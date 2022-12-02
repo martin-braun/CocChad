@@ -1,0 +1,2 @@
+vim.opt.wrap = false
+

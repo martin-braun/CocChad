@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+
+from=$(dirname "$(readlink -f "$0")")
+to="$HOME/.config/nvim"
+rm -rf "$HOME/.cache/nvim"
+rm -rf "$HOME/.local/share/nvim"
+rm -rf "$to" 2>/dev/null || true
+
+mkdir -p "$to"
+git -C "$to" clone https://github.com/NvChad/NvChad.git .
+ln -s "$from/ftplugin" "$to/"
+ln -s "$from/lua/custom" "$to/lua/"
+ln "$from/.luarc.json" "$to/"
+ln "$from/coc-settings.json" "$to/"
+
+# mkdir -p "$to/.local"
+# sudo ln -s "$HOME/.local/share/nvim" "$to/.local/"
+
+nvim
+nvim +PackerSync
+nvim
+
+set +e
