@@ -7,17 +7,21 @@ M.config = function()
     require('auto-dark-mode').setup({
         update_interval = 1000,
         set_light_mode = function()
-            if config.ui.theme ~= config.ui.theme_toggle[1] then
-                require("base46").toggle_theme()
+            local theme = config.ui.theme_toggle[1]
+            if config.ui.theme ~= theme then
+                vim.g.nvchad_theme = theme
                 vim.g.toggle_theme_icon = ""
                 config.ui.theme = vim.g.nvchad_theme
+                require("nvchad").reload_theme()
             end
         end,
         set_dark_mode = function()
-            if config.ui.theme ~= config.ui.theme_toggle[2] then
-                require("base46").toggle_theme()
+            local theme = config.ui.theme_toggle[2]
+            if config.ui.theme ~= theme then
+                vim.g.nvchad_theme = theme
                 vim.g.toggle_theme_icon = ""
                 config.ui.theme = vim.g.nvchad_theme
+                require("nvchad").reload_theme()
             end
         end,
     })
