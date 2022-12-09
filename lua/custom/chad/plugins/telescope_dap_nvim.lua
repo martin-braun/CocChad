@@ -11,9 +11,5 @@ M.config = function()
     require("telescope").load_extension("dap")
 end
 
-M.override_options = function() -- setup
-    return {}
-end
-
 return M
 

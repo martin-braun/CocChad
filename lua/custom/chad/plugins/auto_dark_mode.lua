@@ -6,7 +6,8 @@ end
 M.config = function()
     vim.g.toggle_theme_icon = ""
     local config = require("core.utils").load_config()
-    require('auto-dark-mode').setup({ -- override_options
+    local auto_dark_mode = require('auto-dark-mode')
+    auto_dark_mode.setup({
         update_interval = 1000,
         set_light_mode = function()
             local theme = config.ui.theme_toggle[1]
@@ -27,11 +28,7 @@ M.config = function()
             end
         end,
     })
-    require('auto-dark-mode').init()
-end
-
-M.override_options = function() -- setup
-    return {}
+    auto_dark_mode.init()
 end
 
 return M
