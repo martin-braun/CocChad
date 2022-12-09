@@ -12,6 +12,7 @@ M.setup = function()
     api.nvim_create_user_command("DapGotoCurrentLine", ":lua require('dap').goto_()", {})
     api.nvim_create_user_command("DapListBreakpoints", ":lua require('dap').list_breakpoints(true)", {})
     api.nvim_create_user_command("DapClearBreakpoints", ":lua require'dap'.clear_breakpoints()", {})
+    api.nvim_create_user_command("DapToggleMiniRepl", ":lua require('dap.repl').toggle({ height = 8 })", {})
     api.nvim_create_user_command("DapShowMiniLog", 'botright 8split | e ' .. vim.fn.stdpath('cache') .. '/dap.log | normal! G', {})
 end
 
@@ -25,10 +26,6 @@ M.config = function()
     dap.adapters.dart = dart.adapter
     dap.configurations.dart = dart.configuration
 
-end
-
-M.override_options = function() -- setup
-    return {}
 end
 
 return M

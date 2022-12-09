@@ -243,7 +243,7 @@ M.dap = {
         ["<leader>pbB"] = { "<CMD>DapSetLogBreakpoint<CR>", "set breakpoint with log point message" },
         ["<leader>pbl"] = { "<CMD>DapListBreakpoints<CR>", "list breakpoints" },
         ["<leader>pbx"] = { "<CMD>DapClearBreakpoints<CR>", "clear breakpoints", opts = silent },
-        ["<leader>pe"] = { "<CMD>DapToggleRepl<CR>", "toggle repl environment", opts = silent },
+        ["<leader>pe"] = { "<CMD>DapToggleMiniRepl<CR>", "toggle repl environment", opts = silent },
         ["<leader>pl"] = { "<CMD>DapShowMiniLog<CR>", "show dap log", opts = silent }
     }
 }
