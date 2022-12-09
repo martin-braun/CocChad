@@ -4,6 +4,10 @@ local M = vim.tbl_extend("force", require("custom.chad.plugins._stock"), {
     ["nvim-treesitter/nvim-treesitter-context"] = require("custom.chad.plugins.nvim_treesitter_context"),
     ["sheerun/vim-polyglot"] = require("custom.chad.plugins.vim_polyglot"),
     ["neoclide/coc.nvim"] = require("custom.chad.plugins.coc_nvim"),
+    ["mfussenegger/nvim-dap"] = require("custom.chad.plugins.nvim_dap"),
+    ["rcarriga/nvim-dap-ui"] = require("custom.chad.plugins.nvim_dap_ui"),
+    ["nvim-telescope/telescope-dap.nvim"] = require("custom.chad.plugins.telescope_dap_nvim"),
+    ["theHamsta/nvim-dap-virtual-text"] = require("custom.chad.plugins.nvim_dap_virtual_text"),
 })
 
 -- CoC Plugins

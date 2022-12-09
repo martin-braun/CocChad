@@ -186,8 +186,8 @@ M.coc = {
         ["<leader>sdi"] = { '<CMD>CocCommand deno.initializeWorkspace<CR>', "Initialize Deno workspace configuration" },
 
         --coc-blade
-        ["<leader>sbo"] = { '<CMD>CocCommand blade.showOutput', "show blade output channel", opts = silent },
-        ["<leader>sbf"] = { '<CMD>CocCommand blade.bladeFormatter.run', "run blade-formatter", opts = silent },
+        ["<leader>sbo"] = { '<CMD>CocCommand blade.showOutput<CR>', "show blade output channel", opts = silent },
+        ["<leader>sbf"] = { '<CMD>CocCommand blade.bladeFormatter.run<CR>', "run blade-formatter", opts = silent },
     },
     i = {
         ["<C-d>"] = { 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-d>"', "scroll down", opts = vim.tbl_extend("error", silent, nowait, expr) },
@@ -220,7 +220,33 @@ M.coc = {
         ["<leader>ac"] = { '<Plug>(coc-classobj-a)', "map append class object", opts = vim.tbl_extend("error", silent, nowait) },
     },
 }
--- M.coc = nil -- disable coc.nvim bindings
+
+M.dap = {
+    n = {
+        ["<F5>"] = { "<CMD>DapContinue<CR>", "continue debugging", opts = silent },
+        ["<leader>pr"] = { "<CMD>DapContinue<CR>", "start/continue debugging", opts = silent },
+        ["<leader>pR"] = { "<CMD>DapRestart<CR>", "restart debugging", opts = silent },
+        ["<F10>"] = { "<CMD>DapStepOver<CR>", "step over next instruction while debugging", opts = silent },
+        ["<leader>pn"] = { "<CMD>DapStepOver<CR>", "step over next instruction while debugging", opts = silent },
+        ["<F11>"] = { "<CMD>DapStepInto<CR>", "step into next instruction while debugging", opts = silent },
+        ["<leader>pi"] = { "<CMD>DapStepInto<CR>", "step into next instruction while debugging", opts = silent },
+        ["<F12>"] = { "<CMD>DapStepOut<CR>", "step out of current scope while debugging", opts = silent },
+        ["<S-F5>"] = { "<CMD>DapTerminate<CR>", "terminate debugging", opts = silent },
+        ["<leader>pq"] = { "<CMD>DapTerminate<CR>", "terminate process while debugging", opts = silent },
+        ["<leader>pc"] = { "<CMD>DapClose<CR>", "close process while debugging", opts = silent },
+        ["<leader>po"] = { "<CMD>DapStepOut<CR>", "step out of current scope while debugging", opts = silent },
+        ["<leader>pp"] = { "<CMD>DapStepBack<CR>", "step back to previous instruction while debugging", opts = silent },
+        ["<leader>pP"] = { "<CMD>DapPause<CR>", "pause debugger while debugging", opts = silent },
+        ["<leader>pg"] = { "<CMD>DapGotoCurrentLine<CR>", "go to current liner while debugging", opts = silent },
+        ["<leader>pbb"] = { "<CMD>DapToggleBreakpoint<CR>", "toggle breakpoint", opts = silent },
+        ["<leader>pbc"] = { "<CMD>DapSetConditionalBreakpoint<CR>", "set breakpoint with condition" },
+        ["<leader>pbB"] = { "<CMD>DapSetLogBreakpoint<CR>", "set breakpoint with log point message" },
+        ["<leader>pbl"] = { "<CMD>DapListBreakpoints<CR>", "list breakpoints" },
+        ["<leader>pbx"] = { "<CMD>DapClearBreakpoints<CR>", "clear breakpoints", opts = silent },
+        ["<leader>pe"] = { "<CMD>DapToggleRepl<CR>", "toggle repl environment", opts = silent },
+        ["<leader>pl"] = { "<CMD>DapShowMiniLog<CR>", "show dap log", opts = silent }
+    }
+}
 
 return M
 
