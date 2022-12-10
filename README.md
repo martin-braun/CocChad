@@ -1,8 +1,8 @@
 # CocChad
 
-My NvChad customs for coc.nvim &amp; co.
+My NvChad customs for coc.nvim, nvim-dap, etc.
 
-This custom set is meant to be installed on top of NvChad. It focuses on reverting some original behavior of nvim as well as providing a coc.nvim configuration with many language servers out of the box.
+This custom set is meant to be installed on top of NvChad. It focuses on reverting some original behavior of nvim as well as providing a `coc.nvim` configuration with many language servers out of the box. It also comes with `nvim-dap` and some extensions for some languages to give debugging support right out-of-the-box.
 
 ## Installation
 
