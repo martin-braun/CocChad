@@ -244,7 +244,10 @@ M.dap = {
         ["<leader>pbl"] = { "<CMD>DapListBreakpoints<CR>", "list breakpoints" },
         ["<leader>pbx"] = { "<CMD>DapClearBreakpoints<CR>", "clear breakpoints", opts = silent },
         ["<leader>pe"] = { "<CMD>DapToggleMiniRepl<CR>", "toggle repl environment", opts = silent },
-        ["<leader>pl"] = { "<CMD>DapShowMiniLog<CR>", "show dap log", opts = silent }
+        ["<leader>pl"] = { "<CMD>DapShowMiniLog<CR>", "show dap log", opts = silent },
+        ["<leader>pu"] = { "<CMD>DapUiToggle<CR>", "toggle dap ui", opts = silent },
+        ["<leader>pf"] = { "<CMD>DapUiFloatElement<CR>", "open floated element", opts = silent },
+        ["<leader>pE"] = { "<CMD>DapUiEval<CR>", "evaludate selected expression while debugging", opts = silent },
     }
 }
 
