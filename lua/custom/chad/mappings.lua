@@ -57,8 +57,12 @@ M.general = {
         ["<leader>ti"] = { "a<C-r>=strftime('%y-%m-%d %H:%M:%S')<C-m><C-c>", "insert time", opts = nowait },
         ["<leader>ts"] = { "a<C-r>=strftime('%y%m%d_%H%M%S')<C-m><C-c>", "insert timestamp", opts = nowait },
         ["<C-n>"] = { "<CMD>enew<CR>", "new buffer" },
-        ["<C-w>_"] = { "8<C-w>_", "shrink window vertically" },
-        ["<C-w>|"] = { "32<C-w>|", "shrink window horizontally" },
+        ["<C-w>+"] = { "8<C-w>+", "grow window horizontally" },
+        ["<C-w>-"] = { "8<C-w>-", "shrink window horizontally" },
+        ["<C-w>|"] = { "32<C-w>|", "minimize window horizontally" },
+        ["<C-w>>"] = { "8<C-w>>", "grow window vertically" },
+        ["<C-w><"] = { "8<C-w><", "shrink window vertically" },
+        ["<C-w>_"] = { "8<C-w>_", "minimize window vertically" },
     },
     i = {
         ["<C-s>"] = { "<CMD>w <CR>", "save" },
@@ -99,7 +103,6 @@ M.tabufline = {
         ["<C-S-j>"] = {
             function()
                 require("nvchad_ui.tabufline").move_buf(1)
-                -- require("nvchad_ui.tabufline").tabuflineMoveNext()
             end, "move buffer forward",
         },
         ["<C-k>"] = {
@@ -111,7 +114,6 @@ M.tabufline = {
         ["<C-S-k>"] = {
             function()
                 require("nvchad_ui.tabufline").move_buf(-1)
-                -- require("nvchad_ui.tabufline").tabuflineMovePrev()
             end,
             "move buffer backwards",
         },
