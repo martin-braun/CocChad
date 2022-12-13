@@ -24,7 +24,7 @@ M.config = function()
     dap.listeners.after.event_exited['dapui_config'] = function()
         dapui.close()
     end
-    -- dapui.setup()
+    dapui.setup()
 end
 
 return M
