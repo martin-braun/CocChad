@@ -98,30 +98,21 @@ M.tabufline = {
         ["<C-j>"] = {
             function()
                 require("nvchad_ui.tabufline").tabuflineNext()
-            end, "goto next buffer",
+            end, "goto next buffer", opts = silent
         },
-        ["<C-S-j>"] = {
-            function()
-                require("nvchad_ui.tabufline").move_buf(1)
-            end, "move buffer forward",
-        },
+        ["<C-S-j>"] = { "<CMD>TbufRight<CR>", "move buffer forward", opts = silent },
         ["<C-k>"] = {
             function()
                 require("nvchad_ui.tabufline").tabuflinePrev()
             end,
-            "goto prev buffer",
+            "goto prev buffer", opts = silent
         },
-        ["<C-S-k>"] = {
-            function()
-                require("nvchad_ui.tabufline").move_buf(-1)
-            end,
-            "move buffer backwards",
-        },
+        ["<C-S-k>"] = { "<CMD>TbufLeft<CR>", "move buffer backward", opts = silent },
         ["<leader>c"] = {
             function()
                 require("nvchad_ui.tabufline").close_buffer()
             end,
-            "close buffer",
+            "close buffer", opts = silent
         },
         -- ["<leader>cc"] = {
         --     function()
