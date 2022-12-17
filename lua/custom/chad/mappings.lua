@@ -100,14 +100,14 @@ M.tabufline = {
                 require("nvchad_ui.tabufline").tabuflineNext()
             end, "goto next buffer", opts = silent
         },
-        ["<C-S-j>"] = { "<CMD>TbufRight<CR>", "move buffer forward", opts = silent },
+        ["<C-S-j>"] = { "<CMD>TbufRight<CR>", "move buffer forward" },
         ["<C-k>"] = {
             function()
                 require("nvchad_ui.tabufline").tabuflinePrev()
             end,
             "goto prev buffer", opts = silent
         },
-        ["<C-S-k>"] = { "<CMD>TbufLeft<CR>", "move buffer backward", opts = silent },
+        ["<C-S-k>"] = { "<CMD>TbufLeft<CR>", "move buffer backward" },
         ["<leader>c"] = {
             function()
                 require("nvchad_ui.tabufline").close_buffer()
@@ -189,7 +189,7 @@ M.coc = {
         ["<Up>"] = { 'coc#pum#visible() ? coc#pum#prev(1) : "<Up>"', "move suggestion up", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
         ["<CR>"] = { 'coc#pum#visible() ? coc#pum#confirm() : "<CR>"', "confirm selection", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
         ["<C-m>"] = { '<Plug>(coc-snippets-expand-jump)', "insert snippet" },
-        ["<C-ö>"] = { 'coc#refresh()', "show suggestions", opts = vim.tbl_extend("error", silent, expr) },
+        ["<C-l>"] = { 'coc#refresh()', "show suggestions", opts = vim.tbl_extend("error", silent, expr) },
     },
     v = {
         ["<leader>ff"] = { "<CMD>Format<CR>", "format code" },
@@ -216,7 +216,7 @@ M.coc = {
 
 M.dap = {
     n = {
-        ["<F5>"] = { "<CMD>DapContinue<CR>", "continue debugging", opts = silent },
+        ["<F5>"] = { "<CMD>DapContinue<CR>", "start/continue debugging", opts = silent },
         ["<leader>pr"] = { "<CMD>DapContinue<CR>", "start/continue debugging", opts = silent },
         ["<leader>pR"] = { "<CMD>DapRestart<CR>", "restart debugging", opts = silent },
         ["<F10>"] = { "<CMD>DapStepOver<CR>", "step over next instruction while debugging", opts = silent },
