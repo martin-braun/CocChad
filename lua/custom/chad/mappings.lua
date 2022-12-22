@@ -100,14 +100,14 @@ M.tabufline = {
                 require("nvchad_ui.tabufline").tabuflineNext()
             end, "goto next buffer", opts = silent
         },
-        ["<C-S-j>"] = { "<CMD>TbufRight<CR>", "move buffer forward" },
+        ["<leader>j"] = { "<CMD>TbufRight<CR>", "move buffer forward" },
         ["<C-k>"] = {
             function()
                 require("nvchad_ui.tabufline").tabuflinePrev()
             end,
             "goto prev buffer", opts = silent
         },
-        ["<C-S-k>"] = { "<CMD>TbufLeft<CR>", "move buffer backward" },
+        ["<leader>k"] = { "<CMD>TbufLeft<CR>", "move buffer backward" },
         ["<leader>c"] = {
             function()
                 require("nvchad_ui.tabufline").close_buffer()
@@ -162,6 +162,7 @@ M.coc = {
         ["<leader>sfe"] = { '<CMD>CocList FlutterEmulators<CR>', "launch Flutter emulator", opts = silent },
         ["<leader>sfE"] = { ':call jobstart("emulator @flutter_emulator -no-snapshot-load")<CR>', "cold start flutter_emulator", opts = silent },
         ["<leader>sfd"] = { '<CMD>CocList FlutterDevices<CR>', "select Flutter device target", opts = silent },
+        ["<leader>sfs"] = { '<CMD>CocList FlutterSDKs<CR>', "select Flutter SDK", opts = silent },
         ["<leader>sfr"] = { '<CMD>CocCommand flutter.run<CR><CMD>CocCommand flutter.dev.hotReload<CR>', "run / hot reload Flutter app on device/emulator", silent },
         ["<leader>sfD"] = { '<CMD>CocCommand flutter.doctor<CR>', "run Flutter doctor" },
         ["<leader>sfpg"] = { '<CMD>CocCommand flutter.pub.get<CR>', "run Flutter Pub Get" },
@@ -170,6 +171,7 @@ M.coc = {
         ["<leader>sfl"] = { '<CMD>CocCommand flutter.dev.openDevLog<CR>', "show Flutter dev log" },
         ["<leader>sfc"] = { '<CMD>CocCommand flutter.dev.clearDevLog<CR>', "clear Flutter dev server log" },
         ["<leader>sfp"] = { '<CMD>CocCommand flutter.dev.showPerformanceOverlay<CR>', "show Flutter dev server performance overlay" },
+        ["<leader>sft"] = { '<CMD>new | r ! fvm flutter pub deps<CR>', "show Flutter dependency tree" },
 
         -- coc-deno
         ["<leader>sdc"] = { '<CMD>CocCommand deno.cache<CR>', "cache Deno dependencies" },
@@ -185,7 +187,9 @@ M.coc = {
     i = {
         ["<C-d>"] = { 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-d>"', "scroll down", opts = vim.tbl_extend("error", silent, nowait, expr) },
         ["<C-u>"] = { 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-u>"', "scroll up", opts = vim.tbl_extend("error", silent, nowait, expr) },
-        ["<Down>"] = { 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<Down>" : coc#refresh()', "move suggestion down", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
+        ["<C-n>"] = { 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<C-n>" : coc#refresh()', "move suggestion down / show suggestions", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
+        ["<Down>"] = { 'coc#pum#visible() ? coc#pum#next(1) : "<Down>"', "move suggestion down", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
+        ["<C-p>"] = { 'coc#pum#visible() ? coc#pum#prev(1) : "<C-p>"', "move suggestion up", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
         ["<Up>"] = { 'coc#pum#visible() ? coc#pum#prev(1) : "<Up>"', "move suggestion up", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
         ["<CR>"] = { 'coc#pum#visible() ? coc#pum#confirm() : "<CR>"', "confirm selection", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
         ["<C-m>"] = { '<Plug>(coc-snippets-expand-jump)', "insert snippet" },
