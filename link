@@ -9,7 +9,7 @@ rm -rf "$HOME/.local/share/nvim"
 rm -rf "$to" 2>/dev/null || true
 
 mkdir -p "$to"
-git -C "$to" clone https://github.com/NvChad/NvChad.git .
+git -C "$to" clone --depth 1 https://github.com/NvChad/NvChad.git .
 ln -s "$from/ftplugin" "$to/"
 ln -s "$from/lua/custom" "$to/lua/"
 ln "$from/.luarc.json" "$to/"
