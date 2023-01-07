@@ -196,8 +196,8 @@ M.coc = {
         ["<C-l>"] = { 'coc#refresh()', "show suggestions", opts = vim.tbl_extend("error", silent, expr) },
     },
     v = {
-        ["<leader>ff"] = { "<CMD>Format<CR>", "format code" },
-        ["<leader>FF"] = { "<CMD>Format<CR><CMD>w<CR>", "format code and save" },
+        ["<leader>ff"] = { ':call CocActionAsync("format")<CR>', "format code" },
+        ["<leader>FF"] = { "<CMD>w<CR><CMD>Format<CR><CMD>w<CR>", "format code and save" },
         ["<C-d>"] = { 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-d>"', "scroll down", opts = vim.tbl_extend("error", silent, nowait, expr) },
         ["<C-u>"] = { 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-u>"', "scroll up", opts = vim.tbl_extend("error", silent, nowait, expr) },
     },
