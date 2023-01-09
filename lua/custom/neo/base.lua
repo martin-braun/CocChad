@@ -35,3 +35,4 @@ vim.opt.formatoptions:append { 'r' }
 vim.opt.clipboard:append { 'unnamed', 'unnamedplus' } -- use system clipboard
 vim.cmd("nunmap Y") -- revert capital y to full line copy to fully mimic vim, use y$ instead
 
+

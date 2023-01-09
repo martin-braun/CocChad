@@ -17,10 +17,10 @@ M.disabled = {
         ["j"] = "", -- undo navigating through wrapped text, use gj instead
         ["k"] = "", -- undo navigating through wrapped text, use gk instead
         ["<C-g>"] = "", -- undo file info
-        ["<C-h>"] = "", -- undo quick window jump, prefix with ^W instead
-        ["<C-j>"] = "", -- undo quick window jump, prefix with ^W instead
-        ["<C-k>"] = "", -- undo quick window jump, prefix with ^W instead
-        ["<C-l>"] = "", -- undo quick window jump, prefix with ^W instead
+        ["<C-h>"] = "", -- undo window jump, prefix with ^W instead
+        ["<C-j>"] = "", -- undo window jump, prefix with ^W instead
+        ["<C-k>"] = "", -- undo window jump, prefix with ^W instead
+        ["<C-l>"] = "", -- undo window jump, prefix with ^W instead
         ["<leader>b"] = "", -- undo <leader>b new buffer, use C-n instead
         ["<leader>x"] = "", -- undo <leader>x close buffer, use <leader>c instead
         ["<leader>tk"] = "", -- undo find keys with telescope, use <leader>fk instead
@@ -28,6 +28,8 @@ M.disabled = {
         ["<leader>cc"] = "", -- undo jump to current context
         ["<leader>gt"] = "", -- undo git status, use <C-g> instead
         ["<leader>rn"] = "", -- undo toggle relative numbers, keep it as it is
+        ["<leader>pt"] = "", -- undo pick hidden terminal
+        ["<leader>ph"] = "", -- undo preview hunk terminal
     },
     i = {
         ["<Right>"] = "", -- undo special navigation rules using arrow keys
@@ -56,6 +58,10 @@ M.general = {
         ["<leader>ss"] = { "<CMD>wall<CR>", "save all", opts = nowait },
         ["<leader>ti"] = { "a<C-r>=strftime('%y-%m-%d %H:%M:%S')<C-m><C-c>", "insert time", opts = nowait },
         ["<leader>ts"] = { "a<C-r>=strftime('%y%m%d_%H%M%S')<C-m><C-c>", "insert timestamp", opts = nowait },
+        ["<leader>o"] =  { "<CMD>cw<CR><CMD>.cc<CR>zv", "open quickfix list and jump to selected entry or close if empty", opts = nowait },
+        ["<leader>C"] =  { "<CMD>ccl<CR>", "close quickfix list", opts = nowait },
+        ["<leader>n"] =  { "<CMD>cw<CR><CMD>cn<CR>zv", "open quickfix list and jump to next entry or close if empty", opts = nowait },
+        ["<leader>p"] =  { "<CMD>cw<CR><CMD>cp<CR>zv", "open quickfix list and jump to previous entry or close if empty", opts = nowait },
         ["<C-n>"] = { "<CMD>enew<CR>", "new buffer" },
         ["<C-w>+"] = { "8<C-w>+", "grow window horizontally" },
         ["<C-w>-"] = { "8<C-w>-", "shrink window horizontally" },
@@ -221,30 +227,30 @@ M.coc = {
 M.dap = {
     n = {
         ["<F5>"] = { "<CMD>DapContinue<CR>", "start/continue debugging", opts = silent },
-        ["<leader>pr"] = { "<CMD>DapContinue<CR>", "start/continue debugging", opts = silent },
-        ["<leader>pR"] = { "<CMD>DapRestart<CR>", "restart debugging", opts = silent },
+        ["<leader>dr"] = { "<CMD>DapContinue<CR>", "start/continue debugging", opts = silent },
+        ["<leader>dR"] = { "<CMD>DapRestart<CR>", "restart debugging", opts = silent },
         ["<F10>"] = { "<CMD>DapStepOver<CR>", "step over next instruction while debugging", opts = silent },
-        ["<leader>pn"] = { "<CMD>DapStepOver<CR>", "step over next instruction while debugging", opts = silent },
+        ["<leader>dn"] = { "<CMD>DapStepOver<CR>", "step over next instruction while debugging", opts = silent },
         ["<F11>"] = { "<CMD>DapStepInto<CR>", "step into next instruction while debugging", opts = silent },
-        ["<leader>pi"] = { "<CMD>DapStepInto<CR>", "step into next instruction while debugging", opts = silent },
+        ["<leader>di"] = { "<CMD>DapStepInto<CR>", "step into next instruction while debugging", opts = silent },
         ["<F12>"] = { "<CMD>DapStepOut<CR>", "step out of current scope while debugging", opts = silent },
         ["<S-F5>"] = { "<CMD>DapTerminate<CR>", "terminate debugging", opts = silent },
-        ["<leader>pq"] = { "<CMD>DapTerminate<CR>", "terminate process while debugging", opts = silent },
-        ["<leader>pc"] = { "<CMD>DapClose<CR>", "close process while debugging", opts = silent },
-        ["<leader>po"] = { "<CMD>DapStepOut<CR>", "step out of current scope while debugging", opts = silent },
-        ["<leader>pp"] = { "<CMD>DapStepBack<CR>", "step back to previous instruction while debugging", opts = silent },
-        ["<leader>pP"] = { "<CMD>DapPause<CR>", "pause debugger while debugging", opts = silent },
-        ["<leader>pg"] = { "<CMD>DapGotoCurrentLine<CR>", "go to current liner while debugging", opts = silent },
-        ["<leader>pbb"] = { "<CMD>DapToggleBreakpoint<CR>", "toggle breakpoint", opts = silent },
-        ["<leader>pbc"] = { "<CMD>DapSetConditionalBreakpoint<CR>", "set breakpoint with condition" },
-        ["<leader>pbB"] = { "<CMD>DapSetLogBreakpoint<CR>", "set breakpoint with log point message" },
-        ["<leader>pbl"] = { "<CMD>DapListBreakpoints<CR>", "list breakpoints" },
-        ["<leader>pbx"] = { "<CMD>DapClearBreakpoints<CR>", "clear breakpoints", opts = silent },
-        ["<leader>pe"] = { "<CMD>DapToggleMiniRepl<CR>", "toggle repl environment", opts = silent },
-        ["<leader>pl"] = { "<CMD>DapShowMiniLog<CR>", "show dap log", opts = silent },
-        ["<leader>pu"] = { "<CMD>DapUiToggle<CR>", "toggle dap ui", opts = silent },
-        ["<leader>pf"] = { "<CMD>DapUiFloatElement<CR>", "open floated element", opts = silent },
-        ["<leader>pE"] = { "<CMD>DapUiEval<CR>", "evaludate selected expression while debugging", opts = silent },
+        ["<leader>dq"] = { "<CMD>DapTerminate<CR>", "terminate process while debugging", opts = silent },
+        ["<leader>dc"] = { "<CMD>DapClose<CR>", "close process while debugging", opts = silent },
+        ["<leader>do"] = { "<CMD>DapStepOut<CR>", "step out of current scope while debugging", opts = silent },
+        ["<leader>dp"] = { "<CMD>DapStepBack<CR>", "step back to previous instruction while debugging", opts = silent },
+        ["<leader>dP"] = { "<CMD>DapPause<CR>", "pause debugger while debugging", opts = silent },
+        ["<leader>dg"] = { "<CMD>DapGotoCurrentLine<CR>", "go to current liner while debugging", opts = silent },
+        ["<leader>dbb"] = { "<CMD>DapToggleBreakpoint<CR>", "toggle breakpoint", opts = silent },
+        ["<leader>dbc"] = { "<CMD>DapSetConditionalBreakpoint<CR>", "set breakpoint with condition" },
+        ["<leader>dbB"] = { "<CMD>DapSetLogBreakpoint<CR>", "set breakpoint with log point message" },
+        ["<leader>dbl"] = { "<CMD>DapListBreakpoints<CR>", "list breakpoints" },
+        ["<leader>dbx"] = { "<CMD>DapClearBreakpoints<CR>", "clear breakpoints", opts = silent },
+        ["<leader>de"] = { "<CMD>DapToggleMiniRepl<CR>", "toggle repl environment", opts = silent },
+        ["<leader>dl"] = { "<CMD>DapShowMiniLog<CR>", "show dap log", opts = silent },
+        ["<leader>du"] = { "<CMD>DapUiToggle<CR>", "toggle dap ui", opts = silent },
+        ["<leader>df"] = { "<CMD>DapUiFloatElement<CR>", "open floated element", opts = silent },
+        ["<leader>dE"] = { "<CMD>DapUiEval<CR>", "evaludate selected expression while debugging", opts = silent },
     }
 }
 

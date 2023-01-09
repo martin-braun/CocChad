@@ -40,5 +40,6 @@
   "python.pythonPath": "python3",
   "flutter.openDevLogSplitCommand": "botright 8split",
   "intelephense.licenceKey": "${env:INTELEPHENSE_LICENSE_KEY}",
-  "cursors.cancelKey": "<C-c>"
+  "cursors.cancelKey": "<C-c>",
+  "snippets.ultisnips.pythonPrompt": false
 }
