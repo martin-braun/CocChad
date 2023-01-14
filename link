@@ -12,8 +12,8 @@ mkdir -p "$to"
 git -C "$to" clone --depth 1 https://github.com/NvChad/NvChad.git .
 ln -s "$from/ftplugin" "$to/"
 ln -s "$from/lua/custom" "$to/lua/"
-ln "$from/.luarc.json" "$to/"
-ln "$from/coc-settings.json" "$to/"
+ln -s "$from/.luarc.json" "$to/"
+ln -s "$from/coc-settings.json" "$to/"
 
 # mkdir -p "$to/.local"
 # sudo ln -s "$HOME/.local/share/nvim" "$to/.local/"
