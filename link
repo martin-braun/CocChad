@@ -20,6 +20,5 @@ ln "$from/coc-settings.json" "$to/"
 
 nvim
 nvim +PackerSync
-nvim
 
 set +e
