@@ -133,6 +133,17 @@ M.tabufline = {
     },
 }
 
+M.termux = {
+    n = {
+        ["<leader>tmp"] = { "<CMD>r !termux-clipboard-set<CR>", "paste text from Termux clipboard bridge", opts = vim.tbl_extend("error", silent, nowait) },
+        ["<leader>tmP"] = { "h<CMD>r !termux-clipboard-set<CR>", "paste text from Termux clipboard bridge", opts = vim.tbl_extend("error", silent, nowait) },
+    },
+    v = {
+        ["<leader>tmy"] = { "<CMD>w !termux-clipboard-set<CR>", "yank text to Termux clipboard bridge", opts = vim.tbl_extend("error", silent, nowait) },
+        ["<leader>tmd"] = { "<CMD>!termux-clipboard-set<CR>", "delete text to Termux clipboard bridge", opts = vim.tbl_extend("error", silent, nowait) },
+    }
+}
+
 M.coc = {
     n = {
         ["<leader>ff"] = { "<CMD>Format<CR>", "format code" },
