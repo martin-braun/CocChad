@@ -30,17 +30,18 @@
     "value": "  ",
     "enumMember": "  "
   },
+  "hover.target": "float",
   "emmet.includeLanguages": {
     "vue-html": "html",
     "javascript": "javascriptreact"
   },
-  "hover.target": "float",
+  "css.format.enable": true,
   "html.completion.attributeDefaultValue": "empty",
   "Lua.diagnostics.globals": ["vim"],
   "python.pythonPath": "python3",
+  "snippets.ultisnips.pythonPrompt": false,
   "flutter.openDevLogSplitCommand": "botright 8split",
   "rust-analyzer.server.path": "rust-analyzer",
   "intelephense.licenceKey": "${env:INTELEPHENSE_LICENSE_KEY}",
-  "cursors.cancelKey": "<C-c>",
-  "snippets.ultisnips.pythonPrompt": false
+  "cursors.cancelKey": "<C-c>"
 }

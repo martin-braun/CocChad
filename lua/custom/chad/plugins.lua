@@ -19,6 +19,7 @@ vim.g.coc_global_extensions = {
     'coc-tsserver',
     'coc-eslint',
     'coc-json',
+    'coc-yaml',
     'coc-emmet',
     'coc-tailwindcss',
     'coc-vimlsp',
