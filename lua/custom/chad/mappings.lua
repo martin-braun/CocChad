@@ -177,6 +177,7 @@ M.coc = {
         ["<leader>sfl"] = { '<CMD>CocCommand flutter.dev.openDevLog<CR>', "show Flutter dev log" },
         ["<leader>sfc"] = { '<CMD>CocCommand flutter.dev.clearDevLog<CR>', "clear Flutter dev server log" },
         ["<leader>sfp"] = { '<CMD>CocCommand flutter.dev.showPerformanceOverlay<CR>', "show Flutter dev server performance overlay" },
+        ["<leader>sfg"] = { '<CMD>! fvm flutter pub get<CR>', "get Flutter dependencies" },
         ["<leader>sft"] = { '<CMD>new | r ! fvm flutter pub deps<CR>', "show Flutter dependency tree" },
 
         -- coc-deno
