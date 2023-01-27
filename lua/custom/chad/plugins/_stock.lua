@@ -26,7 +26,7 @@ return {
             }
         end,
     },
-    ["NvChad/nvterm"] = false, -- use native Terminal splits
+    ["NvChad/nvterm"] = false, -- use tmux for additional shells
     ["NvChad/nvim-colorizer.lua"] = {
         override_options = function()
             return {
