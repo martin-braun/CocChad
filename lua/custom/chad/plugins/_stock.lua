@@ -55,7 +55,7 @@ return {
     ["hrsh7th/cmp-buffer"] = false, -- use coc.nvim instead
     ["hrsh7th/cmp-path"] = false; -- use coc.nvim instead
     ["windwp/nvim-autopairs"] = false, -- use coc.nvim instead
-    ["kyazdani42/nvim-tree.lua"] = {
+    ["nvim-tree/nvim-tree.lua"] = {
         override_options = function()
             return {
                 open_on_setup = true,
@@ -71,6 +71,17 @@ return {
                 renderer = {
                     symlink_destination = false,
                 },
+                -- log = {
+                --     enable = true,
+                --     truncate = true,
+                --     types = {
+                --         diagnostics = false,
+                --         git = false,
+                --         profile = false,
+                --         watcher = false,
+                --         dev = true,
+                --     },
+                -- },
             }
         end,
     },
