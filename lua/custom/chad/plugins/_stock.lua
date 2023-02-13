@@ -3,11 +3,11 @@ return {
         override_options = function()
             return {
                 statusline = {
-                    separator_style = "arrow", -- default/round/block/arrow
+                    separator_style = "round", -- default/round/block/arrow
                     overriden_modules = function()
                         return {
                             fileInfo = function() -- Enable laststatus 2 support
-                                local icon = "" --  /  / █ / 
+                                local icon = "" --  /  / █ / 
                                 local filename = (vim.fn.expand "%" == "" and " Empty") or " %t "
                                 return "%#St_file_info#" .. filename .. "%#St_file_sep#" .. icon .. " "
                             end,
@@ -58,7 +58,6 @@ return {
     ["nvim-tree/nvim-tree.lua"] = {
         override_options = function()
             return {
-                open_on_setup = true,
                 view = {
                     adaptive_size = true,
                     mappings = {
