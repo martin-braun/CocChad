@@ -55,7 +55,8 @@ M.general = {
     n = {
         ["<leader>fi"] = { "mqgg=G`qzz", "fix indentions" },
         ["<C-s>"] = { "<CMD>w<CR>", "save" },
-        ["<leader>ss"] = { "<CMD>wall<CR>", "save all", opts = nowait },
+        ["<leader>ss"] = { "<CMD>wall<CR><CMD>mks!<CR>", "save all files and local session", opts = nowait },
+        ["<leader>sl"] = { '<CMD>silent exec "source Session.vim"<CR>', "load local session", opts = nowait },
         ["<leader>ti"] = { "a<C-r>=strftime('%y-%m-%d %H:%M:%S')<C-m><C-c>", "insert time", opts = nowait },
         ["<leader>ts"] = { "a<C-r>=strftime('%y%m%d_%H%M%S')<C-m><C-c>", "insert timestamp", opts = nowait },
         ["<leader>l"] =  { "<CMD>cw<CR><CMD>.cc<CR>zv", "open quickfix list and jump to selected entry or close if empty", opts = nowait },
@@ -201,7 +202,7 @@ M.coc = {
         ["<C-p>"] = { 'coc#pum#visible() ? coc#pum#prev(1) : "<C-p>"', "move suggestion up", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
         ["<Up>"] = { 'coc#pum#visible() ? coc#pum#prev(1) : "<Up>"', "move suggestion up", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
         ["<CR>"] = { 'coc#pum#visible() ? coc#pum#confirm() : "<CR>"', "confirm selection", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
-        ["<C-m>"] = { '<Plug>(coc-snippets-expand-jump)', "insert snippet" },
+        ["<C-e>"] = { '<Plug>(coc-snippets-expand-jump)', "insert snippet" },
         ["<C-l>"] = { 'coc#refresh()', "show suggestions", opts = vim.tbl_extend("error", silent, expr) },
     },
     v = {
@@ -254,6 +255,37 @@ M.dap = {
         ["<leader>du"] = { "<CMD>DapUiToggle<CR>", "toggle dap ui", opts = silent },
         ["<leader>df"] = { "<CMD>DapUiFloatElement<CR>", "open floated element", opts = silent },
         ["<leader>dE"] = { "<CMD>DapUiEval<CR>", "evaludate selected expression while debugging", opts = silent },
+    }
+}
+
+M.codeium = {
+    n = {
+        ["<leader>ma"] = { "<CMD>Codeium Auth<CR>", "authenticate to Codeium", opts = silent },
+        ["<leader>me"] = { "<CMD>Codeium Enable<CR>", "enable Codeium", opts = silent },
+        ["<leader>mbe"] = { "<CMD>Codeium EnableBuffer<CR>", "enable Codeium in the current buffer", opts = silent },
+        ["<leader>md"] = { "<CMD>Codeium Disable<CR>", "disable Codeium", opts = silent },
+        ["<leader>mbd"] = { "<CMD>Codeium DisableBuffer<CR>", "disable Codeium in the current buffer", opts = silent },
+        ["<leader>mx"] = { "<CMD>call codeium#Clear()<CR>", "clear Codeium suggestion", opts = silent },
+        ["<leader>mn"] = { "<CMD>call codeium#CycleCompletions(1)<CR>", "cycle to the next Codeium sugestion", opts = silent },
+        ["<leader>mp"] = { "<CMD>call codeium#CycleCompletions(-1)<CR>", "cycle to the previous Codeium sugestion", opts = silent },
+    },
+    i = {
+        ["<C-f>"] = { "<CMD>call codeium#CycleCompletions(1)<CR>", "cycle to the next Codeium sugestion", opts = silent },
+        ["<C-b>"] = { "<CMD>call codeium#CycleCompletions(-1)<CR>", "cycle to the previous Codeium sugestion", opts = silent },
+    },
+}
+
+M.deepl = {
+    v = {
+        ["<leader>tr2de"] = { '<CMD>call deepl#v("DE")<CR>', opt = silent },
+        ["<leader>trende"] = { '<CMD>call deepl#v("DE", "EN")<CR>', opt = silent },
+        ["<leader>trentr"] = { '<CMD>call deepl#v("TR", "EN")<CR>', opt = silent },
+        ["<leader>tr2en"] = { '<CMD>call deepl#v("EN")<CR>', opt = silent },
+        ["<leader>trdeen"] = { '<CMD>call deepl#v("EN", "DE")<CR>', opt = silent },
+        ["<leader>trdetr"] = { '<CMD>call deepl#v("TR", "DE")<CR>', opt = silent },
+        ["<leader>tr2tr"] = { '<CMD>call deepl#v("TR")<CR>', opt = silent },
+        ["<leader>trtren"] = { '<CMD>call deepl#v("EN", "TR")<CR>', opt = silent },
+        ["<leader>trtrde"] = { '<CMD>call deepl#v("DE", "TR")<CR>', opt = silent },
     }
 }
 

@@ -1,4 +1,3 @@
-
 local M = {}
 
 M.resolved_invoker_of = function(command)

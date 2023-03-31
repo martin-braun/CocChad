@@ -3,7 +3,7 @@ local cmd = require("custom.lib.command")
 local M = {}
 
 M.system_node_active = function()
-    local default_alias_name_file = io.open(op.getenv("NVM_DIR") .. "/alias/default")
+    local default_alias_name_file = io.open(os.getenv("NVM_DIR") .. "/alias/default")
     return default_alias_name_file ~= nil and default_alias_name_file:read() == "system"
 end
 
