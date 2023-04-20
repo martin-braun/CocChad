@@ -9,6 +9,7 @@ local M = vim.tbl_extend("force", require("custom.chad.plugins._stock"), {
     ["nvim-telescope/telescope-dap.nvim"] = require("custom.chad.plugins.telescope_dap_nvim"),
     ["theHamsta/nvim-dap-virtual-text"] = require("custom.chad.plugins.nvim_dap_virtual_text"),
     ["Exafunction/codeium.vim"] = require("custom.chad.plugins.codeium_vim"),
+    ["RaafatTurki/hex.nvim"] = require("custom.chad.plugins.hex_nvim"),
     ["ryicoh/deepl.vim"] = require("custom.chad.plugins.deepl_vim"),
 })
 

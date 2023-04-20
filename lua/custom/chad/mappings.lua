@@ -65,6 +65,10 @@ M.general = {
         ["<leader>p"] =  { "<CMD>cw<CR><CMD>cp<CR>zv", "open quickfix list and jump to previous entry or close if empty", opts = nowait },
         ["<leader>o"] =  { "<CMD>pop<CR>", "move upwards/back in the tag stack", opts = nowait },
         ["<leader>i"] =  { "<CMD>tag<CR>", "move downwards/forward the tag stack", opts = nowait },
+        ["<leader>tn"] = { "<CMD>tabnew<CR>", "new native tab", opts = nowait },
+        ["<leader>tj"] = { "<CMD>tabnext<CR>", "goto next native tab", opts = nowait },
+        ["<leader>tk"] = { "<CMD>tabprevious<CR>", "goto previous native tab", opts = nowait },
+        ["<leader>tc"] = { "<CMD>tabclose<CR>", "close current native tab", opts = nowait },
         ["<C-n>"] = { "<CMD>enew<CR>", "new buffer" },
         ["<C-w>+"] = { "8<C-w>+", "grow window horizontally" },
         ["<C-w>-"] = { "8<C-w>-", "shrink window horizontally" },
@@ -265,7 +269,7 @@ M.codeium = {
         ["<leader>mbe"] = { "<CMD>Codeium EnableBuffer<CR>", "enable Codeium in the current buffer", opts = silent },
         ["<leader>md"] = { "<CMD>Codeium Disable<CR>", "disable Codeium", opts = silent },
         ["<leader>mbd"] = { "<CMD>Codeium DisableBuffer<CR>", "disable Codeium in the current buffer", opts = silent },
-        ["<leader>mx"] = { "<CMD>call codeium#Clear()<CR>", "clear Codeium suggestion", opts = silent },
+        ["<C-c>"] = { "<CMD>call codeium#Clear()<CR>", "clear Codeium suggestion", opts = silent },
         ["<leader>mn"] = { "<CMD>call codeium#CycleCompletions(1)<CR>", "cycle to the next Codeium sugestion", opts = silent },
         ["<leader>mp"] = { "<CMD>call codeium#CycleCompletions(-1)<CR>", "cycle to the previous Codeium sugestion", opts = silent },
     },
@@ -273,6 +277,12 @@ M.codeium = {
         ["<C-f>"] = { "<CMD>call codeium#CycleCompletions(1)<CR>", "cycle to the next Codeium sugestion", opts = silent },
         ["<C-b>"] = { "<CMD>call codeium#CycleCompletions(-1)<CR>", "cycle to the previous Codeium sugestion", opts = silent },
     },
+}
+
+M.hex = {
+    n = {
+        ["<leader>h"] = { "<CMD>HexToggle<CR>", "Toggle hex view", opts = silent },
+    }
 }
 
 M.deepl = {
