@@ -69,6 +69,7 @@ M.general = {
         ["<leader>tj"] = { "<CMD>tabnext<CR>", "goto next native tab", opts = nowait },
         ["<leader>tk"] = { "<CMD>tabprevious<CR>", "goto previous native tab", opts = nowait },
         ["<leader>tc"] = { "<CMD>tabclose<CR>", "close current native tab", opts = nowait },
+        ["<leader>to"] = { "<CMD>tabo<CR>", "close all other native tabs", opts = nowait },
         ["<C-n>"] = { "<CMD>enew<CR>", "new buffer" },
         ["<C-w>+"] = { "8<C-w>+", "grow window horizontally" },
         ["<C-w>-"] = { "8<C-w>-", "shrink window horizontally" },
