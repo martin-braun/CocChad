@@ -288,15 +288,15 @@ M.hex = {
 
 M.deepl = {
     v = {
-        ["<leader>tr2de"] = { '<CMD>call deepl#v("DE")<CR>', opt = silent },
-        ["<leader>trende"] = { '<CMD>call deepl#v("DE", "EN")<CR>', opt = silent },
-        ["<leader>trentr"] = { '<CMD>call deepl#v("TR", "EN")<CR>', opt = silent },
-        ["<leader>tr2en"] = { '<CMD>call deepl#v("EN")<CR>', opt = silent },
-        ["<leader>trdeen"] = { '<CMD>call deepl#v("EN", "DE")<CR>', opt = silent },
-        ["<leader>trdetr"] = { '<CMD>call deepl#v("TR", "DE")<CR>', opt = silent },
-        ["<leader>tr2tr"] = { '<CMD>call deepl#v("TR")<CR>', opt = silent },
-        ["<leader>trtren"] = { '<CMD>call deepl#v("EN", "TR")<CR>', opt = silent },
-        ["<leader>trtrde"] = { '<CMD>call deepl#v("DE", "TR")<CR>', opt = silent },
+        ["<leader>tr2en"] = { '<CMD>call deepl#v("EN")<CR>', "translate to English", opt = silent },
+        ["<leader>trdeen"] = { '<CMD>call deepl#v("EN", "DE")<CR>', "translate from German to English", opt = silent },
+        ["<leader>trtren"] = { '<CMD>call deepl#v("EN", "TR")<CR>', "translate from Turkish to English", opt = silent },
+        ["<leader>tr2de"] = { '<CMD>call deepl#v("DE")<CR>', "translate to German", opt = silent },
+        ["<leader>trende"] = { '<CMD>call deepl#v("DE", "EN")<CR>', "translate from English to German", opt = silent },
+        ["<leader>trtrde"] = { '<CMD>call deepl#v("DE", "TR")<CR>', "translate from Turkish to German", opt = silent },
+        ["<leader>tr2tr"] = { '<CMD>call deepl#v("TR")<CR>', "translate to Turkish", opt = silent },
+        ["<leader>trentr"] = { '<CMD>call deepl#v("TR", "EN")<CR>', "translate from English to Turkish", opt = silent },
+        ["<leader>trdetr"] = { '<CMD>call deepl#v("TR", "DE")<CR>', "translate from German to Turkish", opt = silent },
     }
 }
 
