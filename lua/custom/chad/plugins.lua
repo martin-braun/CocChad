@@ -10,6 +10,7 @@ local M = vim.tbl_extend("force", require("custom.chad.plugins._stock"), {
     ["Exafunction/codeium.vim"] = require("custom.chad.plugins.codeium_vim"),
     ["RaafatTurki/hex.nvim"] = require("custom.chad.plugins.hex_nvim"),
     ["ryicoh/deepl.vim"] = require("custom.chad.plugins.deepl_vim"),
+    ["jwalton512/vim-blade"] = require("custom.chad.plugins.vim_blade"),
 })
 
 -- CoC Plugins
