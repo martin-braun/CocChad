@@ -1,9 +1,9 @@
--- Grep
+-- S
 vim.api.nvim_create_user_command(
-  'Cgrep',
+  'S',
   function(opts)
     if #opts.args < 1 then
-      print("Usage: :Cgrep(!) <pattern> <filter?>, i.e. :Cgrep /my_string/g **/*, or :Cgrep! /my_string/my_replacement/g **/*")
+      print("Usage: :S(!) <pattern> <filter?>, i.e. :S /my_string/g **/*, or :S! /my_string/my_replacement/g **/*")
       return
     end
     local pattern = opts.fargs[1]
