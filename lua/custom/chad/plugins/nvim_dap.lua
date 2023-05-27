@@ -17,15 +17,12 @@ M.setup = function()
 end
 
 M.config = function()
-
     local dap = require('dap')
     dap.set_log_level('TRACE')
-
     -- dart/flutter
     local dart = require("custom.chad.plugins.dap.dart")
     dap.adapters.dart = dart.adapter
     dap.configurations.dart = dart.configuration
-
 end
 
 return M
