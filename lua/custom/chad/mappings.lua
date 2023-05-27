@@ -128,6 +128,12 @@ M.tabufline = {
             end,
             "close buffer", opts = silent
         },
+        ["<leader>C"] = {
+            function()
+                require("nvchad_ui.tabufline").closeBufs_at_direction("right")
+            end,
+            "close buffer", opts = silent
+        },
         -- ["<leader>cc"] = {
         --     function()
         --         pcall(function ()
