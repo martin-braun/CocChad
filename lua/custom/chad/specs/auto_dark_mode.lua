@@ -19,7 +19,7 @@ M.config = function()
                 vim.g.nvchad_theme = theme
                 vim.g.toggle_theme_icon = ""
                 config.ui.theme = vim.g.nvchad_theme
-                require("nvchad").reload_theme()
+                require("base46").load_all_highlights()
             end
         end,
         set_dark_mode = function()
@@ -28,7 +28,7 @@ M.config = function()
                 vim.g.nvchad_theme = theme
                 vim.g.toggle_theme_icon = ""
                 config.ui.theme = vim.g.nvchad_theme
-                require("nvchad").reload_theme()
+                require("base46").load_all_highlights()
             end
         end,
     })

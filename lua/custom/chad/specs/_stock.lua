@@ -1,27 +1,4 @@
 return {
-    ui = {
-        statusline = {
-            separator_style = "round", -- default/round/block/arrow
-            overriden_modules = function()
-                return {
-                    fileInfo = function() -- Enable laststatus 2 support
-                        local icon = "" --  /  / █ / 
-                        local filename = (vim.fn.expand "%" == "" and " Empty") or " %t "
-                        return "%#St_file_info#" .. filename .. "%#St_file_sep#" .. icon .. " "
-                    end,
-                }
-            end,
-        },
-        tabufline = {
-            overriden_modules = function()
-                return {
-                    buttons = function() -- hide buttons
-                        return ""
-                    end,
-                }
-            end,
-        }
-    },
     { "NvChad/nvterm", enabled = false }, -- use tmux for additional shells
     {
         "NvChad/nvim-colorizer.lua",
@@ -50,9 +27,35 @@ return {
     { "hrsh7th/cmp-buffer", enabled = false }, -- use coc.nvim instead
     { "hrsh7th/cmp-path", enabled = false }; -- use coc.nvim instead
     { "windwp/nvim-autopairs", enabled = false }, -- use coc.nvim instead
+    { 
+        "nvim-treesitter/nvim-treesitter", 
+        opts = {
+            ensure_installed = {
+                "vim",
+                "lua",
+                "html",
+                "css",
+                "javascript",
+                "typescript",
+                "tsx",
+                "c",
+                "markdown",
+                "markdown_inline",
+            },
+            indent = {
+                enable = true,
+                -- disable = {
+                --   "python"
+                -- },
+            },
+        }
+    },
     {
         "nvim-tree/nvim-tree.lua",
         opts = {
+            git = {
+                enable = true,
+            },
             view = {
                 adaptive_size = true,
                 mappings = {
@@ -64,6 +67,12 @@ return {
             },
             renderer = {
                 symlink_destination = false,
+                highlight_git = true,
+                icons = {
+                    show = {
+                        git = true,
+                    },
+                },
             },
             -- log = {
             --     enable = true,
