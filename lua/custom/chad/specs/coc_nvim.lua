@@ -1,11 +1,13 @@
-local M = {}
+local M = { "neoclide/coc.nvim" }
 
-M.branch = 'release'
+M.name = "coc_nvim"
+M.lazy = false
+-- M.dependencies = {}
 
-M.setup = function()
+M.init = function()
 end
 
-M.config = function ()
+M.config = function()
     -- Some servers have issues with backup files, see #649.
     vim.opt.backup = false
     vim.opt.writebackup = false
@@ -72,6 +74,15 @@ M.config = function ()
         desc = "Update signature help on jump placeholder"
     })
 end
+
+M.branch = "release"
+
+-- M.event = {}
+-- M.cmd = {}
+-- M.ft = {}
+-- M.keys = {}
+
+M.priority = 100
 
 return M
 

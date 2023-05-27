@@ -1,10 +1,10 @@
-local M = {}
+local M = { "rcarriga/nvim-dap-ui" }
 
-M.requires = { "mfussenegger/nvim-dap" }
-M.wants = "nvim-dap"
-M.after = "nvim-dap"
+M.name = "nvim_dap_ui"
+M.lazy = false
+M.dependencies = { "nvim_dap" }
 
-M.setup = function()
+M.init = function()
     local api = vim.api
     api.nvim_create_user_command("DapUiOpen", ":lua require'dapui'.open()", {})
     api.nvim_create_user_command("DapUiClose", ":lua require'dapui'.close()", {})
@@ -26,6 +26,15 @@ M.config = function()
     end
     dapui.setup()
 end
+
+-- M.branch = ""
+
+-- M.event = {}
+-- M.cmd = {}
+-- M.ft = {}
+-- M.keys = {}
+
+M.priority = 50
 
 return M
 

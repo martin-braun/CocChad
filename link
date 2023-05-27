@@ -9,16 +9,15 @@ rm -rf "$HOME/.local/share/nvim"
 rm -rf "$to" 2>/dev/null || true
 
 mkdir -p "$to"
-git -C "$to" clone --depth 1 https://github.com/NvChad/NvChad.git .
+git -C "$to" clone --depth 1 https://github.com/NvChad/NvChad.git . && nvim
+
+rm -r "$to/ftplugin" || true 
 ln -s "$from/ftplugin" "$to/"
+rm -r "$to/lua/custom" || true 
 ln -s "$from/lua/custom" "$to/lua/"
 ln -s "$from/.luarc.json" "$to/"
 ln -s "$from/coc-settings.json" "$to/"
 
-# mkdir -p "$to/.local"
-# sudo ln -s "$HOME/.local/share/nvim" "$to/.local/"
-
 nvim
-nvim +PackerSync
 
 set +e

@@ -55,6 +55,7 @@ M.general = {
     n = {
         ["<leader>fi"] = { "mqgg=G`qzz", "fix indentions" },
         ["<C-s>"] = { "<CMD>w<CR>", "save" },
+        ["<C-l>"] = { "<CMD>Lazy<CR>", "open lazy", opts = nowait },
         ["<leader>ss"] = { "<CMD>wall<CR><CMD>mks!<CR>", "save all files and local session", opts = nowait },
         ["<leader>sl"] = { '<CMD>silent exec "source Session.vim"<CR>', "load local session", opts = nowait },
         ["<leader>ti"] = { "a<C-r>=strftime('%y-%m-%d %H:%M:%S')<C-m><C-c>", "insert time", opts = nowait },
@@ -114,14 +115,24 @@ M.tabufline = {
                 require("nvchad_ui.tabufline").tabuflineNext()
             end, "goto next buffer", opts = silent
         },
-        ["<leader>j"] = { "<CMD>TbufRight<CR>", "move buffer forward" },
+        ["<leader>j"] = {
+            function()
+                require("nvchad_ui.tabufline").move_buf(1)
+            end,
+            "move buffer forward", opts = silent
+        },
         ["<C-k>"] = {
             function()
                 require("nvchad_ui.tabufline").tabuflinePrev()
             end,
             "goto prev buffer", opts = silent
         },
-        ["<leader>k"] = { "<CMD>TbufLeft<CR>", "move buffer backward" },
+        ["<leader>k"] = {
+            function()
+                require("nvchad_ui.tabufline").move_buf(-1)
+            end,
+            "move buffer backward", opts = silent
+        },
         ["<leader>c"] = {
             function()
                 require("nvchad_ui.tabufline").close_buffer()
@@ -132,7 +143,7 @@ M.tabufline = {
             function()
                 require("nvchad_ui.tabufline").closeBufs_at_direction("right")
             end,
-            "close buffer", opts = silent
+            "close buffers to the right", opts = silent
         },
         -- ["<leader>cc"] = {
         --     function()

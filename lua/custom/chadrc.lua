@@ -5,8 +5,8 @@ M.ui = {
     theme = "one_light",
 }
 
+M.plugins = "custom.chad.plugins"
 M.mappings = require("custom.chad.mappings")
-M.plugins = require("custom.chad.plugins")
 
 return M
 

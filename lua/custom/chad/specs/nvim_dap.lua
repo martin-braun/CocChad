@@ -1,6 +1,10 @@
-local M = {}
+local M = { "mfussenegger/nvim-dap" }
 
-M.setup = function()
+M.name = "nvim_dap"
+M.lazy = false
+-- M.dependencies = {}
+
+M.init = function()
     local api = vim.api
     api.nvim_create_user_command("DapSetConditionalBreakpoint", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))", {})
     api.nvim_create_user_command("DapSetLogBreakpoint", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))", {})
@@ -20,10 +24,19 @@ M.config = function()
     local dap = require('dap')
     dap.set_log_level('TRACE')
     -- dart/flutter
-    local dart = require("custom.chad.plugins.dap.dart")
+    local dart = require("custom.chad.dap.dart")
     dap.adapters.dart = dart.adapter
     dap.configurations.dart = dart.configuration
 end
+
+-- M.branch = ""
+
+-- M.event = {}
+-- M.cmd = {}
+-- M.ft = {}
+-- M.keys = {}
+
+M.priority = 50
 
 return M
 

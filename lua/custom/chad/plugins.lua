@@ -1,16 +1,16 @@
 -- Neovim Plugins
-local M = vim.tbl_extend("force", require("custom.chad.plugins._stock"), {
-    ["f-person/auto-dark-mode.nvim"] = require("custom.chad.plugins.auto_dark_mode"),
-    ["nvim-treesitter/nvim-treesitter-context"] = require("custom.chad.plugins.nvim_treesitter_context"),
-    ["neoclide/coc.nvim"] = require("custom.chad.plugins.coc_nvim"),
-    ["mfussenegger/nvim-dap"] = require("custom.chad.plugins.nvim_dap"),
-    ["rcarriga/nvim-dap-ui"] = require("custom.chad.plugins.nvim_dap_ui"),
-    ["nvim-telescope/telescope-dap.nvim"] = require("custom.chad.plugins.telescope_dap_nvim"),
-    ["theHamsta/nvim-dap-virtual-text"] = require("custom.chad.plugins.nvim_dap_virtual_text"),
-    ["Exafunction/codeium.vim"] = require("custom.chad.plugins.codeium_vim"),
-    ["RaafatTurki/hex.nvim"] = require("custom.chad.plugins.hex_nvim"),
-    ["ryicoh/deepl.vim"] = require("custom.chad.plugins.deepl_vim"),
-    ["jwalton512/vim-blade"] = require("custom.chad.plugins.vim_blade"),
+local M = vim.tbl_extend("force", require("custom.chad.specs._stock"), {
+    require("custom.chad.specs.auto_dark_mode"),
+    require("custom.chad.specs.coc_nvim"),
+    require("custom.chad.specs.codeium_vim"),
+    require("custom.chad.specs.deepl_vim"),
+    require("custom.chad.specs.hex_nvim"),
+    require("custom.chad.specs.nvim_dap"),
+    require("custom.chad.specs.nvim_dap_ui"),
+    require("custom.chad.specs.nvim_dap_virtual_text"),
+    require("custom.chad.specs.nvim_treesitter_context"),
+    require("custom.chad.specs.telescope_dap_nvim"),
+    require("custom.chad.specs.vim_blade"),
 })
 
 -- CoC Plugins

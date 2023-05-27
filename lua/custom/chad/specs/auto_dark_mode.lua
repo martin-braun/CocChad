@@ -1,6 +1,10 @@
-local M = {}
+local M = { "f-person/auto-dark-mode.nvim" }
 
-M.setup = function()
+M.name = "auto_dark_mode"
+M.lazy = false
+-- M.dependencies = {}
+
+M.init = function()
 end
 
 M.config = function()
@@ -30,6 +34,15 @@ M.config = function()
     })
     auto_dark_mode.init()
 end
+
+-- M.branch = ""
+
+-- M.event = {}
+-- M.cmd = {}
+-- M.ft = {}
+-- M.keys = {}
+
+M.priority = 1000
 
 return M
 
