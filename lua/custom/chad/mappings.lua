@@ -64,6 +64,7 @@ M.disabled = {
 
 M.general = {
     n = {
+        ["<leader>uu"] = { "<CMD>NvChadUpdate<CR>", "Update NvChad" },
         ["<leader>fi"] = { "mqgg=G`qzz", "Fix indentions" },
         ["<C-s>"] = { "<CMD>w<CR>", "Save" },
         ["<C-l>"] = { "<CMD>Lazy<CR>", "Open lazy", opts = nowait },
