@@ -1,7 +1,7 @@
 local M = { "nvim-telescope/telescope-dap.nvim" }
 
 M.name = "telescope_dap_nvim"
-M.lazy = false
+M.lazy = true
 M.dependencies = { "nvim_dap", "nvim-telescope/telescope.nvim" }
 
 M.init = function()
@@ -16,9 +16,9 @@ end
 -- M.event = {}
 -- M.cmd = {}
 -- M.ft = {}
--- M.keys = {}
+M.keys = { "<leader>d" }
 
-M.priority = 50
+-- M.priority = 50
 
 return M
 

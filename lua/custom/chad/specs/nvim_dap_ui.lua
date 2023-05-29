@@ -1,7 +1,7 @@
 local M = { "rcarriga/nvim-dap-ui" }
 
 M.name = "nvim_dap_ui"
-M.lazy = false
+M.lazy = true
 M.dependencies = { "nvim_dap" }
 
 M.init = function()
@@ -32,7 +32,7 @@ end
 -- M.event = {}
 -- M.cmd = {}
 -- M.ft = {}
--- M.keys = {}
+M.keys = { "<leader>d" }
 
 M.priority = 50
 
