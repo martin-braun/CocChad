@@ -28,7 +28,6 @@ M.disabled = {
         ["<C-w>c"] = "", -- undo close window
         ["<C-w>w"] = "", -- undo next window
         ["<C-w>p"] = "", -- undo previous window
-        ["<C-w>n"] = "", -- undo new window
         ["<leader>b"] = "", -- undo <leader>b new buffer, use C-n instead
         ["<leader>x"] = "", -- undo <leader>x close buffer, use <C-q> instead
         ["<leader>q"] = "", -- undo diagnostics
@@ -133,6 +132,11 @@ M.tabufline = {
     n = {
         ["<C-n>"] = { "<CMD>enew<CR>", "Create buffer", opts = nowait },
         ["<C-w>c"] = { "<CMD>enew<CR>", "Create buffer", opts = nowait },
+        ["<C-w>n"] = {
+            function()
+                require("nvchad_ui.tabufline").tabuflineNext()
+            end, "Goto next buffer", opts = silent
+        },
         ["<C-j>"] = {
             function()
                 require("nvchad_ui.tabufline").tabuflineNext()
@@ -143,6 +147,12 @@ M.tabufline = {
                 require("nvchad_ui.tabufline").move_buf(1)
             end,
             "Move buffer forward", opts = silent
+        },
+        ["<C-w>p"] = {
+            function()
+                require("nvchad_ui.tabufline").tabuflinePrev()
+            end,
+            "Goto prev buffer", opts = silent
         },
         ["<C-k>"] = {
             function()
