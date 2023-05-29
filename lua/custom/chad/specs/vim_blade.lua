@@ -1,7 +1,7 @@
 local M = { "jwalton512/vim-blade" }
 
 M.name = "vim_blade"
-M.lazy = false
+M.lazy = true
 -- M.dependencies = {}
 
 M.init = function()
@@ -16,10 +16,10 @@ end
 
 -- M.event = {}
 -- M.cmd = {}
--- M.ft = {}
+M.ft = { "blade" }
 -- M.keys = {}
 
-M.priority = 50
+-- M.priority = 50
 
 return M
 
