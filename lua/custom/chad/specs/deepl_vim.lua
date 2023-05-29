@@ -1,7 +1,7 @@
 local M = { "ryicoh/deepl.vim" }
 
 M.name = "deepl_vim"
-M.lazy = false
+M.lazy = true
 -- M.dependencies = {}
 
 M.init = function()
@@ -17,9 +17,9 @@ end
 -- M.event = {}
 -- M.cmd = {}
 -- M.ft = {}
--- M.keys = {}
+M.keys = { "<leader>tr" }
 
-M.priority = 50
+-- M.priority = 50
 
 return M
 
