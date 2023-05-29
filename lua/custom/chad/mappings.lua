@@ -1,5 +1,6 @@
 local M = {}
 
+local script = { script = true }
 local silent = { silent = true }
 local nowait = { nowait = true }
 local noremap = { noremap = true }
@@ -315,6 +316,7 @@ M.codeium = {
     i = {
         ["<C-f>"] = { "<CMD>call codeium#CycleCompletions(1)<CR>", "Cycle to the next Codeium sugestion", opts = silent },
         ["<C-b>"] = { "<CMD>call codeium#CycleCompletions(-1)<CR>", "Cycle to the previous Codeium sugestion", opts = silent },
+        ["<Tab>"] = { "codeium#Accept()", "Accept Codeium suggestion", opts = vim.tbl_extend("error", script, silent, nowait, expr) },
     },
 }
 
