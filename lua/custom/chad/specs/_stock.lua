@@ -58,12 +58,23 @@ return {
                 relativenumber = true,
             },
             renderer = {
-                symlink_destination = false,
-                highlight_git = true,
+                highlight_git = false,
                 icons = {
+                    webdev_colors = false,
                     git_placement = "after",
                     show = {
                         git = true,
+                    },
+                    glyphs = {
+                        git = {
+                            unstaged = "󰝶",
+                            staged = "󰛿",
+                            unmerged = "",
+                            renamed = "󱞇",
+                            untracked = "★",
+                            deleted = "󱟃",
+                            ignored = "",
+                        },
                     },
                 },
                 special_files = {
@@ -72,13 +83,19 @@ return {
                     "CONTRIBUTING.md",
                     "contributing.md",
                 },
+                symlink_destination = false,
             },
             git = {
                 enable = true,
                 ignore = false,
             },
             filters = {
-                custom = { ".git" },
+                custom = { 
+                    "Session.vim",
+                    ".git",
+                    "Desktop.ini",
+                    ".DS_Store",
+                },
             },
             on_attach = function(bufnr)
                 local api = require('nvim-tree.api')
