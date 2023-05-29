@@ -1,44 +1,50 @@
 -- Neovim Plugins
 local M = require("custom.chad.specs._stock")
 
-table.insert(M, require("custom.chad.specs.auto_dark_mode"))
-table.insert(M, require("custom.chad.specs.coc_nvim"))
-table.insert(M, require("custom.chad.specs.codeium_vim"))
-table.insert(M, require("custom.chad.specs.deepl_vim"))
-table.insert(M, require("custom.chad.specs.hex_nvim"))
-table.insert(M, require("custom.chad.specs.nvim_dap"))
-table.insert(M, require("custom.chad.specs.nvim_dap_ui"))
-table.insert(M, require("custom.chad.specs.nvim_dap_virtual_text"))
-table.insert(M, require("custom.chad.specs.nvim_treesitter_context"))
-table.insert(M, require("custom.chad.specs.telescope_dap_nvim"))
-table.insert(M, require("custom.chad.specs.vim_blade"))
+local specs = {
+    "auto_dark_mode",
+    "coc_nvim",
+    "codeium_vim",
+    "deepl_vim",
+    "hex_nvim",
+    "nvim_dap",
+    "nvim_dap_ui",
+    "nvim_dap_virtual_text",
+    "nvim_treesitter_context",
+    "telescope_dap_nvim",
+    "vim_blade",
+}
+
+for _ , spec in ipairs( specs  )  do
+   table.insert(M, require("custom.chad.specs." .. spec))
+end
 
 -- CoC Plugins
 vim.g.coc_global_extensions = {
-    'coc-snippets',
-    'coc-pairs',
-    'coc-sh',
-    'coc-prettier',
-    'coc-tsserver',
-    'coc-eslint',
-    'coc-json',
-    'coc-yaml',
+    'coc-blade',
+    'coc-css',
+    'coc-deno',
     'coc-emmet',
+    'coc-eslint',
+    'coc-flutter',
+    'coc-highlight',
+    'coc-html',
+    'coc-java',
+    'coc-json',
+    'coc-lua',
+    'coc-pairs',
+    'coc-phpls',
+    'coc-prettier',
+    'coc-pyright',
+    'coc-rust-analyzer',
+    'coc-sh',
+    'coc-snippets',
+    'coc-svg',
     'coc-tailwindcss',
+    'coc-tsserver',
     'coc-vimlsp',
     'coc-xml',
-    'coc-html',
-    'coc-svg',
-    'coc-css',
-    'coc-pyright',
-    'coc-highlight',
-    'coc-rust-analyzer',
-    'coc-lua',
-    'coc-java',
-    'coc-deno',
-    'coc-flutter',
-    'coc-phpls',
-    'coc-blade',
+    'coc-yaml',
 }
 
 return M
