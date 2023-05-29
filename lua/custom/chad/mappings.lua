@@ -16,6 +16,7 @@ M.disabled = {
         ["<Left>"] = "", -- undo special navigation rules using arrow keys
         ["j"] = "", -- undo navigating through wrapped text, use gj instead
         ["k"] = "", -- undo navigating through wrapped text, use gk instead
+        ["<C-c>"] = "", -- undo whatever happens on C-c
         ["<C-g>"] = "", -- undo file info
         ["<C-h>"] = "", -- undo window jump, prefix with ^W instead
         ["<C-j>"] = "", -- undo window jump, prefix with ^W instead
@@ -123,7 +124,7 @@ M.nvimtree = {
 
 M.tabufline = {
     n = {
-        ["<C-c>"] = { "<CMD>enew<CR>", "Create buffer", opts = nowait },
+        ["<C-n>"] = { "<CMD>enew<CR>", "Create buffer", opts = nowait },
         ["<C-j>"] = {
             function()
                 require("nvchad_ui.tabufline").tabuflineNext()
@@ -158,16 +159,6 @@ M.tabufline = {
             end,
             "Close buffers to the right", opts = silent
         },
-        -- ["<leader>cc"] = {
-        --     function()
-        --         pcall(function ()
-        --             vim.cmd("update")
-        --         end)
-        --         require("nvchad_ui.tabufline").close_buffer()
-        --     end,
-        --     "Update and close buffer",
-        -- },
-        -- ["<leader>x"] = { "<CMD>q<CR>", "close window" },
     },
 }
 
