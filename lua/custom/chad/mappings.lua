@@ -125,7 +125,6 @@ M.telescope = {
 M.nvimtree = {
     n = {
         ["<C-e>"] = { "<CMD>NvimTreeToggle<CR>", "Toggle nvimtree" },
-        ["<C-a>"] = { "<CMD>NvimTreeToggle<CR>", "toggle nvimtree" },
     },
 }
 
