@@ -53,20 +53,32 @@ return {
     {
         "nvim-tree/nvim-tree.lua",
         opts = {
-            git = {
-                enable = true,
-            },
             view = {
                 adaptive_size = true,
+                relativenumber = true,
             },
             renderer = {
                 symlink_destination = false,
                 highlight_git = true,
                 icons = {
+                    git_placement = "after",
                     show = {
                         git = true,
                     },
                 },
+                special_files = {
+                    "README.md",
+                    "readme.md",
+                    "CONTRIBUTING.md",
+                    "contributing.md",
+                },
+            },
+            git = {
+                enable = true,
+                ignore = false,
+            },
+            filters = {
+                custom = { ".git" },
             },
             on_attach = function(bufnr)
                 local api = require('nvim-tree.api')
@@ -137,7 +149,12 @@ return {
                 -- You will need to insert "your code goes here" for any mappings with a custom action_cb
                 vim.keymap.set('n', '+', api.tree.change_root_to_node, opts('CD'))
 
-            end
+            end,
+            ui = {
+                confirm = {
+                    trash = false
+                }
+            },
             -- log = {
             --     enable = true,
             --     truncate = true,
