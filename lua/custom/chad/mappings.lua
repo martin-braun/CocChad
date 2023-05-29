@@ -92,6 +92,12 @@ M.general = {
         ["<C-w>>"] = { "8<C-w>>", "Grow window vertically", opts = nowait },
         ["<C-w><"] = { "8<C-w><", "Shrink window vertically", opts = nowait },
         ["<C-w>_"] = { "8<C-w>_", "Minimize window vertically", opts = nowait },
+        ["<C-w>}"] = { "<CMD>wincmd r<CR>", "Rotate window clockwise", opts = nowait },
+        ["<C-w>{"] = { "<CMD>wincmd R<CR>", "Rotate window counter clockwise", opts = nowait },
+        ["<C-w>ª"] = { "<CMD>wincmd H<CR>", "Move window to the far-left", opts = nowait },
+        ["<C-w>º"] = { "<CMD>wincmd J<CR>", "Move window to the far-bottom", opts = nowait },
+        ["<C-w>∆"] = { "<CMD>wincmd K<CR>", "Move window to the far-top", opts = nowait },
+        ["<C-w>@"] = { "<CMD>wincmd L<CR>", "Move window to the far-right", opts = nowait },
     },
     i = {
         ["<C-s>"] = { "<CMD>w <CR>", "Save" },
@@ -126,6 +132,7 @@ M.nvimtree = {
 M.tabufline = {
     n = {
         ["<C-n>"] = { "<CMD>enew<CR>", "Create buffer", opts = nowait },
+        ["<C-w>c"] = { "<CMD>enew<CR>", "Create buffer", opts = nowait },
         ["<C-j>"] = {
             function()
                 require("nvchad_ui.tabufline").tabuflineNext()
