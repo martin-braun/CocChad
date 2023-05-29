@@ -27,8 +27,8 @@ return {
     { "hrsh7th/cmp-buffer", enabled = false }, -- use coc.nvim instead
     { "hrsh7th/cmp-path", enabled = false }; -- use coc.nvim instead
     { "windwp/nvim-autopairs", enabled = false }, -- use coc.nvim instead
-    { 
-        "nvim-treesitter/nvim-treesitter", 
+    {
+        "nvim-treesitter/nvim-treesitter",
         opts = {
             ensure_installed = {
                 "vim",

@@ -1,7 +1,7 @@
 local M = { "Exafunction/codeium.vim" }
 
 M.name = "codeium_vim"
-M.lazy = false
+M.lazy = true
 -- M.dependencies = {}
 
 M.init = function()
@@ -12,12 +12,12 @@ end
 
 -- M.branch = ""
 
--- M.event = {}
+M.event = { "InsertEnter" }
 -- M.cmd = {}
 -- M.ft = {}
 -- M.keys = {}
 
-M.priority = 0
+-- M.priority = 0
 
 return M
 
