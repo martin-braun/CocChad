@@ -73,7 +73,7 @@ M.general = {
         ["<leader>ti"] = { "a<C-r>=strftime('%y-%m-%d %H:%M:%S')<C-m><C-c>", "Insert time", opts = nowait },
         ["<leader>ts"] = { "a<C-r>=strftime('%y%m%d_%H%M%S')<C-m><C-c>", "Insert timestamp", opts = nowait },
         ["<leader>l"] =  { "<CMD>cw<CR><CMD>.cc<CR>zv", "Open quickfix list and jump to selected entry or close if empty", opts = nowait },
-        ["<leader>Q"] =  { "<CMD>ccl<CR>", "Close quickfix list", opts = nowait },
+        ["<leader>q"] =  { "<CMD>ccl<CR>", "Close quickfix list", opts = nowait },
         ["<leader>n"] =  { "<CMD>cw<CR><CMD>cn<CR>zv", "Open quickfix list and jump to next entry or close if empty", opts = nowait },
         ["<leader>p"] =  { "<CMD>cw<CR><CMD>cp<CR>zv", "Open quickfix list and jump to previous entry or close if empty", opts = nowait },
         ["<leader>o"] =  { "<CMD>pop<CR>", "Move upwards/back in the tag stack", opts = nowait },
@@ -171,7 +171,7 @@ M.tabufline = {
                 require("nvchad_ui.tabufline").close_buffer()
             end, "Goto next buffer", opts = silent
         },
-        ["<leader>q"] = {
+        ["<leader>Q"] = {
             function()
                 require("nvchad_ui.tabufline").closeBufs_at_direction("right")
             end,
