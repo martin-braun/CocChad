@@ -3,7 +3,7 @@ vim.api.nvim_create_user_command(
   'Grep',
   function(opts)
     if #opts.args < 1 then
-      print("Usage: :Grep(!) <pattern> <filter?>, i.e. :S /my_string/g **/*, or :S! /my_string/my_replacement/g **/*")
+      print("Usage: :Grep(!) <pattern> <filter?>, i.e. :Grep /my_string/g **/*, or :Grep! /my_string/my_replacement/g **/*")
       return
     end
     local pattern = opts.fargs[1]
