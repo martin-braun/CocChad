@@ -91,10 +91,10 @@ return {
             },
             filters = {
                 custom = { 
-                    "Session\\.vim",
-                    "\\.git",
-                    "Desktop\\.ini",
-                    "\\.DS_Store",
+                    "Session\\.vim$",
+                    "\\.git$",
+                    "Desktop\\.ini$",
+                    "\\.DS_Store$",
                 },
             },
             on_attach = function(bufnr)
