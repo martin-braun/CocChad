@@ -17,7 +17,7 @@ end
 -- M.event = {}
 -- M.cmd = {}
 -- M.ft = {}
-M.keys = { "<leader>tr" }
+M.keys = { "<leader>tr", mode = 'v' }
 
 -- M.priority = 50
 
