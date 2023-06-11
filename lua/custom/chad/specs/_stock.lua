@@ -27,29 +27,8 @@ return {
     { "hrsh7th/cmp-buffer", enabled = false }, -- use coc.nvim instead
     { "hrsh7th/cmp-path", enabled = false }; -- use coc.nvim instead
     { "windwp/nvim-autopairs", enabled = false }, -- use coc.nvim instead
-    {
-        "nvim-treesitter/nvim-treesitter",
-        opts = {
-            ensure_installed = {
-                "vim",
-                "lua",
-                "html",
-                "css",
-                "javascript",
-                "typescript",
-                "tsx",
-                "c",
-                "markdown",
-                "markdown_inline",
-            },
-            indent = {
-                enable = true,
-                -- disable = {
-                --   "python"
-                -- },
-            },
-        }
-    },
+    { "nvim-treesitter/nvim-treesitter", enabled = false, }, -- use coc.nvim instead
+    { "lukas-reineke/indent-blankline.nvim", enabled = false }, -- use coc.nvim instead
     {
         "nvim-tree/nvim-tree.lua",
         opts = {

@@ -33,6 +33,7 @@ M.config = function()
         end,
     })
     auto_dark_mode.init()
+    require("base46").load_all_highlights()
 end
 
 -- M.branch = ""
