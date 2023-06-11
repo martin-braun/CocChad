@@ -28,7 +28,7 @@ return {
     { "hrsh7th/cmp-path", enabled = false }; -- use coc.nvim instead
     { "windwp/nvim-autopairs", enabled = false }, -- use coc.nvim instead
     { "nvim-treesitter/nvim-treesitter", enabled = false, }, -- use coc.nvim instead
-    { "lukas-reineke/indent-blankline.nvim", enabled = false }, -- use coc.nvim instead
+    -- { "lukas-reineke/indent-blankline.nvim", enabled = false },
     {
         "nvim-tree/nvim-tree.lua",
         opts = {
