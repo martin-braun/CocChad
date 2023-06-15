@@ -28,7 +28,13 @@ return {
     { "hrsh7th/cmp-path", enabled = false }; -- use coc.nvim instead
     { "windwp/nvim-autopairs", enabled = false }, -- use coc.nvim instead
     { "nvim-treesitter/nvim-treesitter", enabled = false, }, -- use coc.nvim instead
-    -- { "lukas-reineke/indent-blankline.nvim", enabled = false },
+    { 
+        "lukas-reineke/indent-blankline.nvim", 
+        opts = {
+            show_current_context = false,
+            show_current_context_start = false,
+        }
+    },
     {
         "nvim-tree/nvim-tree.lua",
         opts = {
@@ -152,39 +158,39 @@ return {
                 }
             },
             -- log = {
-            --     enable = true,
-            --     truncate = true,
-            --     types = {
-            --         diagnostics = false,
-            --         git = false,
-            --         profile = false,
-            --         watcher = false,
-            --         dev = true,
-            --     },
-            -- },
-        }
-    },
-    {
-        "nvim-telescope/telescope.nvim",
-        opts = {
-            defaults = {
-                layout_strategy = "vertical",
-                layout_config = {
-                    height = 0.95,
-                    prompt_position = "top",
-                    vertical = {
-                        mirror = true,
-                        preview_cutoff = 0,
+                --     enable = true,
+                --     truncate = true,
+                --     types = {
+                    --         diagnostics = false,
+                    --         git = false,
+                    --         profile = false,
+                    --         watcher = false,
+                    --         dev = true,
+                    --     },
+                    -- },
+                }
+            },
+            {
+                "nvim-telescope/telescope.nvim",
+                opts = {
+                    defaults = {
+                        layout_strategy = "vertical",
+                        layout_config = {
+                            height = 0.95,
+                            prompt_position = "top",
+                            vertical = {
+                                mirror = true,
+                                preview_cutoff = 0,
+                            },
+                        },
                     },
-                },
+                }
+            },
+            {
+                "folke/which-key.nvim",
+                opts = {
+                    keys = { "<leader>", '"', "'", "`" }
+                }
             },
         }
-    },
-    {
-        "folke/which-key.nvim",
-        opts = {
-            keys = { "<leader>", '"', "'", "`" }
-        }
-    },
-}
 
