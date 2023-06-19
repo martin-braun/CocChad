@@ -53,7 +53,7 @@ function(opts)
         vim.cmd(":vimgrep /" .. searchpatt .. "/" .. flags .. "j " .. filter)
         vim.cmd(":cw")
         vim.cmd(":.cc")
-        if  replpatt then
+        if replpatt then
             vim.cmd(":cfdo %s/" .. searchpatt .. "/" .. replpatt .. "/" .. flags .. "e")
         end
     end
