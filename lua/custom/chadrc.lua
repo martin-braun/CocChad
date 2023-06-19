@@ -2,7 +2,7 @@ local M = {}
 
 M.ui = {
     theme_toggle = { "one_light", "onedark" },
-    theme = "one_light",
+    theme = "onedark",
     statusline = {
         separator_style = "round", -- default/round/block/arrow
         overriden_modules = function()

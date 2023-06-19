@@ -128,6 +128,16 @@ M.nvimtree = {
     },
 }
 
+M.base46 = {
+    n = {
+        ["<leader>tt"] = {
+            function()
+                require("base46").toggle_theme()
+            end, "Toggle Theme", opts = silent
+        },
+    }
+}
+
 M.tabufline = {
     n = {
         ["<C-n>"] = { "<CMD>enew<CR>", "Create buffer", opts = nowait },
