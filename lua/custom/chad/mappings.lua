@@ -213,7 +213,7 @@ M.coc = {
         ["K"] = { '<CMD>lua _G.show_docs()<CR>', "Show documentation" },
         ["<leader>rn"] = { '<Plug>(coc-rename)', "Refactor rename symbol", opts = silent },
         ["<leader>rf"] = { '<CMD>CocCommand workspace.renameCurrentFile<CR>', "Refactor rename file", opts = silent },
-        ["<leader>a"] = { '<Plug>(coc-codeaction-selected)', "Add codeaction to selected region", opts = vim.tbl_extend("error", silent, nowait) },
+        ["<leader>ar"] = { '<Plug>(coc-codeaction-selected)', "Add codeaction to selected region", opts = vim.tbl_extend("error", silent, nowait) },
         ["<leader>ag"] = { '<Plug>(coc-codeaction)', "Apply code action to current buffer", opts = vim.tbl_extend("error", silent, nowait) },
         ["<leader>fl"] = { '<Plug>(coc-fix-current)', "Autofix current line", opts = vim.tbl_extend("error", silent, nowait) },
         ["<leader>ll"] = { '<Plug>(coc-codelens-action)', "Perform CodeLens action on the current line", opts = vim.tbl_extend("error", silent, nowait) },
@@ -327,6 +327,20 @@ M.codeium = {
         ["<C-b>"] = { "<CMD>call codeium#CycleCompletions(-1)<CR>", "Cycle to the previous Codeium sugestion", opts = silent },
         ["<Tab>"] = { "codeium#Accept()", "Accept Codeium suggestion", opts = vim.tbl_extend("error", script, silent, nowait, expr) },
     },
+}
+
+M.arduino = {
+    n = {
+        ["<leader>aa"] = { "<CMD>ArduinoAttach<CR>", "Automatically attach to Arduino board", opts = silent },
+        ["<leader>ab"] = { "<CMD>ArduinoChooseBoard<CR>", "Select the type of Arduino board", opts = silent },
+        ["<leader>ap"] = { "<CMD>ArduinoChooseProgrammer<CR>", "Select the Arduino programmer", opts = silent },
+        ["<leader>ao"] = { "<CMD>ArduinoChoosePort<CR>", "Select the Arduino serial port", opts = silent },
+        ["<leader>av"] = { "<CMD>ArduinoVerify<CR>", "Build the Arduino sketch", opts = silent },
+        ["<leader>au"] = { "<CMD>ArduinoUpload<CR>", "Build and upload the Arduino sketch", opts = silent },
+        ["<leader>as"] = { "<CMD>ArduinoSerial<CR>", "Connect to the Arduino board for debugging over a serial port", opts = silent },
+        ["<leader>aus"] = { "<CMD>ArduinoUploadAndSerial<CR>", "Build, upload the Arduino sketch, and connect for debugging", opts = silent },
+        ["<leader>ai"] = { "<CMD>ArduinoInfo<CR>", "Display internal information", opts = silent },
+    }
 }
 
 M.hex = {

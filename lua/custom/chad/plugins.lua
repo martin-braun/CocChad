@@ -13,6 +13,7 @@ local specs = {
     "nvim_treesitter_context",
     "telescope_dap_nvim",
     "vim_blade",
+    "vim_arduino",
 }
 
 for _ , spec in ipairs( specs  )  do
