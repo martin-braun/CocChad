@@ -6,7 +6,7 @@ This custom set is meant to be installed on top of NvChad. It focuses on reverti
 
 ## Installation
 
-After installing Neovim + NvChad, please fork this repository to allow further customization, then: 
+After installing Neovim, please fork this repository to allow further customization, then: 
 
 - Pull your fork in a local working directory
 - Backup all your nvim data, the next step will remove it to link a new custom and ftplugin folder
