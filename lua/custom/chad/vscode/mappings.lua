@@ -59,9 +59,6 @@ M.vscode = {
         ["<leader>ff"] = { "<CMD>call VSCodeCall('editor.action.formatDocument')<CR>", "Format Document", opts = nowait },
         ["<leader>FF"] = { "<CMD>call VSCodeCall('editor.action.formatDocument')<CR><CMD>call VSCodeCall('workbench.action.files.save')<CR>", "Format Document and Save", opts = nowait },
         
-        ---- tmux substitute:
-        ['<C-t>"'] = { "<CMD>call VSCodeCall('terminal.focus')<CR>", "Terminal: Focus on Terminal View", opts = nowait },
-        
         ---- temporary scrollfix:
         ['<C-u>"'] = { "<C-u>zz", "Scroll up", opts = nowait },
         ['<C-d>"'] = { "<C-d>zz", "Scroll up", opts = nowait },

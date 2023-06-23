@@ -13,12 +13,6 @@
     },
     {
         "command": "vscode-neovim.send",
-        "key": "ctrl+t",
-        "when": "editorTextFocus",
-        "args": "<C-t>"
-    },
-    {
-        "command": "vscode-neovim.send",
         "key": "ctrl+y",
         "when": "editorTextFocus",
         "args": "<C-y>"
