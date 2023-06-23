@@ -1,0 +1,379 @@
+[
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+e",
+        "when": "editorTextFocus",
+        "args": "<C-e>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+r",
+        "when": "editorTextFocus",
+        "args": "<C-r>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+t",
+        "when": "editorTextFocus",
+        "args": "<C-t>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+y",
+        "when": "editorTextFocus",
+        "args": "<C-y>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+u",
+        "when": "editorTextFocus",
+        "args": "<C-u>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+i",
+        "when": "editorTextFocus",
+        "args": "<C-i>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+o",
+        "when": "editorTextFocus",
+        "args": "<C-o>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+p",
+        "when": "editorTextFocus",
+        "args": "<C-p>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+a",
+        "when": "editorTextFocus",
+        "args": "<C-a>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+s",
+        "when": "editorTextFocus",
+        "args": "<C-s>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+d",
+        "when": "editorTextFocus",
+        "args": "<C-d>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+f",
+        "when": "editorTextFocus",
+        "args": "<C-f>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+g",
+        "when": "editorTextFocus",
+        "args": "<C-g>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+h",
+        "when": "editorTextFocus",
+        "args": "<C-h>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+j",
+        "when": "editorTextFocus",
+        "args": "<C-j>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+k",
+        "when": "editorTextFocus",
+        "args": "<C-k>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+l",
+        "when": "editorTextFocus",
+        "args": "<C-l>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+z",
+        "when": "editorTextFocus",
+        "args": "<C-z>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+x",
+        "when": "editorTextFocus",
+        "args": "<C-x>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+c",
+        "when": "editorTextFocus",
+        "args": "<C-c>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+v",
+        "when": "editorTextFocus",
+        "args": "<C-v>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+b",
+        "when": "editorTextFocus",
+        "args": "<C-b>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+n",
+        "when": "editorTextFocus",
+        "args": "<C-n>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+m",
+        "when": "editorTextFocus",
+        "args": "<C-m>"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+7",
+        "when": "editorTextFocus",
+        "args": "<C-_>"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "workbench.action.files.saveAs"
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "shift+cmd+7",
+        "command": "filesExplorer.findInFolder",
+        "when": "explorerResourceIsFolder && filesExplorerFocus && foldersViewVisible && !inputFocus"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+q",
+        "when": "editorTextFocus",
+        "args": "<C-q>"
+    },
+    {
+        "key": "ctrl+t z",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "ctrl+t shift+5",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+shift+alt+cmd+7",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+t ctrl+left",
+        "command": "workbench.action.terminal.resizePaneLeft",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+cmd+left",
+        "command": "-workbench.action.terminal.resizePaneLeft",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+t ctrl+right",
+        "command": "workbench.action.terminal.resizePaneRight",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+cmd+right",
+        "command": "-workbench.action.terminal.resizePaneRight",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+t ctrl+up",
+        "command": "workbench.action.terminal.resizePaneUp",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+cmd+up",
+        "command": "-workbench.action.terminal.resizePaneUp",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+t ctrl+down",
+        "command": "workbench.action.terminal.resizePaneDown",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+cmd+down",
+        "command": "-workbench.action.terminal.resizePaneDown",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+t alt+5",
+        "command": "workbench.action.terminal.scrollUpPage",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
+    },
+    {
+        "key": "pageup",
+        "command": "-workbench.action.terminal.scrollUpPage",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
+    },
+    {
+        "key": "ctrl+t alt+6",
+        "command": "workbench.action.terminal.scrollDownPage",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
+    },
+    {
+        "key": "pagedown",
+        "command": "-workbench.action.terminal.scrollDownPage",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
+    },
+    {
+        "key": "ctrl+t f6",
+        "command": "workbench.action.terminal.scrollDownPage",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
+    },
+    {
+        "key": "ctrl+t f5",
+        "command": "workbench.action.terminal.scrollUpPage",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
+    },
+    {
+        "key": "ctrl+t right",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+t left",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "shift+w",
+        "command": "workbench.files.action.collapseExplorerFolders",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.switchWindow"
+    },
+    {
+        "key": "ctrl+w right",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "ctrl+t shift+2",
+        "command": "terminal.focus"
+    },
+    {
+        "key": "ctrl+t down",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+w up",
+        "command": "workbench.action.focusAboveGroup",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+w down",
+        "command": "workbench.action.focusBelowGroup",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+w left",
+        "command": "workbench.action.focusLeftGroup",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+w right",
+        "command": "workbench.action.focusRightGroup",
+        "when": "!filesExplorerFocus && !editorTextFocus"
+    },
+    {
+        "key": "ctrl+w right",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.files.action.focusFilesExplorer",
+        "when": "!filesExplorerFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.previousPanelView",
+        "when": "panelFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.nextPanelView",
+        "when": "panelFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.previousEditorInGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.nextEditorInGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+w ctrl+w",
+        "command": "workbench.action.focusNextGroup",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "workbench.view.scm"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-workbench.action.gotoLine"
+    },
+    {
+        "key": "ctrl+7",
+        "command": "workbench.action.findInFiles",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpen",
+        "when": "!editorTextFocus"
+    }
+]

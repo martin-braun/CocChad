@@ -30,6 +30,8 @@ M.arduino = nil
 
 M.vscode = {
     n = {
+        ---- nvchad substitute:
+        ["<leader>e"] = { "<CMD>call VSCodeCall('workbench.files.action.focusFilesExplorer')<CR>", "File: Focus on Files Explorer", opts = nowait },
         ---- telescope substitute:
         ["<CR>"] = { "<CMD>call VSCodeNotify('workbench.action.showCommands', { 'query': expand('<cword>')})<CR>", "Show All Commands" },
         ["<C-p>"] = { "<CMD>call VSCodeNotify('workbench.action.quickOpen')<CR>", "Go to File..." },
@@ -59,6 +61,10 @@ M.vscode = {
         
         ---- tmux substitute:
         ['<C-t>"'] = { "<CMD>call VSCodeCall('terminal.focus')<CR>", "Terminal: Focus on Terminal View", opts = nowait },
+        
+        ---- temporary scrollfix:
+        ['<C-u>"'] = { "<C-u>zz", "Scroll up", opts = nowait },
+        ['<C-d>"'] = { "<C-d>zz", "Scroll up", opts = nowait },
     },
     v = {
         ---- coc substitute:
