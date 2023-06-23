@@ -1,7 +1,11 @@
 return {
+    { "NvChad/ui", enabled = true },
+    { "NvChad/extensions", enabled = true },
+    { "NvChad/base46", enabled = true },
     { "NvChad/nvterm", enabled = false }, -- use tmux for additional shells
     {
         "NvChad/nvim-colorizer.lua",
+        enabled = true,
         opts = {
             user_default_options = {
                 RGB = true, -- #RGB hex codes
@@ -30,6 +34,7 @@ return {
     { "nvim-treesitter/nvim-treesitter", enabled = false, }, -- use coc.nvim instead
     { 
         "lukas-reineke/indent-blankline.nvim", 
+        enabled = true,
         opts = {
             show_current_context = false,
             show_current_context_start = false,
@@ -37,6 +42,7 @@ return {
     },
     {
         "nvim-tree/nvim-tree.lua",
+        enabled = true,
         opts = {
             view = {
                 adaptive_size = true,
@@ -158,39 +164,41 @@ return {
                 }
             },
             -- log = {
-                --     enable = true,
-                --     truncate = true,
-                --     types = {
-                    --         diagnostics = false,
-                    --         git = false,
-                    --         profile = false,
-                    --         watcher = false,
-                    --         dev = true,
-                    --     },
-                    -- },
-                }
-            },
-            {
-                "nvim-telescope/telescope.nvim",
-                opts = {
-                    defaults = {
-                        layout_strategy = "vertical",
-                        layout_config = {
-                            height = 0.95,
-                            prompt_position = "top",
-                            vertical = {
-                                mirror = true,
-                                preview_cutoff = 0,
-                            },
-                        },
+            --     enable = true,
+            --     truncate = true,
+            --     types = {
+            --         diagnostics = false,
+            --         git = false,
+            --         profile = false,
+            --         watcher = false,
+            --         dev = true,
+            --     },
+            -- },
+        }
+    },
+    {
+        "nvim-telescope/telescope.nvim",
+        enabled = true,
+        opts = {
+            defaults = {
+                layout_strategy = "vertical",
+                layout_config = {
+                    height = 0.95,
+                    prompt_position = "top",
+                    vertical = {
+                        mirror = true,
+                        preview_cutoff = 0,
                     },
-                }
-            },
-            {
-                "folke/which-key.nvim",
-                opts = {
-                    keys = { "<leader>", '"', "'", "`" }
-                }
+                },
             },
         }
+    },
+    {
+        "folke/which-key.nvim",
+        enabled = true,
+        opts = {
+            keys = { "<leader>", '"', "'", "`" }
+        }
+    },
+}
 

@@ -67,7 +67,7 @@ M.general = {
         ["<leader>uu"] = { "<CMD>NvChadUpdate<CR>", "Update NvChad" },
         ["<leader>fi"] = { "mqgg=G`qzz", "Fix indentions" },
         ["<C-s>"] = { "<CMD>w<CR>", "Save" },
-        ["<leader>y"] = { "<CMD>Lazy<CR>", "Open lazy", opts = nowait },
+        ["<leader>y"] = { "<CMD>Lazy<CR>", "Open layz", opts = nowait },
         ["<leader>ss"] = { "<CMD>wall<CR><CMD>mks!<CR>", "Save all files and local session", opts = nowait },
         ["<leader>sl"] = { '<CMD>silent exec "source Session.vim"<CR>', "Load local session", opts = nowait },
         ["<leader>ti"] = { "a<C-r>=strftime('%y-%m-%d %H:%M:%S')<C-m><C-c>", "Insert time", opts = nowait },
@@ -100,12 +100,12 @@ M.general = {
         ["<C-w>@"] = { "<CMD>wincmd L<CR>", "Move window to the far-right", opts = nowait },
     },
     i = {
-        ["<C-s>"] = { "<CMD>w <CR>", "Save" },
+        ["<C-s>"] = { "<CMD>w<CR>", "Save" },
     },
     v = {
         ["<leader>fi"] = { "mqgg=G`qzz", "Fix indentions" },
-        ["<C-s>"] = { "<CMD>w <CR>", "Save" },
-        ["<leader>ss"] = { "<CMD>wall <CR>", "Save all" },
+        ["<C-s>"] = { "<CMD>w<CR>", "Save" },
+        ["<leader>ss"] = { "C<MD>wall<CR><CMD>mks!<CR>", "Save all files and local session", opts = nowait },
         ["<leader>ti"] = { "c<C-r>=strftime('%Y-%m-%d %H:%M:%S')<C-m><C-c>", "Insert time" },
         ["<leader>ts"] = { "c<C-r>=strftime('%Y%m%d_%H%M%S')<C-m><C-c>", "Insert timestamp" },
     },
@@ -259,7 +259,7 @@ M.coc = {
         ["<C-l>"] = { 'coc#refresh()', "Show suggestions", opts = vim.tbl_extend("error", silent, expr) },
     },
     v = {
-        ["<leader>ff"] = { ':call CocActionAsync("Format")<CR>', "format code" },
+        ["<leader>ff"] = { ':call CocActionAsync("Format")<CR>', "Format code" },
         ["<leader>FF"] = { "<CMD>w<CR><CMD>Format<CR><CMD>w<CR>", "Format code and save" },
         ["<C-d>"] = { 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-d>"', "scroll down", opts = vim.tbl_extend("error", silent, nowait, expr) },
         ["<C-u>"] = { 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-u>"', "scroll up", opts = vim.tbl_extend("error", silent, nowait, expr) },
@@ -311,6 +311,20 @@ M.dap = {
     }
 }
 
+M.arduino = {
+    n = {
+        ["<leader>aa"] = { "<CMD>ArduinoAttach<CR>", "Automatically attach to Arduino board", opts = silent },
+        ["<leader>ab"] = { "<CMD>ArduinoChooseBoard<CR>", "Select the type of Arduino board", opts = silent },
+        ["<leader>ap"] = { "<CMD>ArduinoChooseProgrammer<CR>", "Select the Arduino programmer", opts = silent },
+        ["<leader>ao"] = { "<CMD>ArduinoChoosePort<CR>", "Select the Arduino serial port", opts = silent },
+        ["<leader>av"] = { "<CMD>ArduinoVerify<CR>", "Build the Arduino sketch", opts = silent },
+        ["<leader>au"] = { "<CMD>ArduinoUpload<CR>", "Build and upload the Arduino sketch", opts = silent },
+        ["<leader>as"] = { "<CMD>ArduinoSerial<CR>", "Connect to the Arduino board for debugging over a serial port", opts = silent },
+        ["<leader>aus"] = { "<CMD>ArduinoUploadAndSerial<CR>", "Build, upload the Arduino sketch, and connect for debugging", opts = silent },
+        ["<leader>ai"] = { "<CMD>ArduinoInfo<CR>", "Display internal information", opts = silent },
+    }
+}
+
 M.codeium = {
     n = {
         ["<leader>ma"] = { "<CMD>Codeium Auth<CR>", "Authenticate to Codeium", opts = silent },
@@ -327,20 +341,6 @@ M.codeium = {
         ["<C-b>"] = { "<CMD>call codeium#CycleCompletions(-1)<CR>", "Cycle to the previous Codeium sugestion", opts = silent },
         ["<Tab>"] = { "codeium#Accept()", "Accept Codeium suggestion", opts = vim.tbl_extend("error", script, silent, nowait, expr) },
     },
-}
-
-M.arduino = {
-    n = {
-        ["<leader>aa"] = { "<CMD>ArduinoAttach<CR>", "Automatically attach to Arduino board", opts = silent },
-        ["<leader>ab"] = { "<CMD>ArduinoChooseBoard<CR>", "Select the type of Arduino board", opts = silent },
-        ["<leader>ap"] = { "<CMD>ArduinoChooseProgrammer<CR>", "Select the Arduino programmer", opts = silent },
-        ["<leader>ao"] = { "<CMD>ArduinoChoosePort<CR>", "Select the Arduino serial port", opts = silent },
-        ["<leader>av"] = { "<CMD>ArduinoVerify<CR>", "Build the Arduino sketch", opts = silent },
-        ["<leader>au"] = { "<CMD>ArduinoUpload<CR>", "Build and upload the Arduino sketch", opts = silent },
-        ["<leader>as"] = { "<CMD>ArduinoSerial<CR>", "Connect to the Arduino board for debugging over a serial port", opts = silent },
-        ["<leader>aus"] = { "<CMD>ArduinoUploadAndSerial<CR>", "Build, upload the Arduino sketch, and connect for debugging", opts = silent },
-        ["<leader>ai"] = { "<CMD>ArduinoInfo<CR>", "Display internal information", opts = silent },
-    }
 }
 
 M.hex = {
@@ -364,4 +364,3 @@ M.deepl = {
 }
 
 return M
-
