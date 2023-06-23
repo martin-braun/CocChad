@@ -2,7 +2,6 @@
 local M = require("custom.chad.vscode.specs._stock")
 
 local specs = {
-   "codeium_vim",
    "deepl_vim",
 }
 

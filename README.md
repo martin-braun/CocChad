@@ -16,4 +16,4 @@ Please read the script before running it! I'm not responsible for any damage. Th
 
 ## VSCode embedding
 
-This configuration is compatible with [vscode-neovim/vscode-neovim](https://github.com/vscode-neovim/vscode-neovim#invoking-vscode-actions-from-neovim), but it recommends you to use [these keybindings](.vscode/keybindings.json) in VSCode to make all work properly.
+This configuration is compatible with [vscode-neovim/vscode-neovim](https://github.com/vscode-neovim/vscode-neovim#invoking-vscode-actions-from-neovim), but it recommends you to use [these keybindings](.vscode/keybindings.sample.json) and [these settings](.vscode/settings.sample.json) in VSCode to make all work properly.
