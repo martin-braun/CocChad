@@ -375,5 +375,10 @@
         "key": "ctrl+p",
         "command": "workbench.action.quickOpen",
         "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.files.newUntitledFile",
+        "when": "!editorTextFocus"
     }
 ]
