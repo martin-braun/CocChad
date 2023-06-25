@@ -25,6 +25,7 @@ vim.g.coc_global_extensions = {
     'coc-blade',
     'coc-css',
     'coc-deno',
+    'coc-clangd',
     'coc-emmet',
     'coc-eslint',
     'coc-flutter',
