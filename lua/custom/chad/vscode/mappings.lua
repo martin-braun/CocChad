@@ -30,6 +30,9 @@ M.arduino = nil
 
 M.vscode = {
     n = {
+        ---- fix scrolling
+        ["<C-d>"] = { '<C-d>zz', "Scroll down", opts = vim.tbl_extend("error", silent, nowait) },
+        ["<C-u>"] = { '<C-u>zz', "Scroll up", opts = vim.tbl_extend("error", silent, nowait) },
         ---- nvchad substitute:
         ["<leader>e"] = { "<CMD>call VSCodeCall('workbench.files.action.focusFilesExplorer')<CR>", "File: Focus on Files Explorer", opts = nowait },
         ---- telescope substitute:
@@ -58,16 +61,20 @@ M.vscode = {
         ---- coc substitute:
         ["<leader>ff"] = { "<CMD>call VSCodeCall('editor.action.formatDocument')<CR>", "Format Document", opts = nowait },
         ["<leader>FF"] = { "<CMD>call VSCodeCall('editor.action.formatDocument')<CR><CMD>call VSCodeCall('workbench.action.files.save')<CR>", "Format Document and Save", opts = nowait },
-        
-        ---- temporary scrollfix:
-        ['<C-u>"'] = { "<C-u>zz", "Scroll up", opts = nowait },
-        ['<C-d>"'] = { "<C-d>zz", "Scroll up", opts = nowait },
     },
     v = {
+        ---- fix scrolling
+        ["<C-d>"] = { '<C-d>zz', "Scroll down", opts = vim.tbl_extend("error", silent, nowait) },
+        ["<C-u>"] = { '<C-u>zz', "Scroll up", opts = vim.tbl_extend("error", silent, nowait) },
         ---- coc substitute:
         ["<leader>ff"] = { "<CMD>call VSCodeCall('editor.action.formatDocument')<CR>", "Format Document", opts = nowait },
         ["<leader>FF"] = { "<CMD>call VSCodeCall('editor.action.formatDocument')<CR><CMD>call VSCodeCall('workbench.action.files.save')<CR>", "Format Document and Save", opts = nowait },
     },
+    i = {
+        ---- fix scrolling
+        ["<C-d>"] = { '<C-d><ESC>zza', "Scroll down", opts = vim.tbl_extend("error", silent, nowait) },
+        ["<C-u>"] = { '<C-u><ESC>zza', "Scroll up", opts = vim.tbl_extend("error", silent, nowait) },
+    }
 }
 
 return M

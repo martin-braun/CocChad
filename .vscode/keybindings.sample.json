@@ -267,6 +267,11 @@
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     },
     {
+        "key": "ctrl+t up",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
         "key": "shift+w",
         "command": "workbench.files.action.collapseExplorerFolders",
         "when": "filesExplorerFocus"
