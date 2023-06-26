@@ -73,6 +73,7 @@ M.vscode = {
         ---- fix scrolling
         ["<C-d>"] = { '<C-d>zz', "Scroll down", opts = vim.tbl_extend("error", silent, nowait) },
         ["<C-u>"] = { '<C-u>zz', "Scroll up", opts = vim.tbl_extend("error", silent, nowait) },
+
         ---- coc substitute:
         ["<leader>ff"] = { "<CMD>call VSCodeCall('editor.action.formatDocument')<CR>", "Format Document", opts = nowait },
         ["<leader>FF"] = { "<CMD>call VSCodeCall('editor.action.formatDocument')<CR><CMD>call VSCodeCall('workbench.action.files.save')<CR>", "Format Document and Save", opts = nowait },
@@ -82,6 +83,13 @@ M.vscode = {
         ---- fix scrolling
         ["<C-d>"] = { '<C-d><ESC>zza', "Scroll down", opts = vim.tbl_extend("error", silent, nowait) },
         ["<C-u>"] = { '<C-u><ESC>zza', "Scroll up", opts = vim.tbl_extend("error", silent, nowait) },
+    }
+}
+
+M.codeium = {
+    n = {
+        ["<leader>mn"] = { "<CMD>VSCodeCall('codeium.showNextCompletion')<CR>", "Codeium: Show Next Completion", opts = silent },
+        ["<leader>mp"] = { "<CMD>VSCodeCall('codeium.showPreviousCompletion')<CR>", "Codeium: Show Previous Completion", opts = silent },
     }
 }
 
