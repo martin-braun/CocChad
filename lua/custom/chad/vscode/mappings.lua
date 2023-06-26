@@ -33,12 +33,15 @@ M.vscode = {
         ---- fix scrolling
         ["<C-d>"] = { '<C-d>zz', "Scroll down", opts = vim.tbl_extend("error", silent, nowait) },
         ["<C-u>"] = { '<C-u>zz', "Scroll up", opts = vim.tbl_extend("error", silent, nowait) },
+
         ---- nvchad substitute:
         ["<leader>e"] = { "<CMD>call VSCodeCall('workbench.files.action.focusFilesExplorer')<CR>", "File: Focus on Files Explorer", opts = nowait },
+
         ---- telescope substitute:
         ["<CR>"] = { "<CMD>call VSCodeNotify('workbench.action.showCommands', { 'query': expand('<cword>')})<CR>", "Show All Commands" },
         ["<C-p>"] = { "<CMD>call VSCodeNotify('workbench.action.quickOpen')<CR>", "Go to File..." },
         ["<C-_>"] = { "<CMD>call VSCodeNotify('workbench.action.findInFiles', { 'query': expand('<cword>')})<CR>", "Search: Find in Files" }, -- CTRL+7
+
         -- ["<leader>fk"] = { "<CMD>Telescope keymaps <CR>", "Show keys" },
         -- ["<leader>fg"] = { "<CMD>Telescope git_commits <CR>", "Git commits" },
         ["<C-g>"] = { "<CMD>Telescope git_status <CR>", "Git status" },
@@ -61,6 +64,10 @@ M.vscode = {
         ---- coc substitute:
         ["<leader>ff"] = { "<CMD>call VSCodeCall('editor.action.formatDocument')<CR>", "Format Document", opts = nowait },
         ["<leader>FF"] = { "<CMD>call VSCodeCall('editor.action.formatDocument')<CR><CMD>call VSCodeCall('workbench.action.files.save')<CR>", "Format Document and Save", opts = nowait },
+        ["<leader>x"] = { "<CMD>call VSCodeCall('editor.action.refactor')<CR>", "View: Show Extensions", opts = vim.tbl_extend("error", silent, nowait) },
+        ["gr"] = { "<CMD>call VSCodeCall('editor.action.goToReferences')<CR>", "Go to References", opts = silent },
+        ["<leader>rn"] = { "<CMD>call VSCodeCall('editor.action.rename')<CR>", "Rename Symbol", opts = silent },
+        ["<leader>fl"] = { "<CMD>call VSCodeCall('editor.action.quickFix')<CR>", "Quick Fix...", opts = silent },
     },
     v = {
         ---- fix scrolling
@@ -69,6 +76,7 @@ M.vscode = {
         ---- coc substitute:
         ["<leader>ff"] = { "<CMD>call VSCodeCall('editor.action.formatDocument')<CR>", "Format Document", opts = nowait },
         ["<leader>FF"] = { "<CMD>call VSCodeCall('editor.action.formatDocument')<CR><CMD>call VSCodeCall('workbench.action.files.save')<CR>", "Format Document and Save", opts = nowait },
+        ["<leader>fl"] = { "<CMD>call VSCodeCall('editor.action.quickFix')<CR>", "Quick Fix...", opts = silent },
     },
     i = {
         ---- fix scrolling
