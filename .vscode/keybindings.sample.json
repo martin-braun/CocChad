@@ -321,7 +321,7 @@
     {
         "key": "ctrl+e",
         "command": "workbench.files.action.focusFilesExplorer",
-        "when": "!filesExplorerFocus"
+        "when": "!filesExplorerFocus && !editorTextFocus"
     },
     {
         "key": "ctrl+e",
@@ -330,7 +330,8 @@
     },
     {
         "key": "ctrl+q",
-        "command": "workbench.action.closeActiveEditor"
+        "command": "workbench.action.closeActiveEditor",
+        "when": "!editorTextFocus"
     },
     {
         "key": "ctrl+k",
@@ -345,12 +346,12 @@
     {
         "key": "ctrl+k",
         "command": "workbench.action.previousEditorInGroup",
-        "when": "editorFocus"
+        "when": "editorFocus && !editorTextFocus"
     },
     {
         "key": "ctrl+j",
         "command": "workbench.action.nextEditorInGroup",
-        "when": "editorFocus"
+        "when": "editorFocus && !editorTextFocus"
     },
     {
         "key": "ctrl+w ctrl+w",
@@ -379,5 +380,10 @@
         "key": "ctrl+n",
         "command": "workbench.action.files.newUntitledFile",
         "when": "!editorTextFocus"
+    },
+    {
+        "key": "c",
+        "command": "filesExplorer.copy",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
     }
 ]
