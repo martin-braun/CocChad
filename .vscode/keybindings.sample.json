@@ -429,5 +429,10 @@
         "key": "ctrl+p",
         "command": "search.action.focusPreviousSearchResult",
         "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "search.action.clearSearchResults",
+        "when": "searchViewletFocus || inSearchEditor"
     }
 ]
