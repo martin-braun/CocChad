@@ -385,5 +385,49 @@
         "key": "c",
         "command": "filesExplorer.copy",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+    },
+    {
+        "key": "ctrl+shift+7",
+        "command": "-vscode-neovim.send",
+        "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "ctrl+shift+7",
+        "command": "-workbench.action.terminal.sendSequence",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "up",
+        "command": "-history.showPrevious",
+        "when": "historyNavigationBackwardsEnabled && historyNavigationWidgetFocus && !suggestWidgetVisible"
+    },
+    {
+        "key": "down",
+        "command": "-history.showNext",
+        "when": "historyNavigationForwardsEnabled && historyNavigationWidgetFocus && !suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+shift+7",
+        "command": "workbench.action.replaceInFiles"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "search.action.focusSearchList",
+        "when": "searchViewletFocus"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "search.action.cancel",
+        "when": "listFocus && searchViewletVisible && !inputFocus && searchState != '0'"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "search.action.focusNextSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
     }
 ]
