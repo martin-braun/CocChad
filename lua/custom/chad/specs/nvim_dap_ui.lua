@@ -1,7 +1,10 @@
+local compat = require("custom.compat")
+
 local M = { "rcarriga/nvim-dap-ui" }
 
 M.name = "nvim_dap_ui"
 M.lazy = true
+M.cond = not compat
 M.dependencies = { "nvim_dap" }
 
 M.init = function()

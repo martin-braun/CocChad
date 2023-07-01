@@ -1,7 +1,10 @@
+local compat = require("custom.compat")
+
 local M = { "f-person/auto-dark-mode.nvim" }
 
 M.name = "auto_dark_mode"
 M.lazy = false
+M.cond = not compat
 -- M.dependencies = {}
 
 M.init = function()

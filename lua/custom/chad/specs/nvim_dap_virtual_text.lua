@@ -1,7 +1,10 @@
+local compat = require("custom.compat")
+
 local M = { "theHamsta/nvim-dap-virtual-text" }
 
 M.name = "nvim_dap_virtual_text"
 M.lazy = true
+M.cond = not compat
 M.dependencies = { "nvim_dap" }
 
 M.init = function()

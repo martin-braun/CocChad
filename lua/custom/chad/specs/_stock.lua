@@ -1,11 +1,14 @@
+local compat = require("custom.compat")
+
 return {
-    { "NvChad/ui", enabled = true },
-    { "NvChad/extensions", enabled = true },
-    { "NvChad/base46", enabled = true },
+    { "NvChad/ui", enabled = true, cond = not compat },
+    { "NvChad/extensions", enabled = true, cond = not compat },
+    { "NvChad/base46", enabled = true, cond = not compat },
     { "NvChad/nvterm", enabled = false }, -- use tmux for additional shells
     {
         "NvChad/nvim-colorizer.lua",
         enabled = true,
+        cond = not compat,
         opts = {
             user_default_options = {
                 RGB = true, -- #RGB hex codes
@@ -33,8 +36,9 @@ return {
     { "windwp/nvim-autopairs", enabled = false }, -- use coc.nvim instead
     { "nvim-treesitter/nvim-treesitter", enabled = false, }, -- use coc.nvim instead
     { 
-        "lukas-reineke/indent-blankline.nvim", 
+        "lukas-reineke/indent-blankline.nvim",
         enabled = true,
+        cond = not compat,
         opts = {
             show_current_context = false,
             show_current_context_start = false,
@@ -43,6 +47,7 @@ return {
     {
         "nvim-tree/nvim-tree.lua",
         enabled = true,
+        cond = not compat,
         opts = {
             view = {
                 adaptive_size = true,
@@ -179,6 +184,7 @@ return {
     {
         "nvim-telescope/telescope.nvim",
         enabled = true,
+        cond = not compat,
         opts = {
             defaults = {
                 layout_strategy = "vertical",
@@ -196,6 +202,7 @@ return {
     {
         "folke/which-key.nvim",
         enabled = true,
+        cond = not compat,
         opts = {
             keys = { "<leader>", '"', "'", "`" }
         }

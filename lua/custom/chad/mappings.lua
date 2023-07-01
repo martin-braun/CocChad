@@ -5,7 +5,7 @@ local silent = { silent = true }
 local nowait = { nowait = true }
 local noremap = { noremap = true }
 local expr = { expr = true }
-local noreplace_keycodes = { replace_keycodes = false }
+local no_replace_keycodes = { replace_keycodes = false }
 
 M.disabled = {
     n = {
@@ -250,11 +250,11 @@ M.coc = {
     i = {
         ["<C-d>"] = { 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-d>"', "Scroll down", opts = vim.tbl_extend("error", silent, nowait, expr) },
         ["<C-u>"] = { 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-u>"', "Scroll up", opts = vim.tbl_extend("error", silent, nowait, expr) },
-        ["<C-n>"] = { 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<C-n>" : coc#refresh()', "Move suggestion down / show suggestions", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
-        ["<Down>"] = { 'coc#pum#visible() ? coc#pum#next(1) : "<Down>"', "Move suggestion down", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
-        ["<C-p>"] = { 'coc#pum#visible() ? coc#pum#prev(1) : "<C-p>"', "Move suggestion up", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
-        ["<Up>"] = { 'coc#pum#visible() ? coc#pum#prev(1) : "<Up>"', "Move suggestion up", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
-        ["<CR>"] = { 'coc#pum#visible() ? coc#pum#confirm() : "<CR>"', "Confirm selection", opts = vim.tbl_extend("error", silent, noremap, expr, noreplace_keycodes) },
+        ["<C-n>"] = { 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<C-n>" : coc#refresh()', "Move suggestion down / show suggestions", opts = vim.tbl_extend("error", silent, noremap, expr, no_replace_keycodes) },
+        ["<Down>"] = { 'coc#pum#visible() ? coc#pum#next(1) : "<Down>"', "Move suggestion down", opts = vim.tbl_extend("error", silent, noremap, expr, no_replace_keycodes) },
+        ["<C-p>"] = { 'coc#pum#visible() ? coc#pum#prev(1) : "<C-p>"', "Move suggestion up", opts = vim.tbl_extend("error", silent, noremap, expr, no_replace_keycodes) },
+        ["<Up>"] = { 'coc#pum#visible() ? coc#pum#prev(1) : "<Up>"', "Move suggestion up", opts = vim.tbl_extend("error", silent, noremap, expr, no_replace_keycodes) },
+        ["<CR>"] = { 'coc#pum#visible() ? coc#pum#confirm() : "<CR>"', "Confirm selection", opts = vim.tbl_extend("error", silent, noremap, expr, no_replace_keycodes) },
         ["<C-e>"] = { '<Plug>(coc-snippets-expand-jump)', "Insert snippet" },
         ["<C-l>"] = { 'coc#refresh()', "Show suggestions", opts = vim.tbl_extend("error", silent, expr) },
     },
@@ -351,15 +351,21 @@ M.hex = {
 
 M.deepl = {
     v = {
-        ["<leader>tr2en"] = { '<CMD>call deepl#v("EN")<CR>', "translate to English", opt = silent },
-        ["<leader>trdeen"] = { '<CMD>call deepl#v("EN", "DE")<CR>', "translate from German to English", opt = silent },
-        ["<leader>trtren"] = { '<CMD>call deepl#v("EN", "TR")<CR>', "translate from Turkish to English", opt = silent },
-        ["<leader>tr2de"] = { '<CMD>call deepl#v("DE")<CR>', "translate to German", opt = silent },
-        ["<leader>trende"] = { '<CMD>call deepl#v("DE", "EN")<CR>', "translate from English to German", opt = silent },
-        ["<leader>trtrde"] = { '<CMD>call deepl#v("DE", "TR")<CR>', "translate from Turkish to German", opt = silent },
-        ["<leader>tr2tr"] = { '<CMD>call deepl#v("TR")<CR>', "translate to Turkish", opt = silent },
-        ["<leader>trentr"] = { '<CMD>call deepl#v("TR", "EN")<CR>', "translate from English to Turkish", opt = silent },
-        ["<leader>trdetr"] = { '<CMD>call deepl#v("TR", "DE")<CR>', "translate from German to Turkish", opt = silent },
+        ["<leader>tr2en"] = { '<CMD>call deepl#v("EN")<CR>', "Translate to English", opt = silent },
+        ["<leader>trdeen"] = { '<CMD>call deepl#v("EN", "DE")<CR>', "Translate from German to English", opt = silent },
+        ["<leader>trtren"] = { '<CMD>call deepl#v("EN", "TR")<CR>', "Translate from Turkish to English", opt = silent },
+        ["<leader>tr2de"] = { '<CMD>call deepl#v("DE")<CR>', "Translate to German", opt = silent },
+        ["<leader>trende"] = { '<CMD>call deepl#v("DE", "EN")<CR>', "Translate from English to German", opt = silent },
+        ["<leader>trtrde"] = { '<CMD>call deepl#v("DE", "TR")<CR>', "Translate from Turkish to German", opt = silent },
+        ["<leader>tr2tr"] = { '<CMD>call deepl#v("TR")<CR>', "Translate to Turkish", opt = silent },
+        ["<leader>trentr"] = { '<CMD>call deepl#v("TR", "EN")<CR>', "Translate from English to Turkish", opt = silent },
+        ["<leader>trdetr"] = { '<CMD>call deepl#v("TR", "DE")<CR>', "Translate from German to Turkish", opt = silent },
+    }
+}
+
+M.firenvim = {
+    n = {
+        ["<leader>cfni"] = { "<CMD>call firenvim#install(0)<CR>", "Install FireNvim bridge" },
     }
 }
 

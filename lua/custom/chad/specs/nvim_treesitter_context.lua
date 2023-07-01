@@ -1,7 +1,10 @@
+local compat = require("custom.compat")
+
 local M = { "nvim-treesitter/nvim-treesitter-context" }
 
 M.name = "nvim_treesitter_context"
 M.lazy = false
+M.cond = not compat
 -- M.dependencies = {}
 
 M.init = function()

@@ -1,7 +1,10 @@
+local compat = require("custom.compat")
+
 local M = { "RaafatTurki/hex.nvim" }
 
 M.name = "hex_nvim"
 M.lazy = false
+M.cond = not compat
 -- M.dependencies = {}
 
 M.init = function()

@@ -1,7 +1,10 @@
+local compat = require("custom.compat")
+
 local M = { "mfussenegger/nvim-dap" }
 
 M.name = "nvim_dap"
 M.lazy = true
+M.cond = not compat
 -- M.dependencies = {}
 
 M.init = function()

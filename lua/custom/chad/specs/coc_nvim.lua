@@ -1,7 +1,10 @@
+local compat = require("custom.compat")
+
 local M = { "neoclide/coc.nvim" }
 
 M.name = "coc_nvim"
 M.lazy = false
+M.cond = not compat
 -- M.dependencies = {}
 
 M.init = function()

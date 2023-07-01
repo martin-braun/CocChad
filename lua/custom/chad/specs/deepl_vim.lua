@@ -2,6 +2,7 @@ local M = { "ryicoh/deepl.vim" }
 
 M.name = "deepl_vim"
 M.lazy = true
+M.cond = true
 -- M.dependencies = {}
 
 M.init = function()
@@ -17,7 +18,7 @@ end
 -- M.event = {}
 -- M.cmd = {}
 -- M.ft = {}
-M.keys = { 
+M.keys = {
     { "<leader>tr", mode = 'v' },
 }
 

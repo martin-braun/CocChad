@@ -1,9 +1,16 @@
+local compat = require("custom.compat")
+
 local M = {}
 
-if vim.g.vscode then
-    M.plugins = "custom.chad.vscode.plugins"
-    M.mappings = require("custom.chad.vscode.mappings")
+M.plugins = "custom.chad.plugins"
+
+if compat == "vscode" then
+    M.mappings = require("custom.chad.compat.vscode.mappings")
+elseif compat == "firenvim" then
+    M.mappings = require("custom.chad.compat.firenvim.mappings")
 else
+    M.mappings = require("custom.chad.mappings")
+
     M.ui = {
         theme_toggle = { "one_light", "onedark" },
         theme = "onedark",
@@ -37,8 +44,7 @@ else
             -- },
         },
     }
-    M.plugins = "custom.chad.plugins"
-    M.mappings = require("custom.chad.mappings")
+
 end
 
 return M

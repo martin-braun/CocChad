@@ -1,7 +1,10 @@
+local compat = require("custom.compat")
+
 local M = { "jwalton512/vim-blade" }
 
 M.name = "vim_blade"
 M.lazy = true
+M.cond = not compat
 -- M.dependencies = {}
 
 M.init = function()

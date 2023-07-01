@@ -1,7 +1,10 @@
+local compat = require("custom.compat")
+
 local M = { "nvim-telescope/telescope-dap.nvim" }
 
 M.name = "telescope_dap_nvim"
 M.lazy = true
+M.cond = not compat
 M.dependencies = { "nvim_dap", "nvim-telescope/telescope.nvim" }
 
 M.init = function()

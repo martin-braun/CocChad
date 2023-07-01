@@ -1,7 +1,10 @@
+local compat = require("custom.compat")
+
 local M = { "Exafunction/codeium.vim" }
 
 M.name = "codeium_vim"
 M.lazy = true
+M.cond = not compat
 -- M.dependencies = {}
 
 M.init = function()

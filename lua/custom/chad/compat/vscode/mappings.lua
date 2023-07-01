@@ -1,11 +1,11 @@
-local M = require("custom.chad.mappings")
+local M = require("custom.chad.compat.base.mappings")
 
 local script = { script = true }
 local silent = { silent = true }
 local nowait = { nowait = true }
 local noremap = { noremap = true }
 local expr = { expr = true }
-local noreplace_keycodes = { replace_keycodes = false }
+local no_replace_keycodes = { replace_keycodes = false }
 
 M.general.n["<leader>uu"] = nil
 M.general.n["<leader>sl"] = nil
@@ -18,15 +18,6 @@ M.general.i["<C-s>"] = { "<CMD>call VSCodeCall('workbench.action.files.save')<CR
  
 M.general.v["<C-s>"] = { "<CMD>call VSCodeCall('workbench.action.files.save')<CR>", "Save", opts = nowait }
 M.general.v["<leader>ss"] = { "<CMD>call VSCodeCall('workbench.action.files.saveAll')<CR>", "Save all files", opts = nowait }
-
-M.telescope = nil
-M.nvimtree = nil
-M.base46 = nil
-M.tabufline = nil
-M.coc = nil
-M.dap = nil
-M.hex = nil
-M.arduino = nil
 
 M.vscode = {
     n = {

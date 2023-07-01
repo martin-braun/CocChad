@@ -1,4 +1,3 @@
--- Neovim Plugins
 local M = require("custom.chad.specs._stock")
 
 local specs = {
@@ -14,6 +13,7 @@ local specs = {
     "telescope_dap_nvim",
     "vim_blade",
     "vim_arduino",
+    "firenvim",
 }
 
 for _ , spec in ipairs( specs  )  do
