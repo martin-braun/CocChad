@@ -9,6 +9,8 @@ local no_replace_keycodes = { replace_keycodes = false }
 
 M.firenvim = {
     n = {
+        -- exit with C-c
+        ["<C-c>"] = { "ZZ", "" },
         -- no mouse
         ["<LeftMouse>"] = { "<nop>", "" },
         ["<MiddleMouse>"] = { "<nop>", "" },
@@ -36,7 +38,7 @@ M.firenvim = {
         ["ù"] = { "`u", "", opts = nowait },
         ["Ú"] = { "'U", "", opts = nowait },
         ["Ù"] = { "`U", "", opts = nowait },
-        -- cmd to ctrl
+        -- cmd to ctrl (macos)
         ["<D-r>"] = { "<C-r>", "" },
         ["<D-a>"] = { "<C-a>", "" },
         ["<D-x>"] = { "<C-x>", "" },
@@ -49,7 +51,7 @@ M.firenvim = {
         ["<LeftMouse>"] = { "<nop>", "" },
         ["<MiddleMouse>"] = { "<nop>", "" },
         ["<RightMouse>"] = { "<nop>", "" },
-        -- cmd to ctrl
+        -- cmd to ctrl (macos)
         ["<D-c>"] = { "<C-c>", "" },
     },
     v = {
@@ -57,7 +59,7 @@ M.firenvim = {
         ["<LeftMouse>"] = { "<nop>", "" },
         ["<MiddleMouse>"] = { "<nop>", "" },
         ["<RightMouse>"] = { "<nop>", "" },
-        -- cmd to ctrl
+        -- cmd to ctrl (macos)
         ["<D-c>"] = { "<C-c>", "" },
     },
 }
