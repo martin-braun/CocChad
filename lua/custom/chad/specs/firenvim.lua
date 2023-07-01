@@ -16,6 +16,7 @@ M.config = function()
         }
     }
     -- start in append mode:
+    vim.cmd("set guifont=:h22")
     vim.cmd("call cursor(0, col('.') + 1)")
     vim.cmd("startinsert")
 end
