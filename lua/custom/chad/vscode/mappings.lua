@@ -51,6 +51,14 @@ M.vscode = {
         
         ---- tabufline substitute:
         ["<C-n>"] = { "<CMD>call VSCodeCall('workbench.action.files.newUntitledFile')<CR>", "File: New Untitled Text File", opts = nowait },
+        ["<C-w>h"] = { "<CMD>call VSCodeCall('workbench.action.navigateLeft')<CR>", "View: Navigate to the View on the Left", opts = nowait },
+        ["<C-w><Left>"] = { "<CMD>call VSCodeCall('workbench.action.navigateLeft')<CR>", "View: Navigate to the View on the Left", opts = nowait },
+        ["<C-w>l"] = { "<CMD>call VSCodeCall('workbench.action.navigateLeft')<CR>", "View: Navigate to the View on the Left", opts = nowait },
+        ["<C-w><Right>"] = { "<CMD>call VSCodeCall('workbench.action.navigateRight')<CR>", "View: Navigate to the View on the Right", opts = nowait },
+        ["<C-w>k"] = { "<CMD>call VSCodeCall('workbench.action.focusAboveGroup')<CR>", "View: Focus Editor Group Above", opts = nowait }, -- undo navigateUp
+        ["<C-w><Up>"] = { "<CMD>call VSCodeCall('workbench.action.focusAboveGroup')<CR>", "View: Focus Editor Group Above", opts = nowait }, -- undo navigateUp
+        ["<C-w>j"] = { "<CMD>call VSCodeCall('workbench.action.focusBelowGroup')<CR>", "View: Focus Editor Group Below", opts = nowait }, -- undo navigateDown
+        ["<C-w><Down>"] = { "<CMD>call VSCodeCall('workbench.action.focusBelowGroup')<CR>", "View: Focus Editor Group Below", opts = nowait }, -- undo navigateDown
         ["<C-w>c"] = { "<CMD>call VSCodeCall('workbench.action.files.newUntitledFile')<CR>", "File: New Untitled Text File", opts = nowait },
         ["<C-w>n"] = { "<CMD>call VSCodeCall('workbench.action.nextEditor')<CR>", "View: Open Next Editor", opts = nowait },
         ["<C-j>"] = { "<CMD>call VSCodeCall('workbench.action.nextEditorInGroup')<CR>", "View: Open Next Editor in Group", opts = nowait },
