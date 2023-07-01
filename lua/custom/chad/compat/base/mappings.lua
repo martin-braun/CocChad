@@ -7,11 +7,8 @@ local noremap = { noremap = true }
 local expr = { expr = true }
 local no_replace_keycodes = { replace_keycodes = false }
 
-M.disabled = {
-    n = {
-        ["<leader>e"] = nil, -- undo nvim-tree
-    }
-}
+M.disabled.n["<leader>e"] = ""
+M.disabled.n["<C-c>"] = ""
 
 M.general.n["<leader>uu"] = nil
 M.general.n["<leader>sl"] = nil
