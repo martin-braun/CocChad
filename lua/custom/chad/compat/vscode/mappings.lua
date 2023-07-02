@@ -28,6 +28,7 @@ M.vscode = {
         ---- nvchad substitute:
         ["<leader>e"] = { "<CMD>call VSCodeCall('workbench.files.action.focusFilesExplorer')<CR>", "File: Focus on Files Explorer", opts = nowait },
         ["<leader>fi"] = { "<CMD>call VSCodeCall('editor.action.formatDocument')<CR>", "Format Document", opts = nowait },
+        ["gf"] = { "<CMD>call VSCodeCall('seito-openfile.openFileFromText')<CR>", "File: Open file under cursor", opts = nowait },
 
         ---- telescope substitute:
         ["<CR>"] = { "<CMD>call VSCodeNotify('workbench.action.showCommands', { 'query': expand('<cword>')})<CR>", "Show All Commands" },

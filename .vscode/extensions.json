@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "asvetliakov.vscode-neovim",
+    "fr43nk.seito-openfile",
     "JulianIaquinandi.nvim-ui-modifier",
     "Codeium.codeium"
   ],
