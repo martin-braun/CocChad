@@ -2,7 +2,9 @@
 
 My NvChad customs for coc.nvim, nvim-dap, VSCode, FireNvim etc.
 
-This custom set is meant to be installed on top of NvChad. It focuses on reverting some original behavior of nvim as well as providing a `coc.nvim` configuration with many language servers out of the box. It also comes with `nvim-dap` and some extensions for some languages to give debugging support right out-of-the-box.
+This configuration is meant to be installed on top of Neovim. It installs NvChad, but focuses on reverting some original behavior of Neovim as well as providing a `coc.nvim` configuration with many language servers out of the box. It also comes with `nvim-dap` and some extensions for some languages to give debugging support right out-of-the-box.
+
+This configuration also enables Neovim to be used in compat mode with VSCode and FireNvim.
 
 ## Installation
 
