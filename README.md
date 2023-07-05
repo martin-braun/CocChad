@@ -22,6 +22,8 @@ Please read the script before running it! I'm not responsible for any damage. Th
 
 This configuration is compatible with [vscode-neovim/vscode-neovim](https://github.com/vscode-neovim/vscode-neovim), but it recommends you to use [these keybindings](.vscode/keybindings.sample.json) and [these settings](.vscode/settings.sample.json) in VSCode to make all work properly.
 
+Please checkout the [recommend extensions](.vscode/extensions.json) as well.
+
 ### FireNvim
 
 This configuration is compatible with [glacambre/firenvim](https://github.com/glacambre/firenvim), load the plugin and install the browser bridge via `<leader>cfni` in a normal terminal session. To transform a textarea to a Neovim window, you have to trigger it with (cmd+e / ctrl+e).
