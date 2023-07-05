@@ -3,6 +3,7 @@
     "asvetliakov.vscode-neovim",
     "fr43nk.seito-openfile",
     "JulianIaquinandi.nvim-ui-modifier",
+    "chrislajoie.vscode-modelines",
     "Codeium.codeium"
   ],
   "unwantedRecommendations": []
