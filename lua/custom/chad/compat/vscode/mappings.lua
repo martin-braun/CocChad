@@ -41,7 +41,7 @@ M.vscode = {
 
         ---- nvimtree substitute:
         ["<C-e>"] = { "<CMD>call VSCodeCall('workbench.files.action.focusFilesExplorer')<CR>", "File: Focus on Files Explorer" },
-        
+
         ---- tabufline substitute:
         ["<C-n>"] = { "<CMD>call VSCodeCall('workbench.action.files.newUntitledFile')<CR>", "File: New Untitled Text File", opts = nowait },
         ["<C-w>h"] = { "<CMD>call VSCodeCall('workbench.action.navigateLeft')<CR>", "View: Navigate to the View on the Left", opts = nowait },
@@ -61,7 +61,14 @@ M.vscode = {
         ["<leader>k"] = { "<CMD>call VSCodeCall('workbench.action.moveEditorLeftInGroup')<CR>", "View: Move Editor Left", opts = nowait },
         ["<C-q>"] = { "<CMD>call VSCodeCall('workbench.action.closeActiveEditor')<CR>", "View: Close Editor", opts = nowait },
         ["<leader>Q"] = { "<CMD>call VSCodeCall('workbench.action.closeEditorsToTheRight')<CR>", "View: Close Editors to the Right in Group", opts = nowait },
-        
+        ["<C-w>\""] = { "<CMD>call VSCodeCall('workbench.action.splitEditorDown')<CR>", "View: Split Editor Down", opts = nowait },
+        ["<C-w>%"] = { "<CMD>call VSCodeCall('workbench.action.splitEditorRight')<CR>", "View: Split Editor Right", opts = nowait },
+        ["<C-w>x"] = { "<CMD>call VSCodeCall('workbench.action.closeActiveEditor')<CR>", "View: Close Editor", opts = nowait },
+        ["<C-w>+"] = { "<CMD>call VSCodeCall('workbench.action.increaseViewHeight')<CR>", "Increase Editor Height", opts = nowait },
+        ["<C-w>-"] = { "<CMD>call VSCodeCall('workbench.action.decreaseViewHeight')<CR>", "Decrease Editor Height", opts = nowait },
+        ["<C-w>>"] = { "<CMD>call VSCodeCall('workbench.action.increaseViewWidth')<CR>", "Increase Editor Width", opts = nowait },
+        ["<C-w><"] = { "<CMD>call VSCodeCall('workbench.action.decreaseViewWidth')<CR>", "Decrease Editor Width", opts = nowait },
+
         ---- coc substitute:
         ["<leader>ff"] = { "<CMD>call VSCodeCall('editor.action.formatDocument')<CR>", "Format Document", opts = nowait },
         ["<leader>FF"] = { "<CMD>call VSCodeCall('editor.action.formatDocument')<CR><CMD>call VSCodeCall('workbench.action.files.save')<CR>", "Format Document and Save", opts = nowait },

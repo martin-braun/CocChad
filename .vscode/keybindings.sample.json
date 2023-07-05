@@ -193,18 +193,14 @@
         "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
     },
     {
-        "key": "ctrl+w",
-        "command": "-workbench.action.switchWindow"
-    },
-    {
         "key": "ctrl+w ctrl+w",
         "command": "workbench.action.focusNextGroup",
-        "when": "!editorTextFocus && !filesExplorerFocus && !searchViewletFocus"
+        "when": "!editorTextFocus && !(filesExplorerFocus || inSearchEditor || searchViewletFocus || replaceInputBoxFocus)"
     },
     {
         "key": "ctrl+w ctrl+w",
         "command": "workbench.action.focusFirstEditorGroup",
-        "when": "filesExplorerFocus || searchViewletFocus"
+        "when": "!editorTextFocus && (filesExplorerFocus || inSearchEditor || searchViewletFocus || replaceInputBoxFocus)"
     },
     {
         "key": "ctrl+w up",
@@ -309,12 +305,12 @@
     {
         "key": "ctrl+k",
         "command": "workbench.action.previousEditorInGroup",
-        "when": "editorFocus && !editorTextFocus"
+        "when": "!editorTextFocus && !panelFocus"
     },
     {
         "key": "ctrl+j",
         "command": "workbench.action.nextEditorInGroup",
-        "when": "editorFocus && !editorTextFocus"
+        "when": "!editorTextFocus && !panelFocus"
     },
     {
         "key": "ctrl+g",
@@ -388,6 +384,21 @@
         "command": "workbench.action.toggleMaximizedPanel"
     },
     {
+        "key": "ctrl+t shift+2",
+        "command": "terminal.focus",
+        "when": "!(terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile)"
+    },
+    {
+        "key": "ctrl+t shift+2",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+t shift+5",
+        "command": "terminal.focus",
+        "when": "!(terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile)"
+    },
+    {
         "key": "ctrl+t shift+5",
         "command": "workbench.action.terminal.split",
         "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
@@ -443,11 +454,76 @@
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     },
     {
-        "key": "ctrl+t shift+2",
-        "command": "terminal.focus"
-    },
-    {
         "key": "ctrl+t down",
         "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.switchWindow"
+    },
+    {
+        "key": "ctrl+w =",
+        "command": "workbench.action.evenEditorWidths",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+w _",
+        "command": "workbench.action.toggleEditorWidths",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+w shift+-",
+        "command": "workbench.action.toggleEditorWidths",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+w <",
+        "command": "workbench.action.decreaseViewWidth",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+w [Backquote]",
+        "command": "workbench.action.decreaseViewWidth",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+w >",
+        "command": "workbench.action.increaseViewWidth",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+w shift+[Backquote]",
+        "command": "workbench.action.increaseViewWidth",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+w +",
+        "command": "workbench.action.increaseViewHeight",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+w -",
+        "command": "workbench.action.decreaseViewHeight",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+w s",
+        "command": "workbench.action.splitEditorDown",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+w v",
+        "command": "workbench.action.splitEditorRight",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+w n",
+        "command": "workbench.action.nextEditor",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+w p",
+        "command": "workbench.action.previousEditor",
+        "when": "!editorTextFocus"
     }
 ]
