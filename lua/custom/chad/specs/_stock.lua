@@ -87,10 +87,14 @@ return {
             },
             filters = {
                 custom = { 
-                    "Session\\.vim$",
-                    "\\.git$",
+                    "^\\.git$",
+                    "^\\.svg$",
+                    "^\\.hg$",
+                    "^CVS$",
+                    "^\\.DS_Store$",
+                    "^\\.Thumbs.db$",
                     "Desktop\\.ini$",
-                    "\\.DS_Store$",
+                    "Session\\.vim$",
                 },
             },
             on_attach = function(bufnr)

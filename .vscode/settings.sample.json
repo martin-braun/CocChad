@@ -5,6 +5,27 @@
     },
     "editor.lineNumbers": "relative",
     "editor.cursorSurroundingLines": 3,
+    "nvim-ui.nvimColorNormal": "#77a3c4",
+    "nvim-ui.nvimColorInsert": "#d47eed",
+    "nvim-ui.nvimColorVisual": "#9db9f4",
+    "nvim-ui.nvimColorReplace": "#8cc470",
+    "nvim-ui.nvimColorCustomizationKeys": [
+        "activityBarBadge.background",
+        "editorCursor.foreground",
+        "inputValidation.errorBorder",
+        "panel.border",
+        "panelTitle.activeBorder",
+        "panelTitle.activeForeground",
+        "peekView.border",
+        "peekViewTitleLabel.foreground",
+        "tab.activeBorder",
+        "statusBar.border",
+        "statusBar.background"
+    ],
+    "files.exclude": {
+        "**/Desktop.ini": true,
+        "**/Session.vim": true
+    },
     "codeium.enableConfig": {
         "*": true,
         "Log": true
