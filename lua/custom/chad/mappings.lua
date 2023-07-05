@@ -98,6 +98,9 @@ M.general = {
         ["<C-w>º"] = { "<CMD>wincmd J<CR>", "Move window to the far-bottom", opts = nowait },
         ["<C-w>∆"] = { "<CMD>wincmd K<CR>", "Move window to the far-top", opts = nowait },
         ["<C-w>@"] = { "<CMD>wincmd L<CR>", "Move window to the far-right", opts = nowait },
+        -- fn alts
+        ["F2"] = { "<CMD>wincmd w<CR>", "Jump to next window", opts = nowait },
+        ["F4"] = { "<CMD>wincmd c<CR>", "Close window", opts = nowait },
     },
     i = {
         ["<C-s>"] = { "<CMD>w<CR>", "Save" },
@@ -114,11 +117,11 @@ M.general = {
 M.telescope = {
     n = {
         ["<CR>"] = { "<CMD>Telescope <CR>", "Open Telescope" },
-        ["<C-p>"] = { "<CMD>Telescope find_files <CR>", "Find files" },
-        ["<C-_>"] = { "<CMD>Telescope live_grep <CR>", "Live grep" }, -- CTRL+7
-        ["<leader>fk"] = { "<CMD>Telescope keymaps <CR>", "Show keys" },
-        ["<leader>fg"] = { "<CMD>Telescope git_commits <CR>", "Git commits" },
-        ["<C-g>"] = { "<CMD>Telescope git_status <CR>", "Git status" },
+        ["<C-p>"] = { "<CMD>Telescope find_files hidden=true<CR>", "Find files" },
+        ["<C-_>"] = { "<CMD>Telescope live_grep hidden=true<CR>", "Live grep" }, -- CTRL+7
+        ["<leader>fk"] = { "<CMD>Telescope keymaps<CR>", "Show keys" },
+        ["<leader>fg"] = { "<CMD>Telescope git_commits<CR>", "Git commits" },
+        ["<C-g>"] = { "<CMD>Telescope git_status<CR>", "Git status" },
     },
 }
 
