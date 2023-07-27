@@ -199,7 +199,7 @@ M.coc = {
         ["]g"] = { "<Plug>(coc-diagnostic-next)", "Navigate to next diagnostic", opts = silent },
         ["gd"] = { "<Plug>(coc-definition)", "Goto definition", opts = silent },
         ["gt"] = { "<Plug>(coc-type-definition)", "Goto type definition", opts = silent },
-        ["gi"] = { "<Plug>(coc-implementation)", "Goto implementation", opts = silent },
+        ["gw"] = { "<Plug>(coc-implementation)", "Goto implementation", opts = silent },
         ["gr"] = { "<Plug>(coc-references)", "Goto references", opts = silent },
         ["K"] = { '<CMD>lua _G.show_docs()<CR>', "Show documentation" },
         ["<leader>rn"] = { '<Plug>(coc-rename)', "Refactor rename symbol", opts = silent },
