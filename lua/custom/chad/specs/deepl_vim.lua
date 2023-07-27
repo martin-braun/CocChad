@@ -19,7 +19,8 @@ end
 -- M.cmd = {}
 -- M.ft = {}
 M.keys = {
-    { "<leader>tr", mode = 'v' },
+    { "<leader>tr", mode = 'n' },
+    { "<leader>tr", mode = 'x' },
 }
 
 -- M.priority = 50
