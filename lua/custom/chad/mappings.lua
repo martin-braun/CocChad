@@ -144,12 +144,6 @@ M.base46 = {
 M.tabufline = {
     n = {
         ["<C-n>"] = { "<CMD>enew<CR>", "Create buffer", opts = nowait },
-        ["<C-w>c"] = { "<CMD>enew<CR>", "Create buffer", opts = nowait },
-        ["<C-w>n"] = {
-            function()
-                require("nvchad_ui.tabufline").tabuflineNext()
-            end, "Goto next buffer", opts = silent
-        },
         ["<C-j>"] = {
             function()
                 require("nvchad_ui.tabufline").tabuflineNext()
@@ -160,12 +154,6 @@ M.tabufline = {
                 require("nvchad_ui.tabufline").move_buf(1)
             end,
             "Move buffer forward", opts = silent
-        },
-        ["<C-w>p"] = {
-            function()
-                require("nvchad_ui.tabufline").tabuflinePrev()
-            end,
-            "Goto prev buffer", opts = silent
         },
         ["<C-k>"] = {
             function()
@@ -222,7 +210,6 @@ M.coc = {
         ["<leader>ll"] = { '<Plug>(coc-codelens-action)', "Perform CodeLens action on the current line", opts = vim.tbl_extend("error", silent, nowait) },
         ["<C-y>"] = { '<Plug>(coc-range-select)', "Select ranges", opts = silent },
         ["<leader>uc"] = { '<CMD>CocUpdate<CR>', "Update coc extensions" },
-
         -- coc-flutter
         ["<leader>sfe"] = { '<CMD>CocList FlutterEmulators<CR>', "Launch Flutter emulator", opts = silent },
         ["<leader>sfE"] = { ':call jobstart("Emulator @flutter_emulator -no-snapshot-load")<CR>', "cold start flutter_emulator", opts = silent },
@@ -238,14 +225,12 @@ M.coc = {
         ["<leader>sfl"] = { '<CMD>CocCommand flutter.dev.openDevLog<CR>', "Show Flutter dev log" },
         ["<leader>sfc"] = { '<CMD>CocCommand flutter.dev.clearDevLog<CR>', "Clear Flutter dev server log" },
         ["<leader>sfp"] = { '<CMD>CocCommand flutter.dev.showPerformanceOverlay<CR>', "Show Flutter dev server performance overlay" },
-
         -- coc-deno
         ["<leader>sdc"] = { '<CMD>CocCommand deno.cache<CR>', "Cache Deno dependencies" },
         ["<leader>sds"] = { '<CMD>CocCommand deno.status<CR>', "Show Deno language server status" },
         ["<leader>sdt"] = { '<CMD>CocCommand deno.task<CR>', "Show/run Deno tasks" },
         ["<leader>sdp"] = { '<CMD>CocCommand deno.performance<CR>', "Display the timing averages for the internal Deno instrumentation" },
         ["<leader>sdi"] = { '<CMD>CocCommand deno.initializeWorkspace<CR>', "Initialize Deno workspace configuration" },
-
         --coc-blade
         ["<leader>sbo"] = { '<CMD>CocCommand blade.showOutput<CR>', "Show blade output channel", opts = silent },
         ["<leader>sbf"] = { '<CMD>CocCommand blade.bladeFormatter.run<CR>', "Run blade-formatter", opts = silent },
