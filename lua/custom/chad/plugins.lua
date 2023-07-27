@@ -28,7 +28,7 @@ vim.g.coc_global_extensions = {
     'coc-clangd',
     'coc-emmet',
     'coc-eslint',
-    'coc-flutter',
+    'coc-flutter-tools',
     'coc-highlight',
     'coc-html',
     'coc-java',
