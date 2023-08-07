@@ -34,7 +34,7 @@ vim.g.coc_global_extensions = {
     'coc-java',
     'coc-json',
     'coc-lua',
-    'coc-pairs',
+    -- 'cc-pairs',
     'coc-phpls',
     'coc-prettier',
     'coc-pyright',
