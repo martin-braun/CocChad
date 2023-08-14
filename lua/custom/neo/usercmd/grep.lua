@@ -12,7 +12,7 @@ function(opts)
         vim.cmd('VSCodeCall("workbench.action.replaceInFiles")')
         return
     end
-    local usage = "Usage: :Grep <regex> <filter?>, i.e. :Grep /my_string/g **/*, or :Grep! s/my_string/my_replacement/g **/*"
+    local usage = "Usage: :Grep <regex> <filter>, i.e. :Grep /my_string/g **/*, or :Grep! s/my_string/my_replacement/g **/*"
     if not opts.args or string.len(opts.args) < 1 then
         print(usage)
         return
