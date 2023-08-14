@@ -43,5 +43,13 @@
   "flutter.openDevLogSplitCommand": "botright 8split",
   "rust-analyzer.server.path": "rust-analyzer",
   "intelephense.licenceKey": "${env:INTELEPHENSE_LICENSE_KEY}",
-  "cursors.cancelKey": "<C-c>"
+  "cursors.cancelKey": "<C-c>",
+  "languageserver": {
+    "jsonnet": {
+      "command": "jsonnet-language-server",
+      "args": ["-t"],
+      "rootPatterns": [".git/", "jsonnetfile.json"],
+      "filetypes": ["jsonnet", "libsonnet"]
+    }
+  }
 }
