@@ -165,6 +165,7 @@ return {
                 --
                 -- You will need to insert "your code goes here" for any mappings with a custom action_cb
                 vim.keymap.set('n', 'e', api.node.open.edit, opts('Open'))
+                vim.keymap.set('n', 'l', api.node.open.preview, opts('Open Preview'))
                 vim.keymap.set('n', '+', api.tree.change_root_to_node, opts('CD'))
 
             end,
