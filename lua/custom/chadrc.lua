@@ -27,12 +27,8 @@ else
             end,
         },
         tabufline = {
-            overriden_modules = function()
-                return {
-                    buttons = function() -- hide buttons
-                        return ""
-                    end,
-                }
+            overriden_modules = function(modules)
+              table.remove(modules, 4)
             end,
         },
         hl_add = {
