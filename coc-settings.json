@@ -45,6 +45,16 @@
   "intelephense.licenceKey": "${env:INTELEPHENSE_LICENSE_KEY}",
   "cursors.cancelKey": "<C-c>",
   "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+    },
     "jsonnet": {
       "command": "jsonnet-language-server",
       "args": ["-t"],
