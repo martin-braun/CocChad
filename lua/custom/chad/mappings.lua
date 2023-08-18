@@ -110,8 +110,9 @@ M.general = {
         ["<leader>fi"] = { "mqgg=G`qzz", "Fix indentions" },
         ["<C-s>"] = { "<CMD>w<CR>", "Save" },
         ["<leader>ss"] = { "C<MD>wall<CR><CMD>mks!<CR>", "Save all files and local session", opts = nowait },
-        ["<leader>ti"] = { "c<C-r>=strftime('%Y-%m-%d %H:%M:%S')<C-m><C-c>", "Insert time" },
-        ["<leader>ts"] = { "c<C-r>=strftime('%Y%m%d_%H%M%S')<C-m><C-c>", "Insert timestamp" },
+        ["<leader>ti"] = { "c<C-r>=strftime('%Y-%m-%d %H:%M:%S')<C-m><C-c>", "Insert time", opts = nowait },
+        ["<leader>ts"] = { "c<C-r>=strftime('%Y%m%d_%H%M%S')<C-m><C-c>", "Insert timestamp", opts = nowait },
+        ["<leader>tu"] = { "c<C-r>=strftime('%s')<C-m><C-c>", "Insert unix epoch timestamp", opts = nowait },
     },
 }
 
