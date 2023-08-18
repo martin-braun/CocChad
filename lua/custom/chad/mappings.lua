@@ -147,35 +147,35 @@ M.tabufline = {
         ["<C-n>"] = { "<CMD>enew<CR>", "Create buffer", opts = nowait },
         ["<C-j>"] = {
             function()
-                require("nvchad_ui.tabufline").tabuflineNext()
+                require("nvchad.tabufline").tabuflineNext()
             end, "Goto next buffer", opts = silent
         },
         ["<leader>j"] = {
             function()
-                require("nvchad_ui.tabufline").move_buf(1)
+                require("nvchad.tabufline").move_buf(1)
             end,
             "Move buffer forward", opts = silent
         },
         ["<C-k>"] = {
             function()
-                require("nvchad_ui.tabufline").tabuflinePrev()
+                require("nvchad.tabufline").tabuflinePrev()
             end,
             "Goto prev buffer", opts = silent
         },
         ["<leader>k"] = {
             function()
-                require("nvchad_ui.tabufline").move_buf(-1)
+                require("nvchad.tabufline").move_buf(-1)
             end,
             "Move buffer backward", opts = silent
         },
         ["<C-q>"] = {
             function()
-                require("nvchad_ui.tabufline").close_buffer()
+                require("nvchad.tabufline").close_buffer()
             end, "Goto next buffer", opts = silent
         },
         ["<leader>Q"] = {
             function()
-                require("nvchad_ui.tabufline").closeBufs_at_direction("right")
+                require("nvchad.tabufline").closeBufs_at_direction("right")
             end,
             "Close buffers to the right", opts = silent
         },
