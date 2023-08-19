@@ -1,5 +1,14 @@
 local compat = require("custom.compat")
 
+local layout_strategies = require("telescope.pickers.layout_strategies")
+layout_strategies.dynamic = function(self, max_columns, max_lines, layout_config)
+    if vim.o.columns > 120 then
+        return layout_strategies.horizontal(self, max_columns, max_lines, layout_config)
+    else
+        return layout_strategies.vertical(self, max_columns, max_lines, layout_config)
+    end
+end
+
 return {
     { "NvChad/ui", enabled = true, cond = not compat },
     { "NvChad/extensions", enabled = true, cond = not compat },
@@ -193,7 +202,7 @@ return {
         cond = not compat,
         opts = {
             defaults = {
-                layout_strategy = "vertical",
+                layout_strategy = "dynamic",
                 layout_config = {
                     height = 0.95,
                     prompt_position = "top",
