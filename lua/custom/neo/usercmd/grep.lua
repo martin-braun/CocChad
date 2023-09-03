@@ -1,5 +1,3 @@
-local compat = require("custom.compat")
-
 -- Grep
 vim.api.nvim_create_user_command(
 'Grep',
@@ -70,4 +68,3 @@ function(opts)
 end,
 { nargs = '*', bang = true }
 )
-
