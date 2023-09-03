@@ -202,6 +202,12 @@ return {
         cond = not compat,
         opts = {
             defaults = {
+                file_ignore_patterns = {
+                    "\\.git",
+                    "node_modules",
+                    "__pycache__",
+                    "venv",
+                },
                 layout_strategy = "dynamic",
                 layout_config = {
                     height = 0.95,
