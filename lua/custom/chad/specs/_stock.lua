@@ -203,7 +203,7 @@ return {
         opts = {
             defaults = {
                 file_ignore_patterns = {
-                    "\\.git",
+                    ".git/",
                     "node_modules",
                     "__pycache__",
                     "venv",
