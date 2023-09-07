@@ -11,7 +11,6 @@ end
 
 return {
     { "NvChad/ui", enabled = true, cond = not compat },
-    { "NvChad/extensions", enabled = true, cond = not compat },
     { "NvChad/base46", enabled = true, cond = not compat },
     { "NvChad/nvterm", enabled = false }, -- use tmux for additional shells
     {
