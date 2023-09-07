@@ -1,4 +1,4 @@
 vim.api.nvim_create_autocmd({"BufNewFile", "BufRead", "BufEnter"},{
-    pattern = {"*.reg"},
-    command = "setf ini"
+    pattern = {"*.log"},
+    command = "setf log"
 })

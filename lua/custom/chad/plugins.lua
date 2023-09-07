@@ -5,6 +5,7 @@ local specs = {
     "coc_nvim",
     "codeium_vim",
     "deepl_vim",
+    "firenvim",
     "hex_nvim",
     "nvim_dap",
     "nvim_dap_ui",
@@ -13,7 +14,7 @@ local specs = {
     "telescope_dap_nvim",
     "vim_blade",
     "vim_arduino",
-    "firenvim",
+    "vim_log_highlighting",
 }
 
 for _ , spec in ipairs( specs  )  do

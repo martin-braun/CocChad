@@ -1,3 +1,4 @@
+require("custom.neo.autocmd.ft.log")
 require("custom.neo.autocmd.ft.reg")
 require("custom.neo.autocmd.ft.xaml")
 
