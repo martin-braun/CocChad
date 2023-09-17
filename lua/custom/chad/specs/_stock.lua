@@ -43,7 +43,7 @@ return {
     { "hrsh7th/cmp-path", enabled = false }; -- use coc.nvim instead
     { "windwp/nvim-autopairs", enabled = false }, -- use coc.nvim instead
     { "nvim-treesitter/nvim-treesitter", enabled = false, }, -- use coc.nvim instead
-    { 
+    {
         "lukas-reineke/indent-blankline.nvim",
         enabled = true,
         cond = not compat,
@@ -94,7 +94,7 @@ return {
                 ignore = false,
             },
             filters = {
-                custom = { 
+                custom = {
                     "^\\.git$",
                     "^\\.svg$",
                     "^\\.hg$",
@@ -193,7 +193,9 @@ return {
             --         dev = true,
             --     },
             -- },
-        }
+        },
+        lazy = false,
+        priority = 5000,
     },
     {
         "nvim-telescope/telescope.nvim",

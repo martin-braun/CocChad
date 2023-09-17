@@ -69,7 +69,7 @@ M.general = {
         ["<C-s>"] = { "<CMD>w<CR>", "Save" },
         ["<leader>y"] = { "<CMD>Lazy<CR>", "Open layz", opts = nowait },
         ["<leader>ss"] = { "<CMD>wall<CR><CMD>mks!<CR>", "Save all files and local session", opts = nowait },
-        ["<leader>sl"] = { '<CMD>silent exec "source Session.vim"<CR>', "Load local session", opts = nowait },
+        ["<leader>sl"] = { '<CMD>sil exec "so Session.vim"<CR>', "Load local session", opts = nowait },
         ["<leader>sx"] = { '<CMD>w<CR><CMD>let @+ = expand("%:p")<CR>:lua require("nvchad.tabufline").close_buffer()<CR>', "Save file and cut its buffer", opts = nowait },
         ["<leader>gx"] = { "<CMD>execute 'edit' @+<CR>", "Goto the file of the path in the current unnamed register", opts = nowait },
         ["<leader>ti"] = { "a<C-r>=strftime('%y-%m-%d %H:%M:%S')<C-m><C-c>", "Insert time", opts = nowait },

@@ -1,7 +1,15 @@
-require("custom.neo.autocmd.ft.log")
-require("custom.neo.autocmd.ft.reg")
-require("custom.neo.autocmd.ft.xaml")
+local compat = require("custom.compat")
 
-if vim.g.vscode then
-    require("custom.neo.autocmd.vscode.ui")
+local autocmds = {
+    { true, "ft.log" },
+    { true, "ft.reg" },
+    { true, "ft.xaml" },
+    { not compat, "mods.nvim_tree" },
+    { vim.g.vscode, "vscode.ui" },
+}
+
+for _ , autocmd in ipairs( autocmds  )  do
+    if autocmd[1] then
+        require("custom.neo.autocmd." .. autocmd[2])
+    end
 end
