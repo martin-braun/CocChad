@@ -25,6 +25,7 @@ end
 vim.g.coc_global_extensions = {
     'coc-blade',
     'coc-css',
+    'coc-clangd',
     'coc-deno',
     'coc-emmet',
     'coc-eslint',
@@ -47,6 +48,20 @@ vim.g.coc_global_extensions = {
     'coc-xml',
     'coc-yaml',
 }
+
+-- alternative to clang in coc-settings.json:
+-- "languageserver": {
+--   "ccls": {
+--     "command": "ccls",
+--     "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+--     "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+--     "initializationOptions": {
+--       "cache": {
+--         "directory": "/tmp/ccls"
+--       }
+--     }
+--   },
+-- }
 
 return M
 
