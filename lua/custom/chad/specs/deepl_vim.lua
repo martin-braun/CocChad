@@ -26,4 +26,3 @@ M.keys = {
 -- M.priority = 50
 
 return M
-

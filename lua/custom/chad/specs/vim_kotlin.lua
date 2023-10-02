@@ -23,4 +23,3 @@ M.ft = { "kotlin" }
 -- M.priority = 50
 
 return M
-

@@ -40,4 +40,3 @@ M.keys = { "<leader>d" }
 M.priority = 50
 
 return M
-

@@ -23,4 +23,3 @@ M.ft = { "log" }
 -- M.priority = 50
 
 return M
-

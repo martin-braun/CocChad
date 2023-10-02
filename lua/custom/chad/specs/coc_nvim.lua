@@ -88,4 +88,3 @@ M.branch = "release"
 M.priority = 100
 
 return M
-

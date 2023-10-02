@@ -23,4 +23,3 @@ M.event = { "InsertEnter" }
 -- M.priority = 0
 
 return M
-

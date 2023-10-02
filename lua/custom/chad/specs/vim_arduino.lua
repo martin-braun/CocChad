@@ -23,4 +23,3 @@ M.keys = { "<leader>a" }
 -- M.priority = 50
 
 return M
-

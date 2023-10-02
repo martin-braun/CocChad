@@ -30,4 +30,3 @@ M.keys = {
 M.priority = 1000
 
 return M
-

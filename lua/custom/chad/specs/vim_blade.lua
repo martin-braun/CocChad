@@ -25,4 +25,3 @@ M.ft = { "blade" }
 -- M.priority = 50
 
 return M
-
