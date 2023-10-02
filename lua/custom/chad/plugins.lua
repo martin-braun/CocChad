@@ -2,6 +2,7 @@ local M = require("custom.chad.specs._stock")
 
 local specs = {
     "auto_dark_mode",
+    "chafa_nvim",
     "coc_nvim",
     "codeium_vim",
     "deepl_vim",

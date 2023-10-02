@@ -3,7 +3,7 @@ local compat = require("custom.compat")
 local M = { "RaafatTurki/hex.nvim" }
 
 M.name = "hex_nvim"
-M.lazy = false
+M.lazy = true
 M.cond = not compat
 -- M.dependencies = {}
 
@@ -21,8 +21,10 @@ M.main = "hex"
 -- M.event = {}
 -- M.cmd = {}
 -- M.ft = {}
--- M.keys = {}
+M.keys = {
+    { "<leader>v", mode = 'n' },
+}
 
-M.priority = 50
+-- M.priority = 50
 
 return M

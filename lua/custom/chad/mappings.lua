@@ -335,12 +335,6 @@ M.codeium = {
     },
 }
 
-M.hex = {
-    n = {
-        ["<leader>h"] = { "<CMD>HexToggle<CR>", "Toggle hex view", opts = silent },
-    }
-}
-
 M.deepl = {
     v = {
         ["<leader>tr2en"] = { '<CMD>call deepl#v("EN")<CR>', "Translate to English", opt = silent },
@@ -352,6 +346,13 @@ M.deepl = {
         ["<leader>tr2tr"] = { '<CMD>call deepl#v("TR")<CR>', "Translate to Turkish", opt = silent },
         ["<leader>trentr"] = { '<CMD>call deepl#v("TR", "EN")<CR>', "Translate from English to Turkish", opt = silent },
         ["<leader>trdetr"] = { '<CMD>call deepl#v("TR", "DE")<CR>', "Translate from German to Turkish", opt = silent },
+    }
+}
+
+M.viewers = {
+    n = {
+        ["<leader>vh"] = { "<CMD>HexToggle<CR>", "Toggle hex view", opts = silent },
+        ["<leader>vi"] = { "<CMD>ViewImage<CR>", "View image", opts = silent },
     }
 }
 
