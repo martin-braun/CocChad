@@ -202,6 +202,12 @@ return {
         enabled = true,
         cond = not compat,
         opts = {
+            mappings = {
+                n = {
+                    ['<C-b>'] = require('telescope.actions').preview_scrolling_left,
+                    ['<C-f>'] = require('telescope.actions').preview_scrolling_right,
+                }
+            },
             defaults = {
                 file_ignore_patterns = {
                     ".git/",
