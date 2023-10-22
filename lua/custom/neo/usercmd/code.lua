@@ -6,7 +6,8 @@ function(_)
     vim.cmd('mks!')
     local r, c = unpack(vim.api.nvim_win_get_cursor(0))
     local g = vim.fn.expand('%') .. ':' .. r .. ':' .. c
-    vim.cmd('!codium . && codium -g ' .. g .. ' || code . && code -g ' .. g)
+    vim.cmd('!{ codium . && codium -g ' .. g .. '; } || { code . && code -g ' .. g .. '; }')
+    vim.cmd('bufdo! bw')
     vim.cmd('q!')
 end,
 { nargs = 0, bang = false }

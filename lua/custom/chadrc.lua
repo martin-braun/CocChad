@@ -13,7 +13,7 @@ else
 
     M.ui = {
         theme_toggle = { "one_light", "onedark" },
-        theme = "onedark",
+        theme = "one_light",
         statusline = {
             separator_style = "round", -- default/round/block/arrow
             overriden_modules = function()
