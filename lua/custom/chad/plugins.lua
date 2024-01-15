@@ -11,7 +11,6 @@ local specs = {
     "nvim_dap",
     "nvim_dap_ui",
     "nvim_dap_virtual_text",
-    "nvim_treesitter_context",
     "telescope_dap_nvim",
     "vim_blade",
     "vim_arduino",
