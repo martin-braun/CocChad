@@ -12,7 +12,7 @@ After installing Neovim, please fork this repository to allow further customizat
 
 - Pull your fork in a local working directory
 - Backup all your nvim data, the next step will remove it to link a new custom and ftplugin folder
-- Run `./link` (will reset all your nvim data)
+- Run `./install` (BEWARE: Will wipe all your previous nvim data)
 
 Please read the script before running it! I'm not responsible for any damage. This repository is primary for me to backing up my personal custom configuration for NvChad, but maybe it is beneficial to you.
 
