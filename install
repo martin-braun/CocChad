@@ -11,9 +11,9 @@ rm -rf "$to" 2>/dev/null || true
 mkdir -p "$to"
 git -C "$to" clone --depth 1 https://github.com/NvChad/NvChad.git . && nvim
 
-rm -r "$to/ftplugin" || true 
+rm -r "$to/ftplugin" 2>/dev/null || true 
 ln -s "$from/ftplugin" "$to/"
-rm -r "$to/lua/custom" || true 
+rm -r "$to/lua/custom" 2>/dev/null || true 
 ln -s "$from/lua/custom" "$to/lua/"
 ln -s "$from/.luarc.json" "$to/"
 ln -s "$from/coc-settings.json" "$to/"
