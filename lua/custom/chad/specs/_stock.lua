@@ -83,9 +83,13 @@ return {
                 },
                 special_files = {
                     "README.md",
+                    "README.txt",
                     "readme.md",
+                    "readme.txt",
                     "CONTRIBUTING.md",
+                    "CONTRIBUTING.txt",
                     "contributing.md",
+                    "contributing.txt",
                 },
                 symlink_destination = false,
             },
@@ -96,7 +100,7 @@ return {
             filters = {
                 custom = {
                     "^\\.git$",
-                    "^\\.svg$",
+                    "^\\.svn$",
                     "^\\.hg$",
                     "^CVS$",
                     "^\\.DS_Store$",
