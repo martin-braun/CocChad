@@ -357,10 +357,4 @@ M.viewers = {
     }
 }
 
-M.firenvim = {
-    n = {
-        ["<leader>cfni"] = { "<CMD>call firenvim#install(0)<CR>", "Install FireNvim bridge" },
-    }
-}
-
 return M

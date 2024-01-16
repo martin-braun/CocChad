@@ -4,7 +4,6 @@ local M = { "glacambre/firenvim" }
 
 M.name = "firenvim"
 M.lazy = compat ~= "firenvim"
--- M.dependencies = {}
 
 M.config = function()
     vim.g.firenvim_config = {
@@ -21,11 +20,9 @@ M.config = function()
     vim.cmd("startinsert")
 end
 
--- M.branch = ""
-
-M.keys = {
-    { "<leader>cfn", mode = 'n' },
-}
+M.build = function()
+    vim.fn["firenvim#install"](0)
+end
 
 M.priority = 1000
 

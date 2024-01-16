@@ -26,4 +26,4 @@ Please checkout the [recommend extensions](.vscode/extensions.json) as well.
 
 ### FireNvim
 
-This configuration is compatible with [glacambre/firenvim](https://github.com/glacambre/firenvim), load the plugin and install the browser bridge via `<leader>cfni` in a normal terminal session. To transform a textarea to a Neovim window, you have to trigger it with (cmd+e / ctrl+e).
+This configuration is compatible with [glacambre/firenvim](https://github.com/glacambre/firenvim). To install the browser bridge and transform a textarea to a Neovim window, you have to trigger it with (cmd+e / ctrl+e) in the browser.
