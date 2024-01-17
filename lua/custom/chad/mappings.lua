@@ -116,11 +116,14 @@ M.general = {
         ["<leader>ts"] = { "c<C-r>=strftime('%Y%m%d_%H%M%S')<C-m><C-c>", "Insert timestamp", opts = nowait },
         ["<leader>tu"] = { "c<C-r>=strftime('%s')<C-m><C-c>", "Insert unix epoch timestamp", opts = nowait },
     },
+    t = {
+        ["<C-q>"] = { "<C-\\><C-n>", "Exit terminal mode" },
+    }
 }
 
 M.telescope = {
     n = {
-        ["<CR>"] = { "<CMD>Telescope <CR>", "Open Telescope" },
+        ["<leader><CR>"] = { "<CMD>Telescope <CR>", "Open Telescope" },
         ["<C-p>"] = { "<CMD>Telescope find_files hidden=true no_ignore=false<CR>", "Find unignored files" },
         [""] = { "<CMD>Telescope find_files hidden=true no_ignore=true<CR>", "Find all files" },
         ["<C-_>"] = { "<CMD>Telescope live_grep hidden=true no_ignore=true<CR>", "Live grep" }, -- CTRL+6
