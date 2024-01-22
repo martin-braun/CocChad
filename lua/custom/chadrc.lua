@@ -12,6 +12,7 @@ else
     M.mappings = require("custom.chad.mappings")
 
     M.ui = {
+        transparency = true,
         theme_toggle = { "one_light", "onedark" },
         theme = "onedark",
         statusline = {
