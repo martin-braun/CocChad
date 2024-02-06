@@ -16,6 +16,7 @@ local specs = {
     "vim_arduino",
     "vim_kotlin",
     "vim_log_highlighting",
+    "vim_vorg_md",
 }
 
 for _ , spec in ipairs( specs  )  do
