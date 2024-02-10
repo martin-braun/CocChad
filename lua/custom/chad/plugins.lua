@@ -14,7 +14,7 @@ local specs = {
     "telescope_dap_nvim",
     "vim_blade",
     "vim_arduino",
-    "vim_kotlin",
+    -- "vim_kotlin",
     "vim_log_highlighting",
     "vim_vorg_md",
 }
@@ -37,7 +37,7 @@ vim.g.coc_global_extensions = {
     'coc-html',
     'coc-java',
     'coc-json',
-    'coc-kotlin',
+    -- 'coc-kotlin',
     'coc-lua',
     'coc-phpls',
     'coc-prettier',
