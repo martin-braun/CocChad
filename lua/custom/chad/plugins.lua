@@ -32,6 +32,7 @@ vim.g.coc_global_extensions = {
     'coc-emmet',
     'coc-eslint',
     'coc-flutter-tools',
+    'coc-go',
     'coc-highlight',
     'coc-html',
     'coc-java',
