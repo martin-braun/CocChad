@@ -151,8 +151,8 @@ M.base46 = {
 
 M.tabufline = {
     n = {
-        ["<C-n>"] = { "<CMD>enew<CR>", "Create buffer", opts = nowait },
-        ["<C-m>"] = { "<CMD>terminal<CR>", "Create terminal buffer", opts = nowait },
+        ["<leader>cb"] = { "<CMD>enew<CR>", "Create buffer", opts = nowait },
+        ["<leader>ct"] = { "<CMD>terminal<CR>", "Create terminal buffer", opts = nowait },
         ["<C-j>"] = {
             function()
                 require("nvchad.tabufline").tabuflineNext()
