@@ -46,7 +46,7 @@ M.vscode = {
         ["<C-e>"] = { "<CMD>call VSCodeCall('workbench.files.action.focusFilesExplorer')<CR>", "File: Focus on Files Explorer" },
 
         ---- tabufline substitute:
-        -- ["<C-n>"] = { "<CMD>call VSCodeCall('workbench.action.files.newUntitledFile')<CR>", "File: New Untitled Text File", opts = nowait },
+        ["<leader>cn"] = { "<CMD>call VSCodeCall('workbench.action.files.newUntitledFile')<CR>", "File: New Untitled Text File", opts = nowait },
         ["<C-w>h"] = { "<CMD>call VSCodeCall('workbench.action.navigateLeft')<CR>", "View: Navigate to the View on the Left", opts = nowait },
         ["<C-w><Left>"] = { "<CMD>call VSCodeCall('workbench.action.navigateLeft')<CR>", "View: Navigate to the View on the Left", opts = nowait },
         ["<C-w>l"] = { "<CMD>call VSCodeCall('workbench.action.navigateLeft')<CR>", "View: Navigate to the View on the Left", opts = nowait },
