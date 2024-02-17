@@ -47,6 +47,7 @@ vim.g.coc_global_extensions = {
     'coc-snippets',
     'coc-svg',
     'coc-tailwindcss',
+    'coc-todo-tree',
     'coc-tsserver',
     'coc-vimlsp',
     'coc-xml',
