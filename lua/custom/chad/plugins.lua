@@ -14,7 +14,7 @@ local specs = {
     "telescope_dap_nvim",
     "vim_blade",
     "vim_arduino",
-    -- "vim_kotlin",
+    "vim_kotlin",
     "vim_log_highlighting",
     "vim_vorg_md",
 }
