@@ -1,5 +1,6 @@
 {
   "codeLens.enable": true,
+  "tree.key.toggle": "l",
   "diagnostic.errorSign": "✘",
   "diagnostic.warningSign": "",
   "diagnostic.infoSign": "",
@@ -49,7 +50,7 @@
       "regex": "@next",
       "icon": {
         "text": "󱇭",
-        "hlGroup": "CocWarningHighlight"
+        "hlGroup": "CocHintSign"
       }
     },
     {
@@ -127,6 +128,8 @@
   },
   "todo-tree.defaultView": "flat",
   "todo-tree.groupByTag": true,
+  "todo-tree.parentNodeHighlightEnabled": true,
+  "todo-tree.autoPreview": true,
   "languageserver": {
     "jsonnet": {
       "command": "jsonnet-language-server",
