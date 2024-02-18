@@ -8,13 +8,13 @@
     "function": "   Function ",
     "variable": "[] Variable",
     "field": "  Field ",
-    "typeParameter": "<>",
-    "constant": "  ",
+    "typeParameter": "<󰬁>",
+    "constant": "  ",
     "class": "  ",
     "interface": " ",
     "struct": "  ",
     "event": "  ",
-    "operator": "  ",
+    "operator": "  ",
     "module": " {} module ",
     "property": "  ",
     "enum": " ",
@@ -27,7 +27,7 @@
     "snippet": " ✂ Snippet ",
     "text": "  ",
     "constructor": "  ",
-    "value": "  ",
+    "value": "  ",
     "enumMember": "  "
   },
   "hover.target": "float",
@@ -43,6 +43,90 @@
   "flutter.openDevLogSplitCommand": "botright 8split",
   "rust-analyzer.server.path": "rust-analyzer",
   "intelephense.licenceKey": "${env:INTELEPHENSE_LICENSE_KEY}",
+  "todo-tree.tags": [
+    {
+      "tagName": "next up",
+      "regex": "@next",
+      "icon": {
+        "text": "󱇭",
+        "hlGroup": "CocWarningHighlight"
+      }
+    },
+    {
+      "tagName": "feats (me)",
+      "regex": "TODO\\(martin-braun\\):",
+      "icon": {
+        "text": "󰗠",
+        "hlGroup": "CocWarningSign"
+      }
+    },
+    {
+      "tagName": "bugs (me)",
+      "regex": "FIXME\\(martin-braun\\):",
+      "icon": {
+        "text": "󰃤",
+        "hlGroup": "CocErrorSign"
+      }
+    },
+    {
+      "tagName": "feats (mycelnet)",
+      "regex": "TODO\\((mycel|mycelnet)\\):",
+      "icon": {
+        "text": "󰘽",
+        "hlGroup": "CocWarningSign"
+      }
+    },
+    {
+      "tagName": "bugs (mycelnet)",
+      "regex": "FIXME\\((mycel|mycelnet)\\):",
+      "icon": {
+        "text": "󰃤",
+        "hlGroup": "CocErrorSign"
+      }
+    },
+    {
+      "tagName": "feats (others)",
+      "regex": "TODO\\(^(martin-braun|mycel|mycelnet)\\):",
+      "icon": {
+        "text": "󰄴",
+        "hlGroup": "CocInfoSign"
+      }
+    },
+    {
+      "tagName": "bugs (others)",
+      "regex": "FIXME\\(^(martin-braun|mycel|mycelnet)\\):",
+      "icon": {
+        "text": "󰨰",
+        "hlGroup": "CocWarningSign"
+      }
+    },
+    {
+      "tagName": "todo (unassigned)",
+      "regex": "TODO:",
+      "icon": {
+        "text": "󰗠",
+        "hlGroup": "CocInfoSign"
+      }
+    },
+    {
+      "tagName": "fix (unassigned)",
+      "regex": "FIXME:",
+      "icon": {
+        "text": "󰃤",
+        "hlGroup": "CocWarningSign"
+      }
+    }
+  ],
+  "todo-tree.fileIcon": {
+    "text": "",
+    "hlGroup": "Normal"
+  },
+  "todo-tree.folderIcon": {
+    "text": "",
+    "hlGroup": "DefxIconsOpenedTreeIcon"
+  },
+  "todo-tree.defaultView": "flat",
+  "todo-tree.groupByTag": true,
   "languageserver": {
     "jsonnet": {
       "command": "jsonnet-language-server",
