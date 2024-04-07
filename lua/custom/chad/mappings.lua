@@ -125,8 +125,8 @@ M.telescope = {
     n = {
         ["<leader><CR>"] = { "<CMD>Telescope <CR>", "Open Telescope" },
         ["<C-Space>"] = { "<CMD>Telescope find_files hidden=true no_ignore=false<CR>", "Find unignored files" },
-        [""] = { "<CMD>Telescope find_files hidden=true no_ignore=true<CR>", "Find all files" },
-        ["<C-_>"] = { "<CMD>Telescope live_grep hidden=true no_ignore=true<CR>", "Live grep" }, -- CTRL+6
+        ["<leader><C-Space>"] = { "<CMD>Telescope find_files hidden=true no_ignore=true<CR>", "Find all files" },
+        ["<C-_>"] = { "<CMD>Telescope live_grep hidden=true no_ignore=true<CR>", "Live grep" }, -- CTRL+7
         ["<leader>fk"] = { "<CMD>Telescope keymaps<CR>", "Show keys" },
         ["<leader>fg"] = { "<CMD>Telescope git_commits<CR>", "Git commits" },
         ["<C-g>"] = { "<CMD>Telescope git_status<CR>", "Git status" },
