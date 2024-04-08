@@ -101,6 +101,7 @@ M.general = {
         ["<C-w>º"] = { "<CMD>wincmd J<CR>", "Move window to the far-bottom", opts = nowait },
         ["<C-w>∆"] = { "<CMD>wincmd K<CR>", "Move window to the far-top", opts = nowait },
         ["<C-w>@"] = { "<CMD>wincmd L<CR>", "Move window to the far-right", opts = nowait },
+        ["y´"] = { "yi`", "Yank inner backticks", opts = nowait },
         -- fn alts
         ["F2"] = { "<CMD>wincmd w<CR>", "Jump to next window", opts = nowait },
         ["F4"] = { "<CMD>wincmd c<CR>", "Close window", opts = nowait },
