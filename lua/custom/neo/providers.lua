@@ -15,9 +15,7 @@ local nvm = require("custom.lib.nvm")
 if nvm.system_node_active then
     vim.g.node_host_prog = cmd.resolved_invoker_of("neovim-node-host")
     vim.g.coc_node_path = cmd.resolved_invoker_of("node")
-
 else
-    print("2")
     vim.g.node_host_prog = nvm.node_lts_path() .. "/bin/neovim-node-host"
     vim.g.coc_node_path = nvm.node_lts_path() .. "/bin/node"
 end

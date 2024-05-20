@@ -29,7 +29,7 @@ M.disabled = {
         ["<C-w>c"] = "", -- undo close window
         ["<C-w>w"] = "", -- undo next window
         ["<C-w>p"] = "", -- undo previous window
-        ["<leader>b"] = "", -- undo <leader>b new buffer, use C-n instead
+        ["<leader>b"] = "", -- undo <leader>b create buffer, use <leader>bc instead
         ["<leader>x"] = "", -- undo <leader>x close buffer, use <C-q> instead
         ["<leader>q"] = "", -- undo diagnostics
         ["<leader>tk"] = "", -- undo find keys with telescope, use <leader>fk instead
@@ -75,16 +75,16 @@ M.general = {
         ["<leader>ti"] = { "a<C-r>=strftime('%y-%m-%d %H:%M:%S')<C-m><C-c>", "Insert time", opts = nowait },
         ["<leader>ts"] = { "a<C-r>=strftime('%y%m%d_%H%M%S')<C-m><C-c>", "Insert timestamp", opts = nowait },
         ["<leader>tu"] = { "a<C-r>=strftime('%s')<C-m><C-c>", "Insert unix epoch timestamp", opts = nowait },
-        ["<leader>l"] =  { "<CMD>cw<CR><CMD>.cc<CR>zv", "Open quickfix list and jump to selected entry or close if empty" },
+        ["<leader>l"] =  { "<CMD>cw<CR><CMD>.cc<CR>zv", "Open quickfix list and jump to selected entry or close if empty", opts = nowait },
         ["<leader>q"] =  { "<CMD>ccl<CR>", "Close quickfix list", opts = nowait },
         ["<leader>n"] =  { "<CMD>cw<CR><CMD>cn<CR>zv", "Open quickfix list and jump to next entry or close if empty", opts = nowait },
         ["<leader>p"] =  { "<CMD>cw<CR><CMD>cp<CR>zv", "Open quickfix list and jump to previous entry or close if empty", opts = nowait },
         ["<leader>o"] =  { "<CMD>pop<CR>", "Move upwards/back in the tag stack", opts = nowait },
         ["<leader>i"] =  { "<CMD>tag<CR>", "Move downwards/forward the tag stack", opts = nowait },
-        ["<leader>tn"] = { "<CMD>tabnew<CR>", "New native tab", opts = nowait },
-        ["<leader>tj"] = { "<CMD>tabnext<CR>", "Goto next native tab", opts = nowait },
-        ["<leader>tk"] = { "<CMD>tabprevious<CR>", "Goto previous native tab", opts = nowait },
-        ["<leader>tc"] = { "<CMD>tabclose<CR>", "Close current native tab", opts = nowait },
+        ["<leader>tc"] = { "<CMD>tabnew<CR>", "Create native tab", opts = nowait },
+        ["<leader>tn"] = { "<CMD>tabnext<CR>", "Goto next native tab", opts = nowait },
+        ["<leader>tp"] = { "<CMD>tabprevious<CR>", "Goto previous native tab", opts = nowait },
+        ["<leader>tx"] = { "<CMD>tabclose<CR>", "Close current native tab", opts = nowait },
         ["<leader>to"] = { "<CMD>tabo<CR>", "Close all other native tabs", opts = nowait },
         ["<C-w>\""] = { "<CMD>split<CR>", "split window horizontally", opts = nowait },
         ["<C-w>%"] = { "<CMD>vsplit<CR>", "Split window vertically", opts = nowait },
@@ -153,8 +153,8 @@ M.base46 = {
 
 M.tabufline = {
     n = {
-        ["<leader>cb"] = { "<CMD>enew<CR>", "Create buffer", opts = nowait },
-        ["<leader>ct"] = { "<CMD>terminal<CR>", "Create terminal buffer", opts = nowait },
+        ["<leader>bc"] = { "<CMD>enew<CR>", "Create buffer", opts = nowait },
+        ["<leader>bt"] = { "<CMD>terminal<CR>", "Create terminal buffer", opts = nowait },
         ["<C-j>"] = {
             function()
                 require("nvchad.tabufline").tabuflineNext()
@@ -204,7 +204,7 @@ M.coc = {
         ["<leader>fs"] = { ':<C-u>CocList -I symbols<CR>', "Find symbols", opts = vim.tbl_extend("error", silent, nowait) },
         ["<leader>j"] = { ':<C-u>CocNext<CR>', "Do default action for next item", opts = vim.tbl_extend("error", silent, nowait) },
         ["<leader>k"] = { ':<C-u>CocPrev<CR>', "Do default action for previous item", opts = vim.tbl_extend("error", silent, nowait) },
-        ["<leader>r"] = { ':<C-u>CocListResume<CR>', "Resume latest coc list", opts = vim.tbl_extend("error", silent, nowait) },
+        ["<leader>rl"] = { ':<C-u>CocListResume<CR>', "Resume latest coc list", opts = vim.tbl_extend("error", silent, nowait) },
         ["<leader>tl"] = { "<CMD>CocCommand coc-todo-tree.showTree<CR>", "Show todo list", opts = nowait },
         ["[]g"] = { "<CMD>CocDiagnostics<CR>", "Show diagnostics" },
         ["[g"] = { "<Plug>(coc-diagnostic-prev)", "Navigate to previous diagnostic", opts = silent },
@@ -228,6 +228,7 @@ M.coc = {
         ["<leader>sfd"] = { '<CMD>CocList FlutterDevices<CR>', "Select Flutter device target", opts = silent },
         ["<leader>sfs"] = { '<CMD>CocList FlutterSDKs<CR>', "Select Flutter SDK", opts = silent },
         ["<leader>sfr"] = { '<CMD>CocCommand flutter.run<CR><CMD>CocCommand flutter.dev.hotReload<CR>', "Run / hot reload Flutter app on device/emulator", silent },
+        ["<leader>sfA"] = { '<CMD>CocCommand flutter.run -d all<CR>', "Run Flutter app on all devices/emulators", silent },
         ["<leader>sfD"] = { '<CMD>CocCommand flutter.doctor<CR>', "Run Flutter doctor" },
         ["<leader>sfC"] = { '<CMD>new | r ! fvm flutter clean<CR>', "Run Flutter clean" },
         ["<leader>sfg"] = { '<CMD>CocCommand flutter.pub.get<CR>', "Run Flutter pub get" },
@@ -237,6 +238,8 @@ M.coc = {
         ["<leader>sfl"] = { '<CMD>CocCommand flutter.dev.openDevLog<CR>', "Show Flutter dev log" },
         ["<leader>sfc"] = { '<CMD>CocCommand flutter.dev.clearDevLog<CR>', "Clear Flutter dev server log" },
         ["<leader>sfp"] = { '<CMD>CocCommand flutter.dev.showPerformanceOverlay<CR>', "Show Flutter dev server performance overlay" },
+        ["<leader>sfw"] = { '<CMD>! adb shell "cmd uimode night no"<CR>', "Switch Android Emulator to light mode" },
+        ["<leader>sfa"] = { '<CMD>! adb shell "cmd uimode night yes"<CR>', "Switch Android Emulator to dark mode" },
         -- coc-deno
         ["<leader>sdc"] = { '<CMD>CocCommand deno.cache<CR>', "Cache Deno dependencies" },
         ["<leader>sds"] = { '<CMD>CocCommand deno.status<CR>', "Show Deno language server status" },
@@ -359,6 +362,7 @@ M.deepl = {
 
 M.viewers = {
     n = {
+        ["<leader>vr"] = { "<CMD>checktime<CR>", "Reload view", opts = silent },
         ["<leader>vh"] = { "<CMD>HexToggle<CR>", "Toggle hex view", opts = silent },
         ["<leader>vi"] = { "<CMD>ViewImage<CR>", "View image", opts = silent },
     }
