@@ -1,9 +1,7 @@
 local compat = require("custom.compat")
 
 local autocmds = {
-    { true, "ft.log" },
-    { true, "ft.reg" },
-    { true, "ft.xaml" },
+    { true, "filetypes" },
     { not compat, "mods.nvim_tree" },
     { vim.g.vscode, "vscode.ui" },
 }
