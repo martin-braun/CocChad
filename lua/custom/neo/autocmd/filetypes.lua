@@ -13,14 +13,12 @@ local FT = function()
             [".stignore"] = "gitignore",
         },
         pattern = {
-            ["%.env%.*"] = "sh",
+            ["%.env%..*"] = "sh",
             [".*/ansible/.*%.ya?ml"] = "yaml.ansible",
         },
     })
 end
 
-vim.api.nvim_create_autocmd({ "User" }, {
-    pattern = "VeryLazy",
-    group = vim.api.nvim_create_augroup("VeryLazy_filetypes", {}),
+vim.api.nvim_create_autocmd({ 'BufReadPre' }, {
     callback = FT,
 })
