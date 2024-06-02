@@ -8,6 +8,7 @@ local specs = {
     "deepl_vim",
     "firenvim",
     "hex_nvim",
+    "markdown_preview_nvim",
     "nvim_dap",
     "nvim_dap_ui",
     "nvim_dap_virtual_text",
@@ -69,4 +70,3 @@ vim.g.coc_global_extensions = {
 -- }
 
 return M
-

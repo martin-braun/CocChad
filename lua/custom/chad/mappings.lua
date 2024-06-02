@@ -365,6 +365,8 @@ M.viewers = {
         ["<leader>vr"] = { "<CMD>checktime<CR>", "Reload view", opts = silent },
         ["<leader>vh"] = { "<CMD>HexToggle<CR>", "Toggle hex view", opts = silent },
         ["<leader>vi"] = { "<CMD>ViewImage<CR>", "View image", opts = silent },
+        ["<leader>vm"] = { "<CMD>MarkdownPreview<CR>", "Preview markdown", opts = silent },
+        ["<leader>vM"] = { "<CMD>MarkdownPreviewStop<CR>", "Stop preview markdown", opts = silent },
     }
 }
 
