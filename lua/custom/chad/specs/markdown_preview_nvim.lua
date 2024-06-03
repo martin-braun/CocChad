@@ -1,4 +1,5 @@
 local compat = require("custom.compat")
+local sys = require("custom.lib.sys")
 
 local M = { "iamcco/markdown-preview.nvim" }
 
@@ -10,6 +11,10 @@ M.cond = not compat
 M.init = function()
     vim.g.mkdp_filetypes = { "markdown" }
     vim.g.mkdp_auto_close = 0
+    vim.g.mkdp_combine_preview = 1
+    if sys.isDarwin then
+        vim.g.mkdp_browser = "Safari"
+    end
 end
 
 M.build = "cd app && yarn install"
