@@ -2,6 +2,8 @@ local FT = function()
     vim.filetype.add({
         extension = {
             arb = "json",
+            ["code-snippets"] = "json",
+            fvmrc = "json",
             log = "log",
             reg = "dosini",
             xaml = "xml",
