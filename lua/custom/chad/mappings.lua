@@ -127,7 +127,8 @@ M.telescope = {
         ["<leader><CR>"] = { "<CMD>Telescope <CR>", "Open Telescope" },
         ["<C-Space>"] = { "<CMD>Telescope find_files hidden=true no_ignore=false<CR>", "Find unignored files" },
         ["<leader><C-Space>"] = { "<CMD>Telescope find_files hidden=true no_ignore=true<CR>", "Find all files" },
-        ["<C-_>"] = { "<CMD>Telescope live_grep<CR>", "Live grep unignored" }, -- CTRL+7
+        ["<C-7>"] = { "<CMD>Telescope live_grep<CR>", "Live grep unignored" },
+        ["<C-_>"] = { "<CMD>Telescope live_grep<CR>", "Live grep unignored" },
         ["<leader><C-_>"] = { "<CMD>Telescope live_grep vimgrep_arguments=rg,--color=never,--no-heading,--no-heading,--line-number,--column,--smart-case,--follow,--hidden,--no-ignore<CR>", "Live grep all" },
         ["<leader>fk"] = { "<CMD>Telescope keymaps<CR>", "Show keys" },
         ["<leader>fg"] = { "<CMD>Telescope git_commits<CR>", "Git commits" },
@@ -219,9 +220,10 @@ M.coc = {
         ["<leader>ar"] = { '<Plug>(coc-codeaction-selected)', "Add codeaction to selected region", opts = vim.tbl_extend("error", silent, nowait) },
         ["<leader>ag"] = { '<Plug>(coc-codeaction)', "Apply code action to current buffer", opts = vim.tbl_extend("error", silent, nowait) },
         ["<leader>fl"] = { '<Plug>(coc-fix-current)', "Autofix current line", opts = vim.tbl_extend("error", silent, nowait) },
-        ["<leader>ll"] = { '<Plug>(coc-codelens-action)', "Perform CodeLens action on the current line", opts = vim.tbl_extend("error", silent, nowait) },
+        ["<leader>cl"] = { '<Plug>(coc-codelens-action)', "Perform CodeLens action on the current line", opts = vim.tbl_extend("error", silent, nowait) },
         ["<C-y>"] = { '<Plug>(coc-range-select)', "Select ranges", opts = silent },
         ["<leader>uc"] = { '<CMD>CocUpdate<CR>', "Update coc extensions" },
+        ["<leader>C"] = { '<CMD>CocOpenLog<CR>', "Open coc logs" },
         -- coc-flutter
         ["<leader>sfe"] = { '<CMD>CocList FlutterEmulators<CR>', "Launch Flutter emulator" },
         ["<leader>sfE"] = { ':call jobstart("Emulator @flutter_emulator -no-snapshot-load")<CR>', "cold start flutter_emulator" },

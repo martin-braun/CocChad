@@ -1,142 +1,147 @@
 {
-  "codeLens.enable": true,
-  "tree.key.toggle": "l",
-  "diagnostic.errorSign": "✘",
-  "diagnostic.warningSign": "",
-  "diagnostic.infoSign": "",
-  "suggest.completionItemKindLabels": {
-    "method": "   Method ",
-    "function": "   Function ",
-    "variable": "[] Variable",
-    "field": "  Field ",
-    "typeParameter": "<󰬁>",
-    "constant": "  ",
-    "class": "  ",
-    "interface": " ",
-    "struct": "  ",
-    "event": "  ",
-    "operator": "  ",
-    "module": " {} module ",
-    "property": "  ",
-    "enum": " ",
-    "reference": "  ",
-    "keyword": "  ",
-    "file": "  ",
-    "folder": " ﱮ ",
-    "color": "  ",
-    "unit": "  ",
-    "snippet": " ✂ Snippet ",
-    "text": "  ",
-    "constructor": "  ",
-    "value": "  ",
-    "enumMember": "  "
-  },
-  "hover.target": "float",
-  "emmet.includeLanguages": {
-    "vue-html": "html",
-    "javascript": "javascriptreact"
-  },
-  "css.format.enable": true,
-  "html.completion.attributeDefaultValue": "empty",
-  "Lua.diagnostics.globals": ["vim"],
-  "python.pythonPath": "python3",
-  "snippets.ultisnips.pythonPrompt": false,
-  "flutter.openDevLogSplitCommand": "botright 8split",
-  "rust-analyzer.server.path": "rust-analyzer",
-  "intelephense.licenceKey": "${env:INTELEPHENSE_LICENSE_KEY}",
-  "todo-tree.tags": [
-    {
-      "tagName": "next up",
-      "regex": "@next",
-      "icon": {
-        "text": "󱇭",
-        "hlGroup": "CocHintSign"
-      }
+    "codeLens.enable": true,
+    "tree.key.toggle": "l",
+    "diagnostic.errorSign": "✘",
+    "diagnostic.warningSign": "",
+    "diagnostic.infoSign": "",
+    "suggest.completionItemKindLabels": {
+        "method": "   Method ",
+        "function": "   Function ",
+        "variable": "[] Variable",
+        "field": "  Field ",
+        "typeParameter": "<󰬁>",
+        "constant": "  ",
+        "class": "  ",
+        "interface": " ",
+        "struct": "  ",
+        "event": "  ",
+        "operator": "  ",
+        "module": " {} module ",
+        "property": "  ",
+        "enum": " ",
+        "reference": "  ",
+        "keyword": "  ",
+        "file": "  ",
+        "folder": " ﱮ ",
+        "color": "  ",
+        "unit": "  ",
+        "snippet": " ✂ Snippet ",
+        "text": "  ",
+        "constructor": "  ",
+        "value": "  ",
+        "enumMember": "  "
     },
-    {
-      "tagName": "feats (me)",
-      "regex": "TODO\\(martin-braun\\):",
-      "icon": {
-        "text": "󰗠",
-        "hlGroup": "CocWarningSign"
-      }
+    "hover.target": "float",
+    "snippets.extends": {
+        "cpp": ["c"],
+        "javascriptreact": ["javascript"],
+        "typescript": ["javascript"]
     },
-    {
-      "tagName": "bugs (me)",
-      "regex": "FIXME\\(martin-braun\\):",
-      "icon": {
-        "text": "󰃤",
-        "hlGroup": "CocErrorSign"
-      }
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "javascript": "javascriptreact"
     },
-    {
-      "tagName": "feats (mycelnet)",
-      "regex": "TODO\\((mycel|mycelnet)\\):",
-      "icon": {
-        "text": "󰘽",
-        "hlGroup": "CocWarningSign"
-      }
+    "css.format.enable": true,
+    "html.completion.attributeDefaultValue": "empty",
+    "Lua.diagnostics.globals": ["vim"],
+    "python.pythonPath": "python3",
+    "snippets.ultisnips.pythonPrompt": false,
+    "flutter.openDevLogSplitCommand": "botright 8split",
+    "rust-analyzer.server.path": "rust-analyzer",
+    "intelephense.licenceKey": "${env:INTELEPHENSE_LICENSE_KEY}",
+    "todo-tree.tags": [
+        {
+            "tagName": "next up",
+            "regex": "@next",
+            "icon": {
+                "text": "󱇭",
+                "hlGroup": "CocHintSign"
+            }
+        },
+        {
+            "tagName": "feats (me)",
+            "regex": "TODO\\(martin-braun\\):",
+            "icon": {
+                "text": "󰗠",
+                "hlGroup": "CocWarningSign"
+            }
+        },
+        {
+            "tagName": "bugs (me)",
+            "regex": "FIXME\\(martin-braun\\):",
+            "icon": {
+                "text": "󰃤",
+                "hlGroup": "CocErrorSign"
+            }
+        },
+        {
+            "tagName": "feats (mycelnet)",
+            "regex": "TODO\\((mycel|mycelnet)\\):",
+            "icon": {
+                "text": "󰘽",
+                "hlGroup": "CocWarningSign"
+            }
+        },
+        {
+            "tagName": "bugs (mycelnet)",
+            "regex": "FIXME\\((mycel|mycelnet)\\):",
+            "icon": {
+                "text": "󰃤",
+                "hlGroup": "CocErrorSign"
+            }
+        },
+        {
+            "tagName": "feats (others)",
+            "regex": "TODO\\(^(martin-braun|mycel|mycelnet)\\):",
+            "icon": {
+                "text": "󰄴",
+                "hlGroup": "CocInfoSign"
+            }
+        },
+        {
+            "tagName": "bugs (others)",
+            "regex": "FIXME\\(^(martin-braun|mycel|mycelnet)\\):",
+            "icon": {
+                "text": "󰨰",
+                "hlGroup": "CocWarningSign"
+            }
+        },
+        {
+            "tagName": "todo (unassigned)",
+            "regex": "TODO:",
+            "icon": {
+                "text": "󰗠",
+                "hlGroup": "CocInfoSign"
+            }
+        },
+        {
+            "tagName": "fix (unassigned)",
+            "regex": "FIXME:",
+            "icon": {
+                "text": "󰃤",
+                "hlGroup": "CocWarningSign"
+            }
+        }
+    ],
+    "todo-tree.fileIcon": {
+        "text": "",
+        "hlGroup": "Normal"
     },
-    {
-      "tagName": "bugs (mycelnet)",
-      "regex": "FIXME\\((mycel|mycelnet)\\):",
-      "icon": {
-        "text": "󰃤",
-        "hlGroup": "CocErrorSign"
-      }
+    "todo-tree.folderIcon": {
+        "text": "",
+        "hlGroup": "DefxIconsOpenedTreeIcon"
     },
-    {
-      "tagName": "feats (others)",
-      "regex": "TODO\\(^(martin-braun|mycel|mycelnet)\\):",
-      "icon": {
-        "text": "󰄴",
-        "hlGroup": "CocInfoSign"
-      }
+    "todo-tree.defaultView": "flat",
+    "todo-tree.groupByTag": true,
+    "todo-tree.parentNodeHighlightEnabled": true,
+    "todo-tree.autoPreview": true,
+    "languageserver": {
+        "jsonnet": {
+            "command": "jsonnet-language-server",
+            "args": ["-t"],
+            "rootPatterns": [".git/", "jsonnetfile.json"],
+            "filetypes": ["jsonnet", "libsonnet"]
+        }
     },
-    {
-      "tagName": "bugs (others)",
-      "regex": "FIXME\\(^(martin-braun|mycel|mycelnet)\\):",
-      "icon": {
-        "text": "󰨰",
-        "hlGroup": "CocWarningSign"
-      }
-    },
-    {
-      "tagName": "todo (unassigned)",
-      "regex": "TODO:",
-      "icon": {
-        "text": "󰗠",
-        "hlGroup": "CocInfoSign"
-      }
-    },
-    {
-      "tagName": "fix (unassigned)",
-      "regex": "FIXME:",
-      "icon": {
-        "text": "󰃤",
-        "hlGroup": "CocWarningSign"
-      }
-    }
-  ],
-  "todo-tree.fileIcon": {
-    "text": "",
-    "hlGroup": "Normal"
-  },
-  "todo-tree.folderIcon": {
-    "text": "",
-    "hlGroup": "DefxIconsOpenedTreeIcon"
-  },
-  "todo-tree.defaultView": "flat",
-  "todo-tree.groupByTag": true,
-  "todo-tree.parentNodeHighlightEnabled": true,
-  "todo-tree.autoPreview": true,
-  "languageserver": {
-    "jsonnet": {
-      "command": "jsonnet-language-server",
-      "args": ["-t"],
-      "rootPatterns": [".git/", "jsonnetfile.json"],
-      "filetypes": ["jsonnet", "libsonnet"]
-    }
-  },
-  "cursors.cancelKey": "<C-c>"
+    "cursors.cancelKey": "<C-c>"
 }
